@@ -45,7 +45,14 @@ module.exports = {
       message.channel.bulkDelete(1)
       switch(arguments)
          {
-            case '010' : 
+            case '000' : 
+            {
+               await channel.send('> 000 - 윤새롬의 유튜브 라이브화면')
+               await channel.send({ files: ['./roll/Preview.mp4'] })
+               const ms1 = await channel.send('```시체 : 정수리에 깊게 패인 흔적이 있다. 다량의 피가 옷과 바닥에 흘렀다.\n바닥에는 쏟아진 물건들로 엉망이다.\n생방송 라이브영상은 8시에 시작되어서 8시 15분 종료되었다.```')
+               await ms1.react('❤️');
+               break;
+            }case '010' : 
             {
                console.log(arguments)
                console.log(clue.dclueid01)

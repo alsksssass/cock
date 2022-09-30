@@ -750,7 +750,7 @@ client.on('interactionCreate', async interaction => {
 
 client.on('guildMemberAdd', async member => {
 await wait(1000);
-member.guild.channels.cache.find(i => i.name === '롤지받기').send('안녕하세요\n캐릭터롤\n수성\n금성\n지구\n화성\n목성\n이 있습니다.\n\n명령어는 ``!롤 역할``입니다.\n\nhttps://crimesss.imweb.me/Reservation')
+member.guild.channels.cache.find(i => i.name === '롤지받기').send(`안녕하세요 롤 선택순서입니다.\n캐릭터롤\n${character1}\n${character2}\n${character3}\n${character4}\n${character5}\n${character6}\n이 있습니다.\n\n명령어는 ``!롤 역할``입니다.`)
 })
 
 

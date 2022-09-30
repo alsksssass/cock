@@ -33,7 +33,7 @@ const date = "" + today.getFullYear() +"년" + today.getMonth() + "월" + today.
             await message.channel.send('롤지는 한번만 받을 수 있습니다.')
             return;
          }
-        if(message.guild.id === guildId && arguments != character1 && arguments != character2 && arguments != characte3 && arguments != character4 && arguments != character5) 
+        if(message.guild.id === guildId && arguments != character1 && arguments != character2 && arguments != character3 && arguments != character4 && arguments != character5) 
         {
            await message.channel.send("롤 확인을 다시해 주세요")
            return;
@@ -69,28 +69,28 @@ const date = "" + today.getFullYear() +"년" + today.getMonth() + "월" + today.
             case character2 : 
             {
                console.log(arguments)
-               await message.author.send({ files: ['.roll\1. 한호랑.pdf'] });
+               await message.author.send({ files: ['./roll/1. 한호랑.pdf'] });
                await message.author.send({ content: "일정과 시간을 조율하신후 약속된 시간에\n``!준비``를\n모든 플레이어가 15초내에 치시면 됩니다.\n카운트는 명령어 사용후  15초입니다." })
                break;
             }
             case character3 : 
             {
                console.log(arguments)
-               await message.author.send({ files: ['.roll\2. 유수호.pdf'] });
+               await message.author.send({ files: ['./roll/2. 유수호.pdf'] });
                await message.author.send({ content: "일정과 시간을 조율하신후 약속된 시간에\n``!준비``를\n모든 플레이어가 15초내에 치시면 됩니다.\n카운트는 명령어 사용후  15초입니다." })
                break;
             }
             case character4 : 
             {
                console.log(arguments)
-               await message.author.send({ files: ['.roll\3. 오정성.pdf'] });
+               await message.author.send({ files: ['./roll/3. 오정성.pdf'] });
                await message.author.send({ content: "일정과 시간을 조율하신후 약속된 시간에\n``!준비``를\n모든 플레이어가 15초내에 치시면 됩니다.\n카운트는 명령어 사용후  15초입니다." })
                break;
             }
             case character5 : 
             {
                console.log(arguments)
-               await message.author.send({ files: ['.roll\4. 곽편집.pdf'] });
+               await message.author.send({ files: ['./roll/4. 곽편집.pdf'] });
                await message.author.send({ content: "일정과 시간을 조율하신후 약속된 시간에\n``!준비``를\n모든 플레이어가 15초내에 치시면 됩니다.\n카운트는 명령어 사용후  15초입니다." })
                break;
             }

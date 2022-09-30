@@ -38,8 +38,8 @@ module.exports = {
          const admin = JSON.parse(fs.readFileSync(dfilePath, "utf-8"));
          const clue = JSON.parse(fs.readFileSync(efilePath, "utf-8"));
          const vote = JSON.parse(fs.readFileSync(vfilePath, "utf-8"));
-    ///////////
-if (arguments != character1 && arguments != character2 && arguments != character3 && arguments != character4 && arguments != character5) return message.channel.send('잘못된 이름입니다.');
+    ///////////console.log('1')
+if (arguments != character1 && arguments != character2 && arguments != character3 && arguments != character4 && arguments != character5) {message.channel.send('이름을 다시 확인해주세요'); return; }
 if(admin.round == 5 && vote.vchance1 ==1 && message.author.id == admin.playerid1) {
     let vo1 = 0
     let vo2 = 0
@@ -49,7 +49,7 @@ if(admin.round == 5 && vote.vchance1 ==1 && message.author.id == admin.playerid1
     let vo6 = 0
     switch(arguments)
     {
-       case admin.class1 : 
+       case character1 : 
        {
         vo1 == 1
         vo2 == 0
@@ -59,7 +59,7 @@ if(admin.round == 5 && vote.vchance1 ==1 && message.author.id == admin.playerid1
         vo6 == 0
           break;
         }
-        case admin.class2 : 
+        case character2 : 
         {
          vo1 == 0
          vo2 == 1
@@ -69,7 +69,7 @@ if(admin.round == 5 && vote.vchance1 ==1 && message.author.id == admin.playerid1
          vo6 == 0
            break;
          }
-         case admin.class3 : 
+         case character3 : 
        {
         vo1 == 0
         vo2 == 0
@@ -79,7 +79,7 @@ if(admin.round == 5 && vote.vchance1 ==1 && message.author.id == admin.playerid1
         vo6 == 0
           break;
         }
-        case admin.class4 : 
+        case character4 : 
        {
         vo1 == 0
         vo2 == 0
@@ -89,7 +89,7 @@ if(admin.round == 5 && vote.vchance1 ==1 && message.author.id == admin.playerid1
         vo6 == 0
           break;
         }
-        case admin.class5 : 
+        case character5 : 
        {
         vo1 == 0
         vo2 == 0
@@ -99,7 +99,7 @@ if(admin.round == 5 && vote.vchance1 ==1 && message.author.id == admin.playerid1
         vo6 == 0
           break;
         }
-        case admin.class6 : 
+        case character6 : 
         {
          vo1 == 0
          vo2 == 0
@@ -112,43 +112,58 @@ if(admin.round == 5 && vote.vchance1 ==1 && message.author.id == admin.playerid1
     }
 
 voting = {
-    votenum : voting.votenum + 1,
-    player1 : voting.player1,
-    vote1 : voting.vote1 +vo1,
-    vote2 : voting.vote1 +vo2,
-    player2 : voting.player2,
-    vote3 : voting.vote1 +vo3,
-    player3 : voting.player3,
-    vote4 : voting.vote1 +vo4,
-    player4 : voting.player4,
-    vote5 : voting.vote1 +vo5,
-    player5 : voting.player5,
-    vote6 : voting.vote1 +vo6,
-    player6 : voting.player6,
+    votenum : vote.votenum + 1,
+    player1 : vote.player1,
+    vote1 : vote.vote1 + vo1,
+    vote2 : vote.vote1 + vo2,
+    player2 : vote.player2,
+    vote3 : vote.vote1 + vo3,
+    player3 : vote.player3,
+    vote4 : vote.vote1 + vo4,
+    player4 : vote.player4,
+    vote5 : vote.vote1 + vo5,
+    player5 : vote.player5,
+    vote6 : vote.vote1 + vo6,
+    player6 : vote.player6,
     vchance1 : vote.vchance1*=0,
     vchance2 : vote.vchance2,
     vchance3 : vote.vchance3,
     vchance4 : vote.vchance4,
     vchance5 : vote.vchance5,
     vchance6 : vote.vchance6,
+    
 
     
    
  }
 fs.writeFileSync(vfilePath, JSON.stringify(voting));
+
+saveUser = {
+  id : user.id,
+  name : user.name,
+  date : user.date,
+  class : user.class,
+  vote : arguments
+}
+fs.writeFileSync(cfilePath, JSON.stringify(saveUser));
+message.channel.send('투표완료!')
+return;
+
   }
   if(admin.round == 5 && vote.vchance2 ==1 && message.author.id == admin.playerid2) {
-    let vo1 = 0
-    let vo2 = 0
+    console.log('1')
+    var vo1 = 0
+    var vo2 = 0
     let vo3 = 0
     let vo4 = 0
     let vo5 = 0
     let vo6 = 0
     switch(arguments)
     {
-       case admin.class1 : 
+       case character1 : 
        {
-        vo1 == 1
+        console.log('2')
+        vo1 += 1
         vo2 == 0
         vo3 == 0
         vo4 == 0
@@ -156,72 +171,72 @@ fs.writeFileSync(vfilePath, JSON.stringify(voting));
         vo6 == 0
           break;
         }
-        case admin.class2 : 
+        case character2 : 
         {
          vo1 == 0
-         vo2 == 1
+         vo2 += 1
          vo3 == 0
          vo4 == 0
          vo5 == 0
          vo6 == 0
            break;
          }
-         case admin.class3 : 
+         case character3 : 
        {
         vo1 == 0
         vo2 == 0
-        vo3 == 1
+        vo3 += 1
         vo4 == 0
         vo5 == 0
         vo6 == 0
           break;
         }
-        case admin.class4 : 
+        case character4 : 
        {
         vo1 == 0
         vo2 == 0
         vo3 == 0
-        vo4 == 1
+        vo4 += 1
         vo5 == 0
         vo6 == 0
           break;
         }
-        case admin.class5 : 
+        case character5 : 
        {
         vo1 == 0
         vo2 == 0
         vo3 == 0
         vo4 == 0
-        vo5 == 1
+        vo5 += 1
         vo6 == 0
           break;
         }
-        case admin.class6 : 
+        case character6 : 
         {
          vo1 == 0
          vo2 == 0
          vo3 == 0
          vo4 == 0
          vo5 == 0
-         vo6 == 1
+         vo6 += 1
            break;
          }
     }
-
+    console.log('3')
 voting = {
-    votenum : voting.votenum + 1,
-    player1 : voting.player1,
-    vote1 : voting.vote1 +vo1,
-    vote2 : voting.vote1 +vo2,
-    player2 : voting.player2,
-    vote3 : voting.vote1 +vo3,
-    player3 : voting.player3,
-    vote4 : voting.vote1 +vo4,
-    player4 : voting.player4,
-    vote5 : voting.vote1 +vo5,
-    player5 : voting.player5,
-    vote6 : voting.vote1 +vo6,
-    player6 : voting.player6,
+    votenum : vote.votenum + 1,
+    player1 : vote.player1,
+    vote1 : vote.vote1 +vo1,
+    vote2 : vote.vote1 +vo2,
+    player2 : vote.player2,
+    vote3 : vote.vote1 +vo3,
+    player3 : vote.player3,
+    vote4 : vote.vote1 +vo4,
+    player4 : vote.player4,
+    vote5 : vote.vote1 +vo5,
+    player5 : vote.player5,
+    vote6 : vote.vote1 +vo6,
+    player6 : vote.player6,
     vchance1 : vote.vchance1,
     vchance2 : vote.vchance2*=0,
     vchance3 : vote.vchance3,
@@ -233,6 +248,18 @@ voting = {
    
  }
 fs.writeFileSync(vfilePath, JSON.stringify(voting));
+console.log('4')
+saveUser = {
+  id : user.id,
+  name : user.name,
+  date : user.date,
+  class : user.class,
+  vote : arguments
+}
+fs.writeFileSync(cfilePath, JSON.stringify(saveUser));
+console.log('5')
+message.channel.send('투표완료!')
+return;
   }
   if(admin.round == 5 && vote.vchance3 ==1 && message.author.id == admin.playerid3) {
     let vo1 = 0
@@ -243,9 +270,10 @@ fs.writeFileSync(vfilePath, JSON.stringify(voting));
     let vo6 = 0
     switch(arguments)
     {
-       case admin.class1 : 
+       case character1 : 
        {
-        vo1 == 1
+        console.log('2')
+        vo1 += 1
         vo2 == 0
         vo3 == 0
         vo4 == 0
@@ -253,72 +281,72 @@ fs.writeFileSync(vfilePath, JSON.stringify(voting));
         vo6 == 0
           break;
         }
-        case admin.class2 : 
+        case character2 : 
         {
          vo1 == 0
-         vo2 == 1
+         vo2 += 1
          vo3 == 0
          vo4 == 0
          vo5 == 0
          vo6 == 0
            break;
          }
-         case admin.class3 : 
+         case character3 : 
        {
         vo1 == 0
         vo2 == 0
-        vo3 == 1
+        vo3 += 1
         vo4 == 0
         vo5 == 0
         vo6 == 0
           break;
         }
-        case admin.class4 : 
+        case character4 : 
        {
         vo1 == 0
         vo2 == 0
         vo3 == 0
-        vo4 == 1
+        vo4 += 1
         vo5 == 0
         vo6 == 0
           break;
         }
-        case admin.class5 : 
+        case character5 : 
        {
         vo1 == 0
         vo2 == 0
         vo3 == 0
         vo4 == 0
-        vo5 == 1
+        vo5 += 1
         vo6 == 0
           break;
         }
-        case admin.class6 : 
+        case character6 : 
         {
          vo1 == 0
          vo2 == 0
          vo3 == 0
          vo4 == 0
          vo5 == 0
-         vo6 == 1
+         vo6 += 1
            break;
          }
     }
 
 voting = {
-    votenum : voting.votenum + 1,
-    player1 : voting.player1,
-    vote1 : voting.vote1 +vo1,
-    vote2 : voting.vote1 +vo2,
-    player2 : voting.player2,
-    vote3 : voting.vote1 +vo3,
-    player3 : voting.player3,
-    vote4 : voting.vote1 +vo4,
-    player4 : voting.player4,
-    vote5 : voting.vote1 +vo5,
-    player5 : voting.player5,
-    vote6 : voting.vote1 +vo6,
-    player6 : voting.player6,
+    votenum : vote.votenum + 1,
+    player1 : vote.player1,
+    vote1 : vote.vote1 +vo1,
+    vote2 : vote.vote1 +vo2,
+    player2 : vote.player2,
+    vote3 : vote.vote1 +vo3,
+    player3 : vote.player3,
+    vote4 : vote.vote1 +vo4,
+    player4 : vote.player4,
+    vote5 : vote.vote1 +vo5,
+    player5 : vote.player5,
+    vote6 : vote.vote1 +vo6,
+    player6 : vote.player6,
     vchance1 : vote.vchance1,
     vchance2 : vote.vchance2,
     vchance3 : vote.vchance3*=0,
@@ -328,8 +356,20 @@ voting = {
 
     
    
- }
-fs.writeFileSync(vfilePath, JSON.stringify(voting));
+  }
+  fs.writeFileSync(vfilePath, JSON.stringify(voting));
+  console.log('4')
+  saveUser = {
+    id : user.id,
+    name : user.name,
+    date : user.date,
+    class : user.class,
+    vote : arguments
+  }
+  fs.writeFileSync(cfilePath, JSON.stringify(saveUser));
+  console.log('5')
+  message.channel.send('투표완료!')
+  return;
   }
   if(admin.round == 5 && vote.vchance4 ==1 && message.author.id == admin.playerid4) {
     let vo1 = 0
@@ -340,9 +380,10 @@ fs.writeFileSync(vfilePath, JSON.stringify(voting));
     let vo6 = 0
     switch(arguments)
     {
-       case admin.class1 : 
+       case character1 : 
        {
-        vo1 == 1
+        console.log('2')
+        vo1 += 1
         vo2 == 0
         vo3 == 0
         vo4 == 0
@@ -350,72 +391,72 @@ fs.writeFileSync(vfilePath, JSON.stringify(voting));
         vo6 == 0
           break;
         }
-        case admin.class2 : 
+        case character2 : 
         {
          vo1 == 0
-         vo2 == 1
+         vo2 += 1
          vo3 == 0
          vo4 == 0
          vo5 == 0
          vo6 == 0
            break;
          }
-         case admin.class3 : 
+         case character3 : 
        {
         vo1 == 0
         vo2 == 0
-        vo3 == 1
+        vo3 += 1
         vo4 == 0
         vo5 == 0
         vo6 == 0
           break;
         }
-        case admin.class4 : 
+        case character4 : 
        {
         vo1 == 0
         vo2 == 0
         vo3 == 0
-        vo4 == 1
+        vo4 += 1
         vo5 == 0
         vo6 == 0
           break;
         }
-        case admin.class5 : 
+        case character5 : 
        {
         vo1 == 0
         vo2 == 0
         vo3 == 0
         vo4 == 0
-        vo5 == 1
+        vo5 += 1
         vo6 == 0
           break;
         }
-        case admin.class6 : 
+        case character6 : 
         {
          vo1 == 0
          vo2 == 0
          vo3 == 0
          vo4 == 0
          vo5 == 0
-         vo6 == 1
+         vo6 += 1
            break;
          }
     }
 
 voting = {
-    votenum : voting.votenum + 1,
-    player1 : voting.player1,
-    vote1 : voting.vote1 +vo1,
-    vote2 : voting.vote1 +vo2,
-    player2 : voting.player2,
-    vote3 : voting.vote1 +vo3,
-    player3 : voting.player3,
-    vote4 : voting.vote1 +vo4,
-    player4 : voting.player4,
-    vote5 : voting.vote1 +vo5,
-    player5 : voting.player5,
-    vote6 : voting.vote1 +vo6,
-    player6 : voting.player6,
+    votenum : vote.votenum + 1,
+    player1 : vote.player1,
+    vote1 : vote.vote1 +vo1,
+    vote2 : vote.vote1 +vo2,
+    player2 : vote.player2,
+    vote3 : vote.vote1 +vo3,
+    player3 : vote.player3,
+    vote4 : vote.vote1 +vo4,
+    player4 : vote.player4,
+    vote5 : vote.vote1 +vo5,
+    player5 : vote.player5,
+    vote6 : vote.vote1 +vo6,
+    player6 : vote.player6,
     vchance1 : vote.vchance1,
     vchance2 : vote.vchance2,
     vchance3 : vote.vchance3,
@@ -425,8 +466,20 @@ voting = {
 
     
    
- }
-fs.writeFileSync(vfilePath, JSON.stringify(voting));
+  }
+  fs.writeFileSync(vfilePath, JSON.stringify(voting));
+  console.log('4')
+  saveUser = {
+    id : user.id,
+    name : user.name,
+    date : user.date,
+    class : user.class,
+    vote : arguments
+  }
+  fs.writeFileSync(cfilePath, JSON.stringify(saveUser));
+  console.log('5')
+  message.channel.send('투표완료!')
+  return;
   }
   if(admin.round == 5 && vote.vchance5 ==1 && message.author.id == admin.playerid5) {
     let vo1 = 0
@@ -437,9 +490,10 @@ fs.writeFileSync(vfilePath, JSON.stringify(voting));
     let vo6 = 0
     switch(arguments)
     {
-       case admin.class1 : 
+       case character1 : 
        {
-        vo1 == 1
+        console.log('2')
+        vo1 += 1
         vo2 == 0
         vo3 == 0
         vo4 == 0
@@ -447,72 +501,71 @@ fs.writeFileSync(vfilePath, JSON.stringify(voting));
         vo6 == 0
           break;
         }
-        case admin.class2 : 
+        case character2 : 
         {
          vo1 == 0
-         vo2 == 1
+         vo2 += 1
          vo3 == 0
          vo4 == 0
          vo5 == 0
          vo6 == 0
            break;
          }
-         case admin.class3 : 
+         case character3 : 
        {
         vo1 == 0
         vo2 == 0
-        vo3 == 1
+        vo3 += 1
         vo4 == 0
         vo5 == 0
         vo6 == 0
           break;
         }
-        case admin.class4 : 
+        case character4 : 
        {
         vo1 == 0
         vo2 == 0
         vo3 == 0
-        vo4 == 1
+        vo4 += 1
         vo5 == 0
         vo6 == 0
           break;
         }
-        case admin.class5 : 
+        case character5 : 
        {
         vo1 == 0
         vo2 == 0
         vo3 == 0
         vo4 == 0
-        vo5 == 1
+        vo5 += 1
         vo6 == 0
           break;
         }
-        case admin.class6 : 
+        case character6 : 
         {
          vo1 == 0
          vo2 == 0
          vo3 == 0
          vo4 == 0
          vo5 == 0
-         vo6 == 1
+         vo6 += 1
            break;
          }
     }
-
 voting = {
-    votenum : voting.votenum + 1,
-    player1 : voting.player1,
-    vote1 : voting.vote1 +vo1,
-    vote2 : voting.vote1 +vo2,
-    player2 : voting.player2,
-    vote3 : voting.vote1 +vo3,
-    player3 : voting.player3,
-    vote4 : voting.vote1 +vo4,
-    player4 : voting.player4,
-    vote5 : voting.vote1 +vo5,
-    player5 : voting.player5,
-    vote6 : voting.vote1 +vo6,
-    player6 : voting.player6,
+    votenum : vote.votenum + 1,
+    player1 : vote.player1,
+    vote1 : vote.vote1 +vo1,
+    vote2 : vote.vote1 +vo2,
+    player2 : vote.player2,
+    vote3 : vote.vote1 +vo3,
+    player3 : vote.player3,
+    vote4 : vote.vote1 +vo4,
+    player4 : vote.player4,
+    vote5 : vote.vote1 +vo5,
+    player5 : vote.player5,
+    vote6 : vote.vote1 +vo6,
+    player6 : vote.player6,
     vchance1 : vote.vchance1,
     vchance2 : vote.vchance2,
     vchance3 : vote.vchance3,
@@ -522,8 +575,20 @@ voting = {
 
     
    
- }
-fs.writeFileSync(vfilePath, JSON.stringify(voting));
+  }
+  fs.writeFileSync(vfilePath, JSON.stringify(voting));
+  console.log('4')
+  saveUser = {
+    id : user.id,
+    name : user.name,
+    date : user.date,
+    class : user.class,
+    vote : arguments
+  }
+  fs.writeFileSync(cfilePath, JSON.stringify(saveUser));
+  console.log('5')
+  message.channel.send('투표완료!')
+  return;
   }
   if(admin.round == 5 && vote.vchance6 ==1 && message.author.id == admin.playerid6) {
     let vo1 = 0
@@ -534,9 +599,10 @@ fs.writeFileSync(vfilePath, JSON.stringify(voting));
     let vo6 = 0
     switch(arguments)
     {
-       case admin.class1 : 
+       case character1 : 
        {
-        vo1 == 1
+        console.log('2')
+        vo1 += 1
         vo2 == 0
         vo3 == 0
         vo4 == 0
@@ -544,72 +610,71 @@ fs.writeFileSync(vfilePath, JSON.stringify(voting));
         vo6 == 0
           break;
         }
-        case admin.class2 : 
+        case character2 : 
         {
          vo1 == 0
-         vo2 == 1
+         vo2 += 1
          vo3 == 0
          vo4 == 0
          vo5 == 0
          vo6 == 0
            break;
          }
-         case admin.class3 : 
+         case character3 : 
        {
         vo1 == 0
         vo2 == 0
-        vo3 == 1
+        vo3 += 1
         vo4 == 0
         vo5 == 0
         vo6 == 0
           break;
         }
-        case admin.class4 : 
+        case character4 : 
        {
         vo1 == 0
         vo2 == 0
         vo3 == 0
-        vo4 == 1
+        vo4 += 1
         vo5 == 0
         vo6 == 0
           break;
         }
-        case admin.class5 : 
+        case character5 : 
        {
         vo1 == 0
         vo2 == 0
         vo3 == 0
         vo4 == 0
-        vo5 == 1
+        vo5 += 1
         vo6 == 0
           break;
         }
-        case admin.class6 : 
+        case character6 : 
         {
          vo1 == 0
          vo2 == 0
          vo3 == 0
          vo4 == 0
          vo5 == 0
-         vo6 == 1
+         vo6 += 1
            break;
          }
     }
-
 voting = {
-    votenum : voting.votenum + 1,
-    player1 : voting.player1,
-    vote1 : voting.vote1 +vo1,
-    vote2 : voting.vote1 +vo2,
-    player2 : voting.player2,
-    vote3 : voting.vote1 +vo3,
-    player3 : voting.player3,
-    vote4 : voting.vote1 +vo4,
-    player4 : voting.player4,
-    vote5 : voting.vote1 +vo5,
-    player5 : voting.player5,
-    vote6 : voting.vote1 +vo6,
-    player6 : voting.player6,
+    votenum : vote.votenum + 1,
+    player1 : vote.player1,
+    vote1 : vote.vote1 +vo1,
+    vote2 : vote.vote1 +vo2,
+    player2 : vote.player2,
+    vote3 : vote.vote1 +vo3,
+    player3 : vote.player3,
+    vote4 : vote.vote1 +vo4,
+    player4 : vote.player4,
+    vote5 : vote.vote1 +vo5,
+    player5 : vote.player5,
+    vote6 : vote.vote1 +vo6,
+    player6 : vote.player6,
     vchance1 : vote.vchance1,
     vchance2 : vote.vchance2,
     vchance3 : vote.vchance3,
@@ -619,9 +684,22 @@ voting = {
 
     
    
- }
-fs.writeFileSync(vfilePath, JSON.stringify(voting));
   }
-  else{message.channel.send('이미 투표 하셧거나 잘못된 이름입니다.')}
+  fs.writeFileSync(vfilePath, JSON.stringify(voting));
+  console.log('4')
+  saveUser = {
+    id : user.id,
+    name : user.name,
+    date : user.date,
+    class : user.class,
+    vote : arguments
+  }
+  fs.writeFileSync(cfilePath, JSON.stringify(saveUser));
+  console.log('5')
+  message.channel.send('투표완료!')
+  return;
+  }
+  if(vote.vchance1 == 0 || vote.vchance2 == 0 || vote.vchance3 == 0 || vote.vchance4 == 0 || vote.vchance5 == 0 || vote.vchance6 == 0 ) message.channel.send('이미 투표 하셧습니다.') 
+  console.log('6')
 }
 }
