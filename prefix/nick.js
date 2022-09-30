@@ -1,6 +1,6 @@
 
 const { Client, GatewayIntentBits, Collection, MembershipScreeningFieldType, ClientUser, User, time, GuildChannel, GuildManager, MessageManager, GuildMemberManager, GuildBanManager, GuildBan, GuildStickerManager, PermissionsBitField, PermissionOverwriteManager, MessageFlagsBitField, GuildMemberRoleManager } = require('discord.js');
-const { record, chroll, stanby, guildId } = require('../config.json');
+const { record, chroll, stanby, guildId, character1, character2, character3, character4, character5, character6 } = require('../config.json');
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.GuildMessageReactions, GatewayIntentBits.GuildVoiceStates, GatewayIntentBits.DirectMessages, GatewayIntentBits.MessageContent, GatewayIntentBits.Guilds, GatewayIntentBits.GuildMembers, GatewayIntentBits.GuildBans] });
 const wait = require('node:timers/promises').setTimeout;///딜레이 구문
 
@@ -33,7 +33,7 @@ const date = "" + today.getFullYear() +"년" + today.getMonth() + "월" + today.
             await message.channel.send('롤지는 한번만 받을 수 있습니다.')
             return;
          }
-        if(message.guild.id === guildId && arguments != "목성" && arguments != "화성" && arguments != "지구" && arguments != "금성" && arguments != "수성") 
+        if(message.guild.id === guildId && arguments != character1 && arguments != character2 && arguments != characte3 && arguments != character4 && arguments != character5) 
         {
            await message.channel.send("롤 확인을 다시해 주세요")
            return;
@@ -59,38 +59,38 @@ const date = "" + today.getFullYear() +"년" + today.getMonth() + "월" + today.
          fs.writeFileSync(cfilePath, JSON.stringify(saveUser));
          switch(arguments)
          {
-            case '금성' : 
+            case character1 : 
             {
                console.log(arguments)
-               await message.author.send({ files: ['./roll/금성.txt'] });
+               await message.author.send('당신은 탐정입니다. 롤지가 없습니다.');
                await message.author.send({ content: "일정과 시간을 조율하신후 약속된 시간에\n``!준비``를\n모든 플레이어가 15초내에 치시면 됩니다.\n카운트는 명령어 사용후  15초입니다." })
                break;
             }
-            case '지구' : 
+            case character2 : 
             {
                console.log(arguments)
-               await message.author.send({ files: ['./roll/지구.txt'] });
+               await message.author.send({ files: ['.roll\1. 한호랑.pdf'] });
                await message.author.send({ content: "일정과 시간을 조율하신후 약속된 시간에\n``!준비``를\n모든 플레이어가 15초내에 치시면 됩니다.\n카운트는 명령어 사용후  15초입니다." })
                break;
             }
-            case '수성' : 
+            case character3 : 
             {
                console.log(arguments)
-               await message.author.send({ files: ['./roll/수성.txt'] });
+               await message.author.send({ files: ['.roll\2. 유수호.pdf'] });
                await message.author.send({ content: "일정과 시간을 조율하신후 약속된 시간에\n``!준비``를\n모든 플레이어가 15초내에 치시면 됩니다.\n카운트는 명령어 사용후  15초입니다." })
                break;
             }
-            case '화성' : 
+            case character4 : 
             {
                console.log(arguments)
-               await message.author.send({ files: ['./roll/화성.txt'] });
+               await message.author.send({ files: ['.roll\3. 오정성.pdf'] });
                await message.author.send({ content: "일정과 시간을 조율하신후 약속된 시간에\n``!준비``를\n모든 플레이어가 15초내에 치시면 됩니다.\n카운트는 명령어 사용후  15초입니다." })
                break;
             }
-            case '목성' : 
+            case character5 : 
             {
                console.log(arguments)
-               await message.author.send({ files: ['./roll/목성.txt'] });
+               await message.author.send({ files: ['.roll\4. 곽편집.pdf'] });
                await message.author.send({ content: "일정과 시간을 조율하신후 약속된 시간에\n``!준비``를\n모든 플레이어가 15초내에 치시면 됩니다.\n카운트는 명령어 사용후  15초입니다." })
                break;
             }

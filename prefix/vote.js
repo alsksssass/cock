@@ -39,7 +39,7 @@ module.exports = {
          const clue = JSON.parse(fs.readFileSync(efilePath, "utf-8"));
          const vote = JSON.parse(fs.readFileSync(vfilePath, "utf-8"));
     ///////////
-
+if (arguments != character1 && arguments != character2 && arguments != character3 && arguments != character4 && arguments != character5) return message.channel.send('잘못된 이름입니다.');
 if(admin.round == 5 && vote.vchance1 ==1 && message.author.id == admin.playerid1) {
     let vo1 = 0
     let vo2 = 0

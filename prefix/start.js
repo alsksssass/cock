@@ -36,7 +36,7 @@ module.exports = {
 //   console.log(user.name+"실패시")
 // }
 
-        if(user.class === character1 && admin.readynum < totalplayer && admin.class1 != character1 && totalplayer == 5)
+        if(user.class === character1 && admin.readynum < totalplayer && admin.class1 == '미지정' && totalplayer == 5)
         {
           console.log("넘어옴1")
           database = {
@@ -68,7 +68,7 @@ module.exports = {
          
          
         }
-        else if(user.class === character2 && admin.readynum < totalplayer && admin.class2 != character2 && totalplayer == 5)
+        else if(user.class === character2 && admin.readynum < totalplayer && admin.class2 == '미지정' && totalplayer == 5)
         {
           console.log("넘어옴2")
           database = {
@@ -101,7 +101,7 @@ module.exports = {
          
         }
 
-        else if(user.class === character3 && admin.readynum < totalplayer && admin.class3 != character3 && totalplayer == 5)
+        else if(user.class === character3 && admin.readynum < totalplayer && admin.class3 == '미지정' && totalplayer == 5)
         {
           console.log("넘어옴3")
           database = {
@@ -134,7 +134,7 @@ module.exports = {
          
         }
 
-        else if(user.class === character4 && admin.readynum < totalplayer && admin.class4 != character4 && totalplayer == 5)
+        else if(user.class === character4 && admin.readynum < totalplayer && admin.class4 == '미지정' && totalplayer == 5)
         {
           console.log("넘어옴4")
           database = {
@@ -167,7 +167,7 @@ module.exports = {
          
         }
 
-        else if(user.class === character5 && admin.readynum < totalplayer && admin.class5 != character5 && totalplayer == 5)
+        else if(user.class === character5 && admin.readynum < totalplayer && admin.class5 == '미지정' && totalplayer == 5)
         {
           console.log("넘어옴5")
           database = {
@@ -198,7 +198,7 @@ module.exports = {
             fs.writeFileSync(dfilePath, JSON.stringify(database));
          }
 
-         if(user.class === character1 && admin.readynum < totalplayer && admin.class1 != character1 && totalplayer == 6)
+         if(user.class === character1 && admin.readynum < totalplayer && admin.class1 == '미지정' && totalplayer == 6)
         {
           console.log("넘어옴1")
           database = {
@@ -230,7 +230,7 @@ module.exports = {
          
          
         }
-        else if(user.class === character2 && admin.readynum < totalplayer && admin.class2 != character2 && totalplayer == 6)
+        else if(user.class === character2 && admin.readynum < totalplayer && admin.class2 == '미지정' && totalplayer == 6)
         {
           console.log("넘어옴2")
           database = {
@@ -263,7 +263,7 @@ module.exports = {
          
         }
 
-        else if(user.class === character3 && admin.readynum < totalplayer && admin.class3 != character3 && totalplayer == 6)
+        else if(user.class === character3 && admin.readynum < totalplayer && admin.class3 == '미지정' && totalplayer == 6)
         {
           console.log("넘어옴3")
           database = {
@@ -296,7 +296,7 @@ module.exports = {
          
         }
 
-        else if(user.class === character4 && admin.readynum < totalplayer && admin.class4 != character4 && totalplayer == 6)
+        else if(user.class === character4 && admin.readynum < totalplayer && admin.class4 == '미지정' && totalplayer == 6)
         {
           console.log("넘어옴4")
           database = {
@@ -329,7 +329,7 @@ module.exports = {
          
         }
 
-        else if(user.class === character5 && admin.readynum < totalplayer && admin.class5 != character5 && totalplayer == 6)
+        else if(user.class === character5 && admin.readynum < totalplayer && admin.class5 == '미지정' && totalplayer == 6)
         {
           console.log("넘어옴5")
           database = {
@@ -359,7 +359,7 @@ module.exports = {
              }
             fs.writeFileSync(dfilePath, JSON.stringify(database));
          }
-         else if(user.class === character6 && admin.readynum < totalplayer && admin.class6 != character6 && totalplayer == 6)
+         else if(user.class === character6 && admin.readynum < totalplayer && admin.class6 == '미지정' && totalplayer == 6)
         {
           console.log("넘어옴6")
           database = {

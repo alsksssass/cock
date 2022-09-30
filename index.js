@@ -94,7 +94,8 @@ if(admin.readynum == 1){
 if(message.author.bot) return;
 const channel = client.channels.cache.get('1022125527118663700');
 await channel.send("15초안에 모두 준비를 마쳐주세요")
-await channel.send({ content: ">>> "+admin.class1+"역"+"\n"+admin.player1+"님"+"\n"+"\n"+admin.class2+"역"+"\n"+admin.player2+"님"+"\n"+"\n"+admin.class3+"역"+"\n"+admin.player3+"님"+"\n"+"\n"+admin.class4+"역"+"\n"+admin.player4+"님"+"\n"+"\n"+admin.class5+"역"+"\n"+admin.player5+"님"+"\n"+"\n"})
+if (totalplayer == 5) await channel.send({ content: ">>> "+admin.class1+"역"+"\n"+admin.player1+"님"+"\n"+"\n"+admin.class2+"역"+"\n"+admin.player2+"님"+"\n"+"\n"+admin.class3+"역"+"\n"+admin.player3+"님"+"\n"+"\n"+admin.class4+"역"+"\n"+admin.player4+"님"+"\n"+"\n"+admin.class5+"역"+"\n"+admin.player5+"님"+"\n"+"\n"})
+if (totalplayer == 6) await channel.send({ content: ">>> "+admin.class1+"역"+"\n"+admin.player1+"님"+"\n"+"\n"+admin.class2+"역"+"\n"+admin.player2+"님"+"\n"+"\n"+admin.class3+"역"+"\n"+admin.player3+"님"+"\n"+"\n"+admin.class4+"역"+"\n"+admin.player4+"님"+"\n"+"\n"+admin.class5+"역"+"\n"+admin.player5+"님"+"\n"+"\n"+admin.class6+"역"+"\n"+admin.player6+"님"+"\n"+"\n"})
 await wait(1000);
 await channel.send("14초안에 모두 준비를 마쳐주세요")
 await wait(1000);
@@ -328,7 +329,7 @@ if(!client.commands.has(command)) return
 
 try{
 if(admin.round == 2 && admin.vpoint == 0 && admin.readynum == totalplayer){/////1차조사종료
-	await today.setMinutes(today.getMinutes() + 50);
+	await today.setMinutes(today.getMinutes() + 15);
 	const dlck = "" + today.getDate() +"일"+ today.getHours() + "시" + today.getMinutes() + "분";
 	
 	
@@ -363,7 +364,7 @@ if(admin.round == 2 && admin.vpoint == 0 && admin.readynum == totalplayer){/////
 	 fs.writeFileSync(dfilePath, JSON.stringify(database));
 }
 if(admin.round == 4 && admin.vpoint == 0 && admin.readynum == totalplayer){////2차조사종료
-	await today.setMinutes(today.getMinutes() + 50);
+	await today.setMinutes(today.getMinutes() + 15);
 	const dlck = "" + today.getDate() +"일"+ today.getHours() + "시" + today.getMinutes() + "분";
 	
 	
