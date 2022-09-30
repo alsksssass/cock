@@ -45,8 +45,6 @@ const date = "" + today.getFullYear() +"년" + today.getMonth() + "월" + today.
          await wait(1000);
          await message.member.setNickname(arguments)
          user1 = await message.author.username
-         const message1 = await client.channels.cache.get(record)
-         await message1.send(`>>> ${arguments}  역 \n${user1}  님`);
          await message.author.send(arguments+"역의 롤지입니다.")
       
         await wait(1000)
@@ -57,6 +55,7 @@ const date = "" + today.getFullYear() +"년" + today.getMonth() + "월" + today.
             class : arguments
          }
          fs.writeFileSync(cfilePath, JSON.stringify(saveUser));
+         console.log('1')
          switch(arguments)
          {
             case character1 : 
@@ -69,21 +68,22 @@ const date = "" + today.getFullYear() +"년" + today.getMonth() + "월" + today.
             case character2 : 
             {
                console.log(arguments)
-               await message.author.send({ files: ['./roll/1. 한호랑.pdf'] });
+               await message.author.send({ files: ['./roll/1.한호랑.pdf'] });
                await message.author.send({ content: "일정과 시간을 조율하신후 약속된 시간에\n``!준비``를\n모든 플레이어가 15초내에 치시면 됩니다.\n카운트는 명령어 사용후  15초입니다." })
                break;
             }
             case character3 : 
             {
                console.log(arguments)
-               await message.author.send({ files: ['./roll/2. 유수호.pdf'] });
+               await message.author.send({ files: ['./roll/2.유수호.pdf'] });
                await message.author.send({ content: "일정과 시간을 조율하신후 약속된 시간에\n``!준비``를\n모든 플레이어가 15초내에 치시면 됩니다.\n카운트는 명령어 사용후  15초입니다." })
                break;
             }
             case character4 : 
             {
+
                console.log(arguments)
-               await message.author.send({ files: ['./roll/3. 오정성.pdf'] });
+               await message.author.send({ files: ['./roll/3.오정성.pdf'] });
                await message.author.send({ content: "일정과 시간을 조율하신후 약속된 시간에\n``!준비``를\n모든 플레이어가 15초내에 치시면 됩니다.\n카운트는 명령어 사용후  15초입니다." })
                break;
             }

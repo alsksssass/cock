@@ -80,8 +80,8 @@ module.exports = {
       { name: admin.class6+"님의 득표", value: vote.vote6+"표", inline: true },
     )
     .setFooter({ text: '플레이해 주셔서 감사합니다', iconURL: 'https://emoji-uc.akamaized.net/orig/36/42dfd89cc30f82fc76ebe7fd1ef1fb.png' });
-    const channel = client.channels.cache.get(record);
-  await channel.send({ embeds: [playrecord] })////특정채널 메시지
+    const channel77 = client.channels.cache.get(record);
+  await channel77.send({ embeds: [playrecord] })////특정채널 메시지
   } catch (error) {
     console.error(error);
     
