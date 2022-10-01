@@ -57,7 +57,7 @@ module.exports = {
                console.log(arguments)
                console.log(clue.dclueid01)
                await channel.send('> 010 - 윤새롬의 다이어리')
-               await channel.send({ files: ['./clue/010.png'] })
+               await channel.send('https://i.imgur.com/qZVo8DT.png')
                const ms1 = await channel.send('방송일정과 스케쥴이 빡빡하다.')
                await ms1.react('❤️');
                await channel5.send("조사횟수"+(admin.vpoint-1)+"개 남음")
@@ -97,7 +97,7 @@ module.exports = {
                console.log(arguments)
                console.log(clue.dclueid02)
                await channel.send('> 020 - 윤새롬의 통장')
-               const ms1 = await channel.send({ files: ['./clue/020.png'] })
+               const ms1 = await channel.send('https://i.imgur.com/q3pdrOF.png')
                await ms1.react('❤️');
                await channel5.send("조사횟수"+(admin.vpoint-1)+"개 남음")
                
@@ -138,7 +138,7 @@ module.exports = {
               console.log(arguments)
               console.log(clue.dclueid03)
               await channel.send('> 030 - 윤새롬의 흰 봉투')
-              const ms1 = await channel.send({ files: ['./clue/030.jpg'] })
+              const ms1 = await channel.send('https://i.imgur.com/PXxl62g.jpg')
               await ms1.react('❤️');
                await channel5.send("조사횟수"+(admin.vpoint-1)+"개 남음")
 
@@ -178,7 +178,7 @@ module.exports = {
                console.log(arguments)
                console.log(clue.dclueid04)
                await channel.send('> 040 - 윤새롬의 계약서')
-              const ms1 = await channel.send({ files: ['./clue/040.jpg'] })
+              const ms1 = await channel.send('https://i.imgur.com/qb2nxAP.jpg')
               await ms1.react('❤️');
                await channel5.send("조사횟수"+(admin.vpoint-1)+"개 남음")
 
@@ -218,7 +218,7 @@ module.exports = {
                console.log(arguments)
                console.log(clue.dclueid05)
                await channel.send('> 050 - 새롬의 골든버튼')
-              const ms1 = await channel.send({ files: ['./clue/050.png'] })
+              const ms1 = await channel.send('https://i.imgur.com/xCTSxHc.png')
               await ms1.react('❤️');
                await channel5.send("조사횟수"+(admin.vpoint-1)+"개 남음")
                client.channels.cache
@@ -298,7 +298,7 @@ module.exports = {
                console.log(clue.dclueid07)
                await channel.send('> 070 - 윤새롬의 카메라')
                await channel.send('```sd 카드가 없다. 컴퓨터에 연결이 되어있는 방송 송출용 카메라인 듯 하다```')
-               const ms1 = await channel.send({ files: ['./clue/070.png'] })
+               const ms1 = await channel.send('https://i.imgur.com/aKLZv3g.png')
                await ms1.react('❤️');
                await channel5.send("조사횟수"+(admin.vpoint-1)+"개 남음")
                client.channels.cache
@@ -415,7 +415,7 @@ module.exports = {
                console.log(arguments)
                console.log(clue.dclueid11)
                await channel1.send('> 110 - 한호랑의 호랑타로유튜브 댓글, 악성댓글로 가득하다.')
-               const ms1 = await channel1.send({ files: ['./clue/110.png'] })
+               const ms1 = await channel1.send('https://i.imgur.com/JdOENkm.png')
                await ms1.react('❤️');
                await channel5.send("조사횟수"+(admin.vpoint-1)+"개 남음")
                client.channels.cache
@@ -494,7 +494,7 @@ module.exports = {
                console.log(clue.dclueid13)
                await channel1.send('> 130 - 한호랑의 노트북')
                await channel1.send('```다양한 타로 셔플 영상등이 있다.```')
-               const ms1 = await channel1.send({ files: ['./clue/130.png'] })
+               const ms1 = await channel1.send('https://i.imgur.com/bP2AW3Q.png')
                await ms1.react('❤️');
                await channel5.send("조사횟수"+(admin.vpoint-1)+"개 남음")
                client.channels.cache
@@ -534,7 +534,7 @@ module.exports = {
                console.log(clue.dclueid14)
                await channel1.send('> 140 - 한호랑의 그래프')
                await channel1.send('```유튜브 스트리밍 그래프 점점 떨어지고 있다```')
-               const ms1 = await channel1.send({ files: ['./clue/140.png'] })
+               const ms1 = await channel1.send('https://i.imgur.com/2tcFQjj.png')
                await ms1.react('❤️');
                await channel5.send("조사횟수"+(admin.vpoint-1)+"개 남음")
                client.channels.cache
@@ -574,7 +574,7 @@ module.exports = {
                console.log(clue.dclueid15)
                await channel1.send('> 150 - 한호랑의 신체검사')
                await channel1.send('```프릴이 잔뜩 달린 공주풍의 옷이다. 옷소매가짧다```')
-               const ms1 = await channel1.send({ files: ['./clue/150.png'] })
+               const ms1 = await channel1.send('https://i.imgur.com/AxkDdck.png')
                await ms1.react('❤️');
                await channel5.send("조사횟수"+(admin.vpoint-1)+"개 남음")
                client.channels.cache
@@ -652,7 +652,7 @@ module.exports = {
                console.log(arguments)
                console.log(clue.dclueid17)
                await channel1.send('> 170 - 한호랑의  SD카드,내용이 없다.')
-               const ms1 = await channel1.send({ files: ['./clue/170.png'] })
+               const ms1 = await channel1.send('https://i.imgur.com/8y15FaL.png')
                await ms1.react('❤️');
                await channel5.send("조사횟수"+(admin.vpoint-1)+"개 남음")
                client.channels.cache
@@ -691,7 +691,7 @@ module.exports = {
                console.log(arguments)
                console.log(clue.dclueid18)
                await channel1.send('> 180 - 한호랑의  캐리어가방 비어있다.')
-               const ms1 = await channel1.send({ files: ['./clue/180.png'] })
+               const ms1 = await channel1.send('https://i.imgur.com/h6iYEey.png')
                await ms1.react('❤️');
                await channel5.send("조사횟수"+(admin.vpoint-1)+"개 남음")
                client.channels.cache
@@ -730,7 +730,7 @@ module.exports = {
                console.log(arguments)
                console.log(clue.dclueid19)
                await channel1.send('> 190 - 한호랑의  진단서')
-               const ms1 = await channel1.send({ files: ['./clue/190.png'] })
+               const ms1 = await channel1.send('https://i.imgur.com/5OyX0CQ.png')
                await ms1.react('❤️');
                await channel5.send("조사횟수"+(admin.vpoint-1)+"개 남음")
                client.channels.cache
@@ -808,7 +808,7 @@ module.exports = {
                console.log(arguments)
                console.log(clue.dclueid22)
                await channel2.send('> 220 - 유수호의  주머니속 서바이벌 칼')
-               const ms1 = await channel2.send({ files: ['./clue/210.png'] })
+               const ms1 = await channel2.send('https://i.imgur.com/WzwrzJV.png')
                await ms1.react('❤️');
                await channel5.send("조사횟수"+(admin.vpoint-1)+"개 남음")
                client.channels.cache
@@ -847,6 +847,8 @@ module.exports = {
                console.log(arguments)
                console.log(clue.dclueid23)
                await channel2.send('> 230 - 유수호의  스크랩집의 일기장')
+               channel2.send('https://i.imgur.com/wDmmGEj.png')
+               channel2.send('https://i.imgur.com/7zMzbst.png')
                const ms1 = await channel2.send('```2월 1일\n결국 보육원을 나왔다. 이제 갈 곳은 없는데... \n우선은 아는 형집에 얻혀 살기로 하긴 했다. \n그래도 돈 모으면 독립 해야겠지?\n\n2월 15일\n배달 일을 시작했다. 토바이는 형이 빌려준 돈으로 구입했다.\n중고지만 나름 일 할만했다. 그거면 충분하지...\n그리고 오늘 유튜브를 보는데 타로 유튜브를 처음 봤다. \n제네럴이면 정확하지 않을 거라는데 정확했다. \n내가 지금 의지할 사람도 없고, 돈도 급한 상황이라고... \n그래 그래도 앞으로 희망이보일거라고 했다. \n‘윤선생타로’뭔가 좋은 말을 많이 해줘서 내미래가 희망적일 것 같다.\n\n3월 5일\n나름 횡재를 한다더니 길 가다가 5만원을 주웠다. \n기분이 좋았다.\n이번달은 내내 평안한 한 달을 보낸다고 하니 그 점괘도 믿어봐야지,\n\n4월 15일\n내 생일이다.\n타로대로 풍족한 한달을 보내는 중이다. \n형이 밥도 사주고, 선물로 배달할 때 입으라고 바람막이도 사줬다. \n기분이가 좋다.\n\n8월 30일\n횡재한다며? 순조롭다며? 여친도 만난다고?\n그런데 형이... 내가 그동안 번 돈 가지고 튀었다.\n집세도 이미 5달치 밀려있었다. \n그걸 모르고... 집주인이 내가갚지 않으면 고소한다고 했다. \n우선... 기다려 달라고 사정 했다.\n\n10월 3일\n오토바이 사고를 당했다.\n배달하던 음식과 병원비. \n그리고 오토바이를 다시 사야하는 상황이라서... 너무 힘들다.\n\n11월 29일\n이번에는 직접 타로를 봤다. \n전화로 30분동안 타로를 봐주는데3만원이다.\n좀 비쌌지만 받았다.\n그동안 희망적인 내용이 다 유튜브로 봐서 그런걸 수 있으니까.\n직접 전화로 점괘를 들었는데 희망적이다... \n아... 이번에도 희망고문일까? \n앞으로 큰 횡재가 있어서 팔자가 필거라는데... 과연?\n로또는... 사긴 했는데... \n아무래도 직접 만나서 얘기 해보는건어떨까?```')
                await ms1.react('❤️');
                await channel5.send("조사횟수"+(admin.vpoint-1)+"개 남음")
@@ -886,7 +888,7 @@ module.exports = {
                console.log(arguments)
                console.log(clue.dclueid24)
                await channel2.send('> 240 - 유수호의  병원비 영수증')
-               const ms1 = await channel2.send({ files: ['./clue/240.png'] })
+               const ms1 = await channel2.send('https://i.imgur.com/dUpF0hl.png')
                await ms1.react('❤️');
                await channel5.send("조사횟수"+(admin.vpoint-1)+"개 남음")
                client.channels.cache
@@ -925,7 +927,7 @@ module.exports = {
                console.log(arguments)
                console.log(clue.dclueid25)
                await channel2.send('> 250 - 유수호의 신체검사')
-               const ms1 = await channel2.send({ files: ['./clue/250.png'] })
+               const ms1 = await channel2.send('https://i.imgur.com/bV3IXYm.png')
                await ms1.react('❤️');
                await channel5.send("조사횟수"+(admin.vpoint-1)+"개 남음")
                client.channels.cache
@@ -1042,7 +1044,7 @@ module.exports = {
                console.log(arguments)
                console.log(clue.dclueid28)
                await channel2.send('> 280 - 유수호의 집앞')
-               const ms1 = await channel2.send({ files: ['./clue/280.jpg'] })
+               const ms1 = await channel2.send('https://i.imgur.com/iSnKvty.jpg')
                await ms1.react('❤️');
                await channel5.send("조사횟수"+(admin.vpoint-1)+"개 남음")
                client.channels.cache
@@ -1120,7 +1122,7 @@ module.exports = {
                console.log(arguments)
                console.log(clue.dclueid31)
                await channel3.send('> 320 - 오정성의 달력 : 곧 새롬의 생일이다.')
-               const ms1 = await channel3.send({ files: ['./clue/320.jpg'] })
+               const ms1 = await channel3.send('https://i.imgur.com/xfqA2Y1.jpg')
                await ms1.react('❤️');
                await channel5.send("조사횟수"+(admin.vpoint-1)+"개 남음")
                client.channels.cache
@@ -1159,7 +1161,7 @@ module.exports = {
                console.log(arguments)
                console.log(clue.dclueid32)
                await channel3.send('> 330 - 오정성의 도시락 : 피해자에게 주려고싸온 도시락이다')
-               const ms1 = await channel3.send({ files: ['./clue/330.png'] })
+               const ms1 = await channel3.send('https://i.imgur.com/rDjzvos.png')
                await ms1.react('❤️');
                await channel5.send("조사횟수"+(admin.vpoint-1)+"개 남음")
                client.channels.cache
@@ -1199,7 +1201,7 @@ module.exports = {
                console.log(arguments)
                console.log(clue.dclueid33)
                await channel3.send('> 340 - 오정성의 신체검사 : 정성의 옷과 손이 피투성이다')
-               const ms1 = await channel3.send({ files: ['./clue/340.png'] })
+               const ms1 = await channel3.send('https://i.imgur.com/YUirPHg.png')
                await ms1.react('❤️');
                await channel5.send("조사횟수"+(admin.vpoint-1)+"개 남음")
                client.channels.cache
@@ -1238,7 +1240,7 @@ module.exports = {
                console.log(arguments)
                console.log(clue.dclueid34)
                await channel3.send('> 350 - 오정성의 망치 : 피가흥건하게 묻어있다.')
-               const ms1 = await channel3.send({ files: ['./clue/350.png'] })
+               const ms1 = await channel3.send('https://i.imgur.com/3bpc6fD.png')
                await ms1.react('❤️');
                await channel5.send("조사횟수"+(admin.vpoint-1)+"개 남음")
                client.channels.cache
@@ -1395,7 +1397,7 @@ module.exports = {
                console.log(arguments)
                console.log(clue.dclueid39)
                await channel4.send('> 410 - 곽편집의 고용계약서. 2년전부터 월 200씩 받아왔다.')
-               const ms1 = await channel4.send({ files: ['./clue/410.png'] })
+               const ms1 = await channel4.send('https://i.imgur.com/JdxniVX.png')
                await ms1.react('❤️');
                await channel5.send("조사횟수"+(admin.vpoint-1)+"개 남음")
                client.channels.cache
@@ -1434,7 +1436,7 @@ module.exports = {
                console.log(arguments)
                console.log(clue.dclueid40)
                await channel4.send('> 420 - 곽편집의 통장. 입금날짜가 점점 뒤로 미루어진다.')
-               const ms1 = await channel4.send({ files: ['./clue/420.png'] })
+               const ms1 = await channel4.send('https://i.imgur.com/gqJ80jK.png')
                await ms1.react('❤️');
                await channel5.send("조사횟수"+(admin.vpoint-1)+"개 남음")
                client.channels.cache
@@ -1473,7 +1475,7 @@ module.exports = {
                console.log(arguments)
                console.log(clue.dclueid41)
                await channel4.send('> 430 - 곽편집의 노트북. 영상편집용이다.')
-               const ms1 = await channel4.send({ files: ['./clue/430.png'] })
+               const ms1 = await channel4.send('https://i.imgur.com/NGBoSjI.png')
                await ms1.react('❤️');
                await channel5.send("조사횟수"+(admin.vpoint-1)+"개 남음")
                client.channels.cache
@@ -1513,7 +1515,7 @@ module.exports = {
                console.log(arguments)
                console.log(clue.dclueid42)
                await channel4.send('> 440 - 곽편집의 자동차 주차영수증. 주차장은 새롬의 집과 10분거리. ')
-               const ms1 = await channel4.send({ files: ['./clue/440.jpg'] })
+               const ms1 = await channel4.send('https://i.imgur.com/KixKtq9.jpg')
                await ms1.react('❤️');
                await channel5.send("조사횟수"+(admin.vpoint-1)+"개 남음")
                client.channels.cache
@@ -1552,7 +1554,7 @@ module.exports = {
                console.log(arguments)
                console.log(clue.dclueid43)
                await channel4.send('> 450 - 곽편집의 신체검사 : 옷이꽤재재하고 냄새가난다')
-               const ms1 = await channel4.send({ files: ['./clue/450.png'] })
+               const ms1 = await channel4.send('https://i.imgur.com/0XERzR8.png')
                await ms1.react('❤️');
                await channel5.send("조사횟수"+(admin.vpoint-1)+"개 남음")
                client.channels.cache
@@ -1591,7 +1593,7 @@ module.exports = {
                console.log(arguments)
                console.log(clue.dclueid44)
                await channel4.send('> 460 - 곽편집의 각종 메모리 카드: 새롬의 영상들로 가득하다')
-               const ms1 = await channel4.send({ files: ['./clue/460.png'] })
+               const ms1 = await channel4.send('https://i.imgur.com/ahrZPaX.png')
                await ms1.react('❤️');
                await channel5.send("조사횟수"+(admin.vpoint-1)+"개 남음")
                client.channels.cache
@@ -1630,7 +1632,7 @@ module.exports = {
                console.log(arguments)
                console.log(clue.dclueid45)
                await channel4.send('> 470 - 곽편집의 집 : 온갖 피규어가 가득하다')
-               const ms1 = await channel4.send({ files: ['./clue/470.png'] })
+               const ms1 = await channel4.send('https://i.imgur.com/56E1njc.png')
                await ms1.react('❤️');
                await channel5.send("조사횟수"+(admin.vpoint-1)+"개 남음")
                client.channels.cache
@@ -1669,7 +1671,7 @@ module.exports = {
                console.log(arguments)
                console.log(clue.dclueid46)
                await channel4.send('> 480 - 곽편집의 블로그 : 음식리뷰가 12월 3일 오후7시 15분에 올라와 있다.')
-               const ms1 = await channel4.send({ files: ['./clue/470.png'] })
+               const ms1 = await channel4.send('https://i.imgur.com/5V8P1Tb.png')
                await ms1.react('❤️');
                await channel5.send("조사횟수"+(admin.vpoint-1)+"개 남음")
                client.channels.cache
