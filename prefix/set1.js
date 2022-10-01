@@ -91,7 +91,7 @@ const channel3 = client.channels.cache.get(chclue4);
 const channel4 = client.channels.cache.get(chclue5);
 
 const channel22 = client.channels.cache.get('1024599576541397033');
-message.guild.members.cache.get('1013329595082231811').setNickname('1차조사 시작')
+
 const editms = await channel22.send("준비중입니다. Loding....")////특정채널 메시지
 await editms.edit({ content: "준비중입니다. 1/10" })
 

@@ -362,7 +362,7 @@ if(admin.round == 2 && admin.vpoint == 0 && admin.readynum == totalplayer){/////
 	await today.setMinutes(today.getMinutes() + 15);
 	const dlck = "" + today.getDate() +"일"+ today.getHours() + "시" + today.getMinutes() + "분";
 	
-	message.guild.members.cache.get('1013329595082231811').setNickname('2차조사 시작')
+
 	const channel5 = client.channels.cache.get(note1);//추리노트
 	await channel5.send('1차 조사가 모두 끝났습니다. 토론시간을 가지신후 2차조사를 시작하시려면 ```!2차조사 시작```이라고 쳐주세요.')
 	await channel5.send(dlck+"후에 2차조사를 시작 하세요")
@@ -397,7 +397,7 @@ if(admin.round == 4 && admin.vpoint == 0 && admin.readynum == totalplayer){////2
 	await today.setMinutes(today.getMinutes() + 15);
 	const dlck = "" + today.getDate() +"일"+ today.getHours() + "시" + today.getMinutes() + "분";
 	
-	message.guild.members.cache.get('1013329595082231811').setNickname('2차조사끝 투표')
+
 	const channel5 = client.channels.cache.get(note1);//추리노트
 	await channel5.send('2차 조사가 모두 끝났습니다. 토론시간을 가지신후 투표해 주세요 투표는 ```!투표 캐릭터이름```이라고 쳐주세요. 각자 치시면 됩니다.')
 	await channel5.send(dlck+"까지 토론 하시면 됩니다. 투표 동점이라면 범인승리 입니다. 재투표는 없습니다.")
@@ -457,7 +457,7 @@ if(admin.round == 4 && admin.vpoint == 0 && admin.readynum == totalplayer){////2
 if(admin.round == 4 && admin.vpoint == 0 && admin.readynum == totalplayer && vote.votenum == totalplayer && totalplayer == 5){////5인 투표종료
 	await today.setMinutes(today.getMinutes() + 50);
 	const dlck = "" + today.getDate() +"일"+ today.getHours() + "시" + today.getMinutes() + "분";
-	message.guild.members.cache.get('1013329595082231811').setNickname('투표완료')
+
 	const channel1 = client.channels.cache.get(chclue1);//윤새롬
     const channel2 = client.channels.cache.get(chclue2);//한호랑
     const channel3 = client.channels.cache.get(chclue3);//유수호
