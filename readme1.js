@@ -135,3 +135,19 @@ switch(arguments)
 	 .setFooter({ text: 'Some footer text here', iconURL: 'https://i.imgur.com/AfFp7pu.png' });
 	 const channel = client.channels.cache.get(record);
 await channel.send("15초안에 모두 준비를 마쳐주세요")////특정채널 메시지
+
+
+/////올청소
+
+do {
+	
+	fetched1 = await channel.messages.fetch({limit: 99}).catch(console.warn = () => {});
+	await channel1.bulkDelete(fetched1).catch(console.warn = () => {});
+	console.log('1')
+	
+
+  }
+  while((fetched.size) >= 2);
+  console.log('끝')
+  
+  

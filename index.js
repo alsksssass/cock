@@ -78,15 +78,26 @@ const command = args.shift();
 if(!client.commands.has(command)) return
 
 
-	///////////저장소
-	var uid = message.author.id
-	var database = message.guild.ownerId
-      const cfilePath = `./data/${uid}.json`;
-      const dfilePath = `./data/${database}.json`;
-	  !fs.existsSync(cfilePath) ? fs.writeFileSync(cfilePath, JSON.stringify({})) : null;
-      !fs.existsSync(dfilePath) ? fs.writeFileSync(dfilePath, JSON.stringify({})) : null;
-      const admin = JSON.parse(fs.readFileSync(dfilePath, "utf-8"));
-	  const user = JSON.parse(fs.readFileSync(cfilePath, "utf-8"));
+var cluedata = '0011005500'
+var voting = '00'
+var numtitle = '33'
+var database = message.guild.ownerId
+var uid = message.author.id
+const cfilePath = `./data/${uid}.json`;
+const dfilePath = `./data/${database}.json`;
+const efilePath = `./data/${cluedata}.json`;
+const vfilePath = `./data/${voting}.json`;
+const ffilePath = `./data/${numtitle}.json`;
+!fs.existsSync(cfilePath) ? fs.writeFileSync(cfilePath, JSON.stringify({})) : null;
+!fs.existsSync(dfilePath) ? fs.writeFileSync(dfilePath, JSON.stringify({})) : null;
+!fs.existsSync(efilePath) ? fs.writeFileSync(efilePath, JSON.stringify({})) : null;
+!fs.existsSync(vfilePath) ? fs.writeFileSync(vfilePath, JSON.stringify({})) : null;
+!fs.existsSync(ffilePath) ? fs.writeFileSync(ffilePath, JSON.stringify({})) : null;
+const user = JSON.parse(fs.readFileSync(cfilePath, "utf-8"));
+const admin = JSON.parse(fs.readFileSync(dfilePath, "utf-8"));
+const clue = JSON.parse(fs.readFileSync(efilePath, "utf-8"));
+const vote = JSON.parse(fs.readFileSync(vfilePath, "utf-8"));
+const pnum = JSON.parse(fs.readFileSync(ffilePath, "utf-8"));
 
 //////////저장소
 /////////레디부분
@@ -217,6 +228,13 @@ database = {
 		vpoint : admin.vpoint
 	 }
 	 fs.writeFileSync(dfilePath, JSON.stringify(database));
+
+	 numtitle = {
+		title1 : numtitle.title1,
+		playnum : numtitle.playnum +1
+		
+		 }
+		 fs.writeFileSync(ffilePath, JSON.stringify(numtitle));
 	 console.log(admin.readynum+"성공")
 	 try{
 		const channel = client.channels.cache.get('1022125527118663700');
@@ -224,6 +242,7 @@ database = {
 				const channel1 = client.channels.cache.get('1022125527118663700');
 				await channel1.send({ content: ">>> "+admin.class1+"역"+"\n"+admin.player1+"님"+"\n"+"\n"+admin.class2+"역"+"\n"+admin.player2+"님"+"\n"+"\n"+admin.class3+"역"+"\n"+admin.player3+"님"+"\n"+"\n"+admin.class4+"역"+"\n"+admin.player4+"님"+"\n"+"\n"+admin.class5+"역"+"\n"+admin.player5+"님"+"\n"+"\n"+admin.starttime+"에 플레이 시작!" })
 				client.user.setAvatar(botplay);
+				message.guild.members.cache.get('1013329595082231811').setNickname('진행')
 		message.guild.members.cache.get(admin.playerid1).roles.add(playcode).catch(console.warn = () => {});/////특정 유저에게 롤주기 성공!!
 		message.guild.members.cache.get(admin.playerid1).roles.remove(stanby).catch(console.warn = () => {});
 		message.guild.members.cache.get(admin.playerid2).roles.add(playcode).catch(console.warn = () => {});
@@ -272,12 +291,19 @@ database = {
 	 }
 	 fs.writeFileSync(dfilePath, JSON.stringify(database));
 	 console.log(admin.readynum+"성공")
+	 numtitle = {
+		title1 : numtitle.title1,
+		playnum : numtitle.playnum +1
+		
+		 }
+		 fs.writeFileSync(ffilePath, JSON.stringify(numtitle));
 	 try{
 		const channel = client.channels.cache.get('1022125527118663700');
 				await channel.send('시작!')
 				const channel1 = client.channels.cache.get('1022125527118663700');
 				await channel1.send({ content: ">>> "+admin.class1+"역"+"\n"+admin.player1+"님"+"\n"+"\n"+admin.class2+"역"+"\n"+admin.player2+"님"+"\n"+"\n"+admin.class3+"역"+"\n"+admin.player3+"님"+"\n"+"\n"+admin.class4+"역"+"\n"+admin.player4+"님"+"\n"+"\n"+admin.class5+"역"+"\n"+admin.player5+"님"+"\n"+"\n"+admin.starttime+"에 플레이 시작!" })
 				client.user.setAvatar(botplay);
+				message.guild.members.cache.get('1013329595082231811').setNickname('진행')
 		message.guild.members.cache.get(admin.playerid1).roles.add(playcode).catch(console.warn = () => {});/////특정 유저에게 롤주기 성공!!
 		message.guild.members.cache.get(admin.playerid1).roles.remove(stanby).catch(console.warn = () => {});
 		message.guild.members.cache.get(admin.playerid2).roles.add(playcode).catch(console.warn = () => {});
@@ -311,20 +337,24 @@ const command = args.shift();
 const coget = client.commands.get(command);
 var cluedata = '0011005500'
 var voting = '00'
+var numtitle = '33'
 var database = message.guild.ownerId
 var uid = message.author.id
 const cfilePath = `./data/${uid}.json`;
 const dfilePath = `./data/${database}.json`;
 const efilePath = `./data/${cluedata}.json`;
 const vfilePath = `./data/${voting}.json`;
+const ffilePath = `./data/${numtitle}.json`;
 !fs.existsSync(cfilePath) ? fs.writeFileSync(cfilePath, JSON.stringify({})) : null;
 !fs.existsSync(dfilePath) ? fs.writeFileSync(dfilePath, JSON.stringify({})) : null;
 !fs.existsSync(efilePath) ? fs.writeFileSync(efilePath, JSON.stringify({})) : null;
 !fs.existsSync(vfilePath) ? fs.writeFileSync(vfilePath, JSON.stringify({})) : null;
+!fs.existsSync(ffilePath) ? fs.writeFileSync(ffilePath, JSON.stringify({})) : null;
 const user = JSON.parse(fs.readFileSync(cfilePath, "utf-8"));
 const admin = JSON.parse(fs.readFileSync(dfilePath, "utf-8"));
 const clue = JSON.parse(fs.readFileSync(efilePath, "utf-8"));
 const vote = JSON.parse(fs.readFileSync(vfilePath, "utf-8"));
+const pnum = JSON.parse(fs.readFileSync(ffilePath, "utf-8"));
 if(!client.commands.has(command)) return
 
 try{
@@ -332,7 +362,7 @@ if(admin.round == 2 && admin.vpoint == 0 && admin.readynum == totalplayer){/////
 	await today.setMinutes(today.getMinutes() + 15);
 	const dlck = "" + today.getDate() +"일"+ today.getHours() + "시" + today.getMinutes() + "분";
 	
-	
+	message.guild.members.cache.get('1013329595082231811').setNickname('2차조사 시작')
 	const channel5 = client.channels.cache.get(note1);//추리노트
 	await channel5.send('1차 조사가 모두 끝났습니다. 토론시간을 가지신후 2차조사를 시작하시려면 ```!2차조사 시작```이라고 쳐주세요.')
 	await channel5.send(dlck+"후에 2차조사를 시작 하세요")
@@ -367,7 +397,7 @@ if(admin.round == 4 && admin.vpoint == 0 && admin.readynum == totalplayer){////2
 	await today.setMinutes(today.getMinutes() + 15);
 	const dlck = "" + today.getDate() +"일"+ today.getHours() + "시" + today.getMinutes() + "분";
 	
-	
+	message.guild.members.cache.get('1013329595082231811').setNickname('2차조사끝 투표')
 	const channel5 = client.channels.cache.get(note1);//추리노트
 	await channel5.send('2차 조사가 모두 끝났습니다. 토론시간을 가지신후 투표해 주세요 투표는 ```!투표 캐릭터이름```이라고 쳐주세요. 각자 치시면 됩니다.')
 	await channel5.send(dlck+"까지 토론 하시면 됩니다. 투표 동점이라면 범인승리 입니다. 재투표는 없습니다.")
@@ -427,7 +457,7 @@ if(admin.round == 4 && admin.vpoint == 0 && admin.readynum == totalplayer){////2
 if(admin.round == 4 && admin.vpoint == 0 && admin.readynum == totalplayer && vote.votenum == totalplayer && totalplayer == 5){////5인 투표종료
 	await today.setMinutes(today.getMinutes() + 50);
 	const dlck = "" + today.getDate() +"일"+ today.getHours() + "시" + today.getMinutes() + "분";
-	
+	message.guild.members.cache.get('1013329595082231811').setNickname('투표완료')
 	const channel1 = client.channels.cache.get(chclue1);//윤새롬
     const channel2 = client.channels.cache.get(chclue2);//한호랑
     const channel3 = client.channels.cache.get(chclue3);//유수호
@@ -654,7 +684,7 @@ if(admin.round == 5 && admin.vpoint == 0 && admin.readynum == totalplayer && vot
     const playrecord = new EmbedBuilder()
     .setColor(0x0099FF)
     .setTitle('타로마스터')
-    .setAuthor({ name: 'Some name', iconURL: 'https://emoji-uc.akamaized.net/orig/36/42dfd89cc30f82fc76ebe7fd1ef1fb.png'})
+    .setAuthor({ name: pnum.title1+" "+pnum.playnum+" 차", iconURL: 'https://emoji-uc.akamaized.net/orig/36/42dfd89cc30f82fc76ebe7fd1ef1fb.png'})
     .setDescription('타로마스터 살인사건')
     .setThumbnail('https://emoji-uc.akamaized.net/orig/36/42dfd89cc30f82fc76ebe7fd1ef1fb.png')
     .addFields(
@@ -689,6 +719,7 @@ if(admin.round == 5 && admin.vpoint == 0 && admin.readynum == totalplayer && vot
     const channel77 = client.channels.cache.get(record);
   await channel77.send({ embeds: [playrecord] })////특정채널 메시지
   client.user.setAvatar(botstan);
+  message.guild.members.cache.get('1013329595082231811').setNickname('대기')
   database = {
 	readynum : 0,
 	class1 : "미지정",

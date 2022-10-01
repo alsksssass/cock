@@ -14,7 +14,7 @@ const dater ="" + today.getFullYear()+"년" + today.getMonth()+"월" + today.get
 
 
 module.exports = {
-  name: "확인",
+  name: "봇",
   async execute(message, args, client ) {
       ////저장정보 불러오는 부분
       var cluedata = '0011005500'
@@ -37,9 +37,26 @@ module.exports = {
 
   arguments = args.shift(1)
   
-
+if (message.author.id == message.guild.ownerId){
   try {
+        switch(arguments)
+         {
+            case '대기' : 
+            {
+               console.log(arguments)
+               client.user.setAvatar(botstan);
+               message.guild.members.cache.get('1013329595082231811').setNickname(arguments)
+               break;
+            }
+            case '진행' : 
+            {
+               console.log(arguments)
+               client.user.setAvatar(botplay);
+               message.guild.members.cache.get('1013329595082231811').setNickname(arguments)
+               break;
+            }
 
+         }
   } catch (error) {
     console.error(error);
     
@@ -47,6 +64,7 @@ module.exports = {
   
 
   }}
+}
 //     const arguments = args.shift(1)
 //     console.log(arguments)
    

@@ -91,6 +91,7 @@ const channel3 = client.channels.cache.get(chclue4);
 const channel4 = client.channels.cache.get(chclue5);
 
 const channel22 = client.channels.cache.get('1024599576541397033');
+message.guild.members.cache.get('1013329595082231811').setNickname('1차조사 시작')
 const editms = await channel22.send("준비중입니다. Loding....")////특정채널 메시지
 await editms.edit({ content: "준비중입니다. 1/10" })
 
@@ -302,7 +303,7 @@ await editms.edit({ content: "준비중입니다. 1/10" })
     })
     await channel4.send('-----------------------------')
     await editms.edit({ content: "준비 완료 되었습니다." })
-    await channel22.send("``!단서 000`` 을 치셔서 연습을 해 보세요 횟수는 차감되지 않습니다. 아주 중요한 단서이니 꼭 쳐보시고 시작하세요!\n 명령어는 탐정님만 사용이 가능합니다. \n의견을 조율받으셔서 명령어를 써 주세요. \n1차 단서 조사갯수는 20개입니다.")
+    await channel22.send("``!단서 000`` 을 치셔서 연습을 해 보세요 횟수는 차감되지 않습니다. 아주 중요한 단서이니 꼭 쳐보시고 시작하세요!\n 명령어는 탐정님만 사용이 가능합니다. \n의견을 조율받으셔서 명령어를 써 주세요. \n1차 단서 조사갯수는 20+1개입니다.")
     cluedata = {
 
         dclueid01 : clueid01,

@@ -2,6 +2,7 @@ const { createAudioResource, createAudioPlayer, joinVoiceChannel, NoSubscriberBe
 const fs = require('node:fs');
 const { Client, GatewayIntentBits, Collection, MembershipScreeningFieldType, ClientUser, User, time, GuildChannel, GuildManager, MessageManager, GuildMemberManager, GuildBanManager, GuildBan, GuildStickerManager, PermissionsBitField, PermissionOverwriteManager, MessageFlagsBitField, GuildMemberRoleManager, GuildMember, MessageReaction } = require('discord.js');
 const { record, playcode, owner, character1, character2, character3, character4, character5, character6, botplay, botstan, guildId, chclue1, chclue2, chclue3, chclue4, chclue5, note1, totalplayer } = require('../config.json');
+const { title } = require('node:process');
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.GuildMessageReactions, GatewayIntentBits.GuildVoiceStates, GatewayIntentBits.DirectMessages, GatewayIntentBits.MessageContent, GatewayIntentBits.Guilds, GatewayIntentBits.GuildMembers, GatewayIntentBits.GuildBans, GatewayIntentBits.GuildVoiceStates] });
 const wait = require('node:timers/promises').setTimeout;///딜레이 구문
@@ -24,20 +25,25 @@ module.exports = {
          ////저장정보 불러오는 부분
          var cluedata = '0011005500'
          var voting = '00'
+         var numtitle = '33'
          var database = message.guild.ownerId
          var uid = message.author.id
          const cfilePath = `./data/${uid}.json`;
          const dfilePath = `./data/${database}.json`;
          const efilePath = `./data/${cluedata}.json`;
          const vfilePath = `./data/${voting}.json`;
+         const ffilePath = `./data/${numtitle}.json`;
          !fs.existsSync(cfilePath) ? fs.writeFileSync(cfilePath, JSON.stringify({})) : null;
          !fs.existsSync(dfilePath) ? fs.writeFileSync(dfilePath, JSON.stringify({})) : null;
          !fs.existsSync(efilePath) ? fs.writeFileSync(efilePath, JSON.stringify({})) : null;
          !fs.existsSync(vfilePath) ? fs.writeFileSync(vfilePath, JSON.stringify({})) : null;
-       const user = JSON.parse(fs.readFileSync(cfilePath, "utf-8"));
+         !fs.existsSync(ffilePath) ? fs.writeFileSync(ffilePath, JSON.stringify({})) : null;
+         const user = JSON.parse(fs.readFileSync(cfilePath, "utf-8"));
          const admin = JSON.parse(fs.readFileSync(dfilePath, "utf-8"));
          const clue = JSON.parse(fs.readFileSync(efilePath, "utf-8"));
          const vote = JSON.parse(fs.readFileSync(vfilePath, "utf-8"));
+         const pnum = JSON.parse(fs.readFileSync(ffilePath, "utf-8"));
+    ///////////
     ///////////console.log('1')
 if (arguments != character1 && arguments != character2 && arguments != character3 && arguments != character4 && arguments != character5) {message.channel.send('이름을 다시 확인해주세요'); return; }
 if(admin.round == 5 && vote.vchance1 ==1 && message.author.id == admin.playerid1) {
@@ -143,7 +149,17 @@ saveUser = {
   name : user.name,
   date : user.date,
   class : user.class,
-  vote : arguments
+  vote : arguments,
+  player1 : admin.player1,
+  player2 : admin.player2,
+  player3 : admin.player3,
+  player4 : admin.player4,
+  player5 : admin.player5,
+  player6 : admin.player6,
+  sdate : admin.starttime,
+      edate : admin.endtime,
+    ptitle : pnum.title1,
+    pnum : pnum.playnum
 }
 fs.writeFileSync(cfilePath, JSON.stringify(saveUser));
 message.channel.send('투표완료!')
@@ -254,7 +270,17 @@ saveUser = {
   name : user.name,
   date : user.date,
   class : user.class,
-  vote : arguments
+  vote : arguments,
+  player1 : admin.player1,
+  player2 : admin.player2,
+  player3 : admin.player3,
+  player4 : admin.player4,
+  player5 : admin.player5,
+  player6 : admin.player6,
+  sdate : admin.starttime,
+      edate : admin.endtime,
+    ptitle : pnum.title1,
+    pnum : pnum.playnum
 }
 fs.writeFileSync(cfilePath, JSON.stringify(saveUser));
 console.log('5')
@@ -364,7 +390,17 @@ voting = {
     name : user.name,
     date : user.date,
     class : user.class,
-    vote : arguments
+    vote : arguments,
+    player1 : admin.player1,
+    player2 : admin.player2,
+    player3 : admin.player3,
+    player4 : admin.player4,
+    player5 : admin.player5,
+    player6 : admin.player6,
+    sdate : admin.starttime,
+        edate : admin.endtime,
+    ptitle : pnum.title1,
+    pnum : pnum.playnum
   }
   fs.writeFileSync(cfilePath, JSON.stringify(saveUser));
   console.log('5')
@@ -474,7 +510,17 @@ voting = {
     name : user.name,
     date : user.date,
     class : user.class,
-    vote : arguments
+    vote : arguments,
+    player1 : admin.player1,
+    player2 : admin.player2,
+    player3 : admin.player3,
+    player4 : admin.player4,
+    player5 : admin.player5,
+    player6 : admin.player6,
+    sdate : admin.starttime,
+        edate : admin.endtime,
+    ptitle : pnum.title1,
+    pnum : pnum.playnum
   }
   fs.writeFileSync(cfilePath, JSON.stringify(saveUser));
   console.log('5')
@@ -583,7 +629,18 @@ voting = {
     name : user.name,
     date : user.date,
     class : user.class,
-    vote : arguments
+    vote : arguments,
+    player1 : admin.player1,
+    player2 : admin.player2,
+    player3 : admin.player3,
+    player4 : admin.player4,
+    player5 : admin.player5,
+    player6 : admin.player6,
+    sdate : admin.starttime,
+    edate : admin.endtime,
+    ptitle : pnum.title1,
+    pnum : pnum.playnum
+  
   }
   fs.writeFileSync(cfilePath, JSON.stringify(saveUser));
   console.log('5')
@@ -692,7 +749,17 @@ voting = {
     name : user.name,
     date : user.date,
     class : user.class,
-    vote : arguments
+    vote : arguments,
+    player1 : admin.player1,
+    player2 : admin.player2,
+    player3 : admin.player3,
+    player4 : admin.player4,
+    player5 : admin.player5,
+    player6 : admin.player6,
+    sdate : admin.starttime,
+        edate : admin.endtime,
+    ptitle : pnum.title1,
+    pnum : pnum.playnum
   }
   fs.writeFileSync(cfilePath, JSON.stringify(saveUser));
   console.log('5')
