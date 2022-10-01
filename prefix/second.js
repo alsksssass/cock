@@ -12,7 +12,7 @@ const date = "" + today.getFullYear() +"년" + today.getMonth() + "월" + today.
 
 
 module.exports = {
-  name: "!2차조사",
+  name: "2차조사",
   async execute(message, args, client ) {
     const arguments = args.shift(1)
     const channel1 = client.channels.cache.get(chclue1);//윤새롬
@@ -66,6 +66,8 @@ if(admin.round == 3 && admin.vpoint == 0 && message.author.id == admin.playerid1
 		endtime : admin.endtime,
 		vpoint : (admin.vpoint *= 0) +23
 	 }
+  
+  fs.writeFileSync(dfilePath, JSON.stringify(database));
     }
 }
 }

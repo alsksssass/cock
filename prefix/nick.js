@@ -25,7 +25,7 @@ const date = "" + today.getFullYear() +"년" + today.getMonth() + "월" + today.
 //////////////////
          let saveUser = {};
       
-      if(message.guild.id === guildId && user.id === message.author.id)
+      if(message.guild.id == guildId && user.id == message.author.id)
          {
             console.log(message.guild.id)
             console.log(guildId)

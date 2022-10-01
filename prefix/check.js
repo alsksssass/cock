@@ -42,7 +42,6 @@ module.exports = {
      } 
      else if(admin.vpoint > 0 && message.author.id == admin.playerid1) {
         console.log('2')
-      message.channel.bulkDelete(1)
       switch(arguments)
          {
             case '000' : 
@@ -66,6 +65,7 @@ module.exports = {
                .messages.fetch(clue.dclueid01)
                .then((msg) => msg.edit('~~**010> 다이어리**~~'));
                database = {
+                  readynum : admin.readynum,
                 class1 : admin.class1,
                 player1 : admin.player1,
                 class2 : admin.class2,
@@ -107,6 +107,7 @@ module.exports = {
                .messages.fetch(clue.dclueid02)
                .then((msg) => msg.edit('~~**020> 통장**~~'));
                database = {
+                  readynum : admin.readynum,
                 class1 : admin.class1,
                 player1 : admin.player1,
                 class2 : admin.class2,
@@ -147,6 +148,7 @@ module.exports = {
                .messages.fetch(clue.dclueid03)
                .then((msg) => msg.edit('~~**030> 흰 봉투**~~'));
                database = {
+                  readynum : admin.readynum,
                 class1 : admin.class1,
                 player1 : admin.player1,
                 class2 : admin.class2,
@@ -187,6 +189,7 @@ module.exports = {
                .messages.fetch(clue.dclueid04)
                .then((msg) => msg.edit('~~**040> 계약서**~~'));
                database = {
+                  readynum : admin.readynum,
                 class1 : admin.class1,
                 player1 : admin.player1,
                 class2 : admin.class2,
@@ -226,6 +229,7 @@ module.exports = {
                .messages.fetch(clue.dclueid05)
                .then((msg) => msg.edit('~~**050> 골든버튼**~~'));
                database = {
+                  readynum : admin.readynum,
                 class1 : admin.class1,
                 player1 : admin.player1,
                 class2 : admin.class2,
@@ -266,6 +270,7 @@ module.exports = {
                .messages.fetch(clue.dclueid06)
                .then((msg) => msg.edit('~~**060> 편지**~~'));
                database = {
+                  readynum : admin.readynum,
                 class1 : admin.class1,
                 player1 : admin.player1,
                 class2 : admin.class2,
@@ -306,6 +311,7 @@ module.exports = {
                .messages.fetch(clue.dclueid07)
                .then((msg) => msg.edit('~~**070> 카메라**~~'));
                database = {
+                  readynum : admin.readynum,
                 class1 : admin.class1,
                 player1 : admin.player1,
                 class2 : admin.class2,
@@ -345,6 +351,7 @@ module.exports = {
                .messages.fetch(clue.dclueid08)
                .then((msg) => msg.edit('~~**080 포스트잇**~~'));
                database = {
+                  readynum : admin.readynum,
                 class1 : admin.class1,
                 player1 : admin.player1,
                 class2 : admin.class2,
@@ -384,6 +391,7 @@ module.exports = {
                .messages.fetch(clue.dclueid09)
                .then((msg) => msg.edit('~~**090 새롬의 휴대폰 문자내역**~~'));
                database = {
+                  readynum : admin.readynum,
                 class1 : admin.class1,
                 player1 : admin.player1,
                 class2 : admin.class2,
@@ -423,6 +431,7 @@ module.exports = {
                .messages.fetch(clue.dclueid11)
                .then((msg) => msg.edit('~~**110> 타로유튜브 댓글**~~'));
                database = {
+                  readynum : admin.readynum,
                 class1 : admin.class1,
                 player1 : admin.player1,
                 class2 : admin.class2,
@@ -462,6 +471,7 @@ module.exports = {
                .messages.fetch(clue.dclueid12)
                .then((msg) => msg.edit('~~**120> 새롬의 연락**~~'));
                database = {
+                  readynum : admin.readynum,
                 class1 : admin.class1,
                 player1 : admin.player1,
                 class2 : admin.class2,
@@ -502,6 +512,7 @@ module.exports = {
                .messages.fetch(clue.dclueid13)
                .then((msg) => msg.edit('~~**130> 노트북**~~'));
                database = {
+                  readynum : admin.readynum,
                 class1 : admin.class1,
                 player1 : admin.player1,
                 class2 : admin.class2,
@@ -542,6 +553,7 @@ module.exports = {
                .messages.fetch(clue.dclueid14)
                .then((msg) => msg.edit('~~**140> 그래프**~~'));
                database = {
+                  readynum : admin.readynum,
                 class1 : admin.class1,
                 player1 : admin.player1,
                 class2 : admin.class2,
@@ -582,6 +594,7 @@ module.exports = {
                .messages.fetch(clue.dclueid15)
                .then((msg) => msg.edit('~~**150> 신체검사**~~'));
                database = {
+                  readynum : admin.readynum,
                 class1 : admin.class1,
                 player1 : admin.player1,
                 class2 : admin.class2,
@@ -621,6 +634,7 @@ module.exports = {
                .messages.fetch(clue.dclueid16)
                .then((msg) => msg.edit('~~**160> CCTV**~~'));
                database = {
+                  readynum : admin.readynum,
                 class1 : admin.class1,
                 player1 : admin.player1,
                 class2 : admin.class2,
@@ -660,6 +674,7 @@ module.exports = {
                .messages.fetch(clue.dclueid17)
                .then((msg) => msg.edit('~~**170> SD카드**~~'));
                database = {
+                  readynum : admin.readynum,
                 class1 : admin.class1,
                 player1 : admin.player1,
                 class2 : admin.class2,
@@ -699,6 +714,7 @@ module.exports = {
                .messages.fetch(clue.dclueid18)
                .then((msg) => msg.edit('~~**180> 캐리어**~~'));
                database = {
+                  readynum : admin.readynum,
                 class1 : admin.class1,
                 player1 : admin.player1,
                 class2 : admin.class2,
@@ -738,6 +754,7 @@ module.exports = {
                .messages.fetch(clue.dclueid19)
                .then((msg) => msg.edit('~~**190> 진단서**~~'));
                database = {
+                  readynum : admin.readynum,
                 class1 : admin.class1,
                 player1 : admin.player1,
                 class2 : admin.class2,
@@ -777,6 +794,7 @@ module.exports = {
                .messages.fetch(clue.dclueid21)
                .then((msg) => msg.edit('~~**210> 수호의 유튜브 계정**~~'));
                database = {
+                  readynum : admin.readynum,
                 class1 : admin.class1,
                 player1 : admin.player1,
                 class2 : admin.class2,
@@ -816,6 +834,7 @@ module.exports = {
                .messages.fetch(clue.dclueid22)
                .then((msg) => msg.edit('~~**220> 주머니**~~'));
                database = {
+                  readynum : admin.readynum,
                 class1 : admin.class1,
                 player1 : admin.player1,
                 class2 : admin.class2,
@@ -857,6 +876,7 @@ module.exports = {
                .messages.fetch(clue.dclueid23)
                .then((msg) => msg.edit('~~**230> 스크랩집**~~'));
                database = {
+                  readynum : admin.readynum,
                 class1 : admin.class1,
                 player1 : admin.player1,
                 class2 : admin.class2,
@@ -896,6 +916,7 @@ module.exports = {
                .messages.fetch(clue.dclueid24)
                .then((msg) => msg.edit('~~**240> 영수증**~~'));
                database = {
+                  readynum : admin.readynum,
                 class1 : admin.class1,
                 player1 : admin.player1,
                 class2 : admin.class2,
@@ -935,6 +956,7 @@ module.exports = {
                .messages.fetch(clue.dclueid25)
                .then((msg) => msg.edit('~~**250> 신체검사**~~'));
                database = {
+                  readynum : admin.readynum,
                 class1 : admin.class1,
                 player1 : admin.player1,
                 class2 : admin.class2,
@@ -974,6 +996,7 @@ module.exports = {
                .messages.fetch(clue.dclueid26)
                .then((msg) => msg.edit('~~**260> 사진**~~'));
                database = {
+                  readynum : admin.readynum,
                 class1 : admin.class1,
                 player1 : admin.player1,
                 class2 : admin.class2,
@@ -1013,6 +1036,7 @@ module.exports = {
                .messages.fetch(clue.dclueid27)
                .then((msg) => msg.edit('~~**270> 배달 내역**~~'));
                database = {
+                  readynum : admin.readynum,
                 class1 : admin.class1,
                 player1 : admin.player1,
                 class2 : admin.class2,
@@ -1052,6 +1076,7 @@ module.exports = {
                .messages.fetch(clue.dclueid28)
                .then((msg) => msg.edit('~~**280> 집앞**~~'));
                database = {
+                  readynum : admin.readynum,
                 class1 : admin.class1,
                 player1 : admin.player1,
                 class2 : admin.class2,
@@ -1091,6 +1116,7 @@ module.exports = {
                .messages.fetch(clue.dclueid30)
                .then((msg) => msg.edit('~~**310> 문자**~~'));
                database = {
+                  readynum : admin.readynum,
                 class1 : admin.class1,
                 player1 : admin.player1,
                 class2 : admin.class2,
@@ -1130,6 +1156,7 @@ module.exports = {
                .messages.fetch(clue.dclueid31)
                .then((msg) => msg.edit('~~**320> 달력**~~'));
                database = {
+                  readynum : admin.readynum,
                 class1 : admin.class1,
                 player1 : admin.player1,
                 class2 : admin.class2,
@@ -1169,6 +1196,7 @@ module.exports = {
                .messages.fetch(clue.dclueid32)
                .then((msg) => msg.edit('~~**330> 도시락**~~'));
                database = {
+                  readynum : admin.readynum,
                 class1 : admin.class1,
                 player1 : admin.player1,
                 class2 : admin.class2,
@@ -1209,6 +1237,7 @@ module.exports = {
                .messages.fetch(clue.dclueid33)
                .then((msg) => msg.edit('~~**340> 신체검사**~~'));
                database = {
+                  readynum : admin.readynum,
                 class1 : admin.class1,
                 player1 : admin.player1,
                 class2 : admin.class2,
@@ -1248,6 +1277,7 @@ module.exports = {
                .messages.fetch(clue.dclueid34)
                .then((msg) => msg.edit('~~**350> 망치**~~'));
                database = {
+                  readynum : admin.readynum,
                 class1 : admin.class1,
                 player1 : admin.player1,
                 class2 : admin.class2,
@@ -1287,6 +1317,7 @@ module.exports = {
                .messages.fetch(clue.dclueid35)
                .then((msg) => msg.edit('~~**360> 증언**~~'));
                database = {
+                  readynum : admin.readynum,
                 class1 : admin.class1,
                 player1 : admin.player1,
                 class2 : admin.class2,
@@ -1327,6 +1358,7 @@ module.exports = {
                .messages.fetch(clue.dclueid36)
                .then((msg) => msg.edit('~~**370> 일기**~~'));
                database = {
+                  readynum : admin.readynum,
                 class1 : admin.class1,
                 player1 : admin.player1,
                 class2 : admin.class2,
@@ -1366,6 +1398,7 @@ module.exports = {
                .messages.fetch(clue.dclueid37)
                .then((msg) => msg.edit('~~**380> 집 내부**~~'));
                database = {
+                  readynum : admin.readynum,
                 class1 : admin.class1,
                 player1 : admin.player1,
                 class2 : admin.class2,
@@ -1405,6 +1438,7 @@ module.exports = {
                .messages.fetch(clue.dclueid39)
                .then((msg) => msg.edit('~~**410> 계약서**~~'));
                database = {
+                  readynum : admin.readynum,
                 class1 : admin.class1,
                 player1 : admin.player1,
                 class2 : admin.class2,
@@ -1444,6 +1478,7 @@ module.exports = {
                .messages.fetch(clue.dclueid40)
                .then((msg) => msg.edit('~~**420> 통장**~~'));
                database = {
+                  readynum : admin.readynum,
                 class1 : admin.class1,
                 player1 : admin.player1,
                 class2 : admin.class2,
@@ -1483,6 +1518,7 @@ module.exports = {
                .messages.fetch(clue.dclueid41)
                .then((msg) => msg.edit('~~**430> 노트북**~~'));
                database = {
+                  readynum : admin.readynum,
                 class1 : admin.class1,
                 player1 : admin.player1,
                 class2 : admin.class2,
@@ -1523,6 +1559,7 @@ module.exports = {
                .messages.fetch(clue.dclueid42)
                .then((msg) => msg.edit('~~**440> 영수증**~~'));
                database = {
+                  readynum : admin.readynum,
                 class1 : admin.class1,
                 player1 : admin.player1,
                 class2 : admin.class2,
@@ -1562,6 +1599,7 @@ module.exports = {
                .messages.fetch(clue.dclueid43)
                .then((msg) => msg.edit('~~**450> 신체검사**~~'));
                database = {
+                  readynum : admin.readynum,
                 class1 : admin.class1,
                 player1 : admin.player1,
                 class2 : admin.class2,
@@ -1601,6 +1639,7 @@ module.exports = {
                .messages.fetch(clue.dclueid44)
                .then((msg) => msg.edit('~~**460> SD카드**~~'));
                database = {
+                  readynum : admin.readynum,
                 class1 : admin.class1,
                 player1 : admin.player1,
                 class2 : admin.class2,
@@ -1640,6 +1679,7 @@ module.exports = {
                .messages.fetch(clue.dclueid45)
                .then((msg) => msg.edit('~~**470> 집**~~'));
                database = {
+                  readynum : admin.readynum,
                 class1 : admin.class1,
                 player1 : admin.player1,
                 class2 : admin.class2,
@@ -1679,6 +1719,7 @@ module.exports = {
                .messages.fetch(clue.dclueid46)
                .then((msg) => msg.edit('~~**480> 블로그**~~'));
                database = {
+                  readynum : admin.readynum,
                 class1 : admin.class1,
                 player1 : admin.player1,
                 class2 : admin.class2,
@@ -1718,6 +1759,7 @@ module.exports = {
                .messages.fetch(clue.dclueid47)
                .then((msg) => msg.edit('~~**490> 메시지**~~'));
                database = {
+                  readynum : admin.readynum,
                 class1 : admin.class1,
                 player1 : admin.player1,
                 class2 : admin.class2,

@@ -46,7 +46,7 @@ module.exports = {
     ///////////
     ///////////console.log('1')
 if (arguments != character1 && arguments != character2 && arguments != character3 && arguments != character4 && arguments != character5) {message.channel.send('이름을 다시 확인해주세요'); return; }
-if(admin.round == 5 && vote.vchance1 ==1 && message.author.id == admin.playerid1) {
+if(admin.round == 4 && vote.vchance1 ==1 && message.author.id == admin.playerid1) {
     let vo1 = 0
     let vo2 = 0
     let vo3 = 0
@@ -57,7 +57,7 @@ if(admin.round == 5 && vote.vchance1 ==1 && message.author.id == admin.playerid1
     {
        case character1 : 
        {
-        vo1 == 1
+        vo1 += 1
         vo2 == 0
         vo3 == 0
         vo4 == 0
@@ -68,7 +68,7 @@ if(admin.round == 5 && vote.vchance1 ==1 && message.author.id == admin.playerid1
         case character2 : 
         {
          vo1 == 0
-         vo2 == 1
+         vo2 += 1
          vo3 == 0
          vo4 == 0
          vo5 == 0
@@ -79,7 +79,7 @@ if(admin.round == 5 && vote.vchance1 ==1 && message.author.id == admin.playerid1
        {
         vo1 == 0
         vo2 == 0
-        vo3 == 1
+        vo3 += 1
         vo4 == 0
         vo5 == 0
         vo6 == 0
@@ -90,7 +90,7 @@ if(admin.round == 5 && vote.vchance1 ==1 && message.author.id == admin.playerid1
         vo1 == 0
         vo2 == 0
         vo3 == 0
-        vo4 == 1
+        vo4 += 1
         vo5 == 0
         vo6 == 0
           break;
@@ -101,7 +101,7 @@ if(admin.round == 5 && vote.vchance1 ==1 && message.author.id == admin.playerid1
         vo2 == 0
         vo3 == 0
         vo4 == 0
-        vo5 == 1
+        vo5 += 1
         vo6 == 0
           break;
         }
@@ -112,7 +112,7 @@ if(admin.round == 5 && vote.vchance1 ==1 && message.author.id == admin.playerid1
          vo3 == 0
          vo4 == 0
          vo5 == 0
-         vo6 == 1
+         vo6 += 1
            break;
          }
     }
@@ -121,15 +121,15 @@ voting = {
     votenum : vote.votenum + 1,
     player1 : vote.player1,
     vote1 : vote.vote1 + vo1,
-    vote2 : vote.vote1 + vo2,
+    vote2 : vote.vote2 + vo2,
     player2 : vote.player2,
-    vote3 : vote.vote1 + vo3,
+    vote3 : vote.vote3 + vo3,
     player3 : vote.player3,
-    vote4 : vote.vote1 + vo4,
+    vote4 : vote.vote4 + vo4,
     player4 : vote.player4,
-    vote5 : vote.vote1 + vo5,
+    vote5 : vote.vote5 + vo5,
     player5 : vote.player5,
-    vote6 : vote.vote1 + vo6,
+    vote6 : vote.vote6 + vo6,
     player6 : vote.player6,
     vchance1 : vote.vchance1*=0,
     vchance2 : vote.vchance2,
@@ -243,15 +243,15 @@ voting = {
     votenum : vote.votenum + 1,
     player1 : vote.player1,
     vote1 : vote.vote1 +vo1,
-    vote2 : vote.vote1 +vo2,
+    vote2 : vote.vote2 +vo2,
     player2 : vote.player2,
-    vote3 : vote.vote1 +vo3,
+    vote3 : vote.vote3 +vo3,
     player3 : vote.player3,
-    vote4 : vote.vote1 +vo4,
+    vote4 : vote.vote4 +vo4,
     player4 : vote.player4,
-    vote5 : vote.vote1 +vo5,
+    vote5 : vote.vote5 +vo5,
     player5 : vote.player5,
-    vote6 : vote.vote1 +vo6,
+    vote6 : vote.vote6 +vo6,
     player6 : vote.player6,
     vchance1 : vote.vchance1,
     vchance2 : vote.vchance2*=0,
@@ -363,15 +363,15 @@ voting = {
     votenum : vote.votenum + 1,
     player1 : vote.player1,
     vote1 : vote.vote1 +vo1,
-    vote2 : vote.vote1 +vo2,
+    vote2 : vote.vote2 +vo2,
     player2 : vote.player2,
-    vote3 : vote.vote1 +vo3,
+    vote3 : vote.vote3 +vo3,
     player3 : vote.player3,
-    vote4 : vote.vote1 +vo4,
+    vote4 : vote.vote4 +vo4,
     player4 : vote.player4,
-    vote5 : vote.vote1 +vo5,
+    vote5 : vote.vote5 +vo5,
     player5 : vote.player5,
-    vote6 : vote.vote1 +vo6,
+    vote6 : vote.vote6 +vo6,
     player6 : vote.player6,
     vchance1 : vote.vchance1,
     vchance2 : vote.vchance2,
@@ -483,15 +483,15 @@ voting = {
     votenum : vote.votenum + 1,
     player1 : vote.player1,
     vote1 : vote.vote1 +vo1,
-    vote2 : vote.vote1 +vo2,
+    vote2 : vote.vote2 +vo2,
     player2 : vote.player2,
-    vote3 : vote.vote1 +vo3,
+    vote3 : vote.vote3 +vo3,
     player3 : vote.player3,
-    vote4 : vote.vote1 +vo4,
+    vote4 : vote.vote4 +vo4,
     player4 : vote.player4,
-    vote5 : vote.vote1 +vo5,
+    vote5 : vote.vote5 +vo5,
     player5 : vote.player5,
-    vote6 : vote.vote1 +vo6,
+    vote6 : vote.vote6 +vo6,
     player6 : vote.player6,
     vchance1 : vote.vchance1,
     vchance2 : vote.vchance2,
@@ -602,15 +602,15 @@ voting = {
     votenum : vote.votenum + 1,
     player1 : vote.player1,
     vote1 : vote.vote1 +vo1,
-    vote2 : vote.vote1 +vo2,
+    vote2 : vote.vote2 +vo2,
     player2 : vote.player2,
-    vote3 : vote.vote1 +vo3,
+    vote3 : vote.vote3 +vo3,
     player3 : vote.player3,
-    vote4 : vote.vote1 +vo4,
+    vote4 : vote.vote4 +vo4,
     player4 : vote.player4,
-    vote5 : vote.vote1 +vo5,
+    vote5 : vote.vote5 +vo5,
     player5 : vote.player5,
-    vote6 : vote.vote1 +vo6,
+    vote6 : vote.vote6 +vo6,
     player6 : vote.player6,
     vchance1 : vote.vchance1,
     vchance2 : vote.vchance2,
@@ -722,15 +722,15 @@ voting = {
     votenum : vote.votenum + 1,
     player1 : vote.player1,
     vote1 : vote.vote1 +vo1,
-    vote2 : vote.vote1 +vo2,
+    vote2 : vote.vote2 +vo2,
     player2 : vote.player2,
-    vote3 : vote.vote1 +vo3,
+    vote3 : vote.vote3 +vo3,
     player3 : vote.player3,
-    vote4 : vote.vote1 +vo4,
+    vote4 : vote.vote4 +vo4,
     player4 : vote.player4,
-    vote5 : vote.vote1 +vo5,
+    vote5 : vote.vote5 +vo5,
     player5 : vote.player5,
-    vote6 : vote.vote1 +vo6,
+    vote6 : vote.vote6 +vo6,
     player6 : vote.player6,
     vchance1 : vote.vchance1,
     vchance2 : vote.vchance2,

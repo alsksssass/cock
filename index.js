@@ -4,8 +4,8 @@ const today = new Date();
 const date = "" + today.getFullYear() + today.getMonth() + today.getDate() + today.getHours() + today.getMinutes();
 const dater ="" + today.getFullYear()+"년" + today.getMonth()+"월" + today.getDate()+"일" + today.getHours()+"시" + today.getMinutes()+"분";
 
-const { Client, GatewayIntentBits, Collection, GuildMember, PermissionFlagsBits, Message, MessageMentions, EmbedBuilder } = require('discord.js');
-const { token, prefix, totalplayer, stanby, record, playcode, owner, character1, character2, character3, character4, character5, character6, botplay, botstan, guildId, chclue1, chclue2, chclue3, chclue4, chclue5, note1 } = require('./config.json');
+const { Client, GatewayIntentBits, Collection, GuildMember, PermissionFlagsBits, Message, MessageMentions, EmbedBuilder, MessageFlags, RoleManager } = require('discord.js');
+const { token, prefix, totalplayer, stanby, record, playcode, owner, character1, character2, character3, character4, character5, character6, botplay, botstan, guildId, chclue1, chclue2, chclue3, chclue4, chclue5, note1, observer } = require('./config.json');
 const wait = require('node:timers/promises').setTimeout;///딜레이 구문
 const { RESTJSONErrorCodes } = require('discord.js');
 const { createAudioResource, createAudioPlayer, joinVoiceChannel, NoSubscriberBehavior, AudioPlayerStatus, generateDependencyReport, getVoiceConnection, VoiceConnectionStatus } = require('@discordjs/voice');
@@ -364,7 +364,7 @@ if(admin.round == 2 && admin.vpoint == 0 && admin.readynum == totalplayer){/////
 	
 
 	const channel5 = client.channels.cache.get(note1);//추리노트
-	await channel5.send('1차 조사가 모두 끝났습니다. 토론시간을 가지신후 2차조사를 시작하시려면 ```!2차조사 시작```이라고 쳐주세요.')
+	await channel5.send('1차 조사가 모두 끝났습니다. 토론시간을 가지신후 2차조사를 시작하시려면 ```!2차조사```라고 쳐주세요.')
 	await channel5.send(dlck+"후에 2차조사를 시작 하세요")
 	database = {
 		readynum : admin.readynum,
@@ -454,7 +454,7 @@ if(admin.round == 4 && admin.vpoint == 0 && admin.readynum == totalplayer){////2
 	 }
 	fs.writeFileSync(vfilePath, JSON.stringify(voting));
 }
-if(admin.round == 4 && admin.vpoint == 0 && admin.readynum == totalplayer && vote.votenum == totalplayer && totalplayer == 5){////5인 투표종료
+if(admin.round == 5 && admin.vpoint == 0 && admin.readynum == totalplayer && vote.votenum == totalplayer && totalplayer == 5){////5인 투표종료
 	await today.setMinutes(today.getMinutes() + 50);
 	const dlck = "" + today.getDate() +"일"+ today.getHours() + "시" + today.getMinutes() + "분";
 
@@ -487,7 +487,7 @@ if(admin.round == 4 && admin.vpoint == 0 && admin.readynum == totalplayer && vot
 		playerid4 : admin.playerid4,
 		playerid5 : admin.playerid5,
 		playerid6 : admin.playerid6,
-        round : (admin.round *= 0) +5,
+        round : (admin.round *= 0) +6,
 		starttime : admin.starttime,
 		endtime : dater,
 		vpoint : admin.vpoint
@@ -563,7 +563,7 @@ console.log('끝')
 	   
 
 }
-if(admin.round == 4 && admin.vpoint == 0 && admin.readynum == totalplayer && vote.votenum == totalplayer && totalplayer == 6){////6인 투표종료
+if(admin.round == 5 && admin.vpoint == 0 && admin.readynum == totalplayer && vote.votenum == totalplayer && totalplayer == 6){////6인 투표종료
 	await today.setMinutes(today.getMinutes() + 50);
 	const dlck = "" + today.getDate() +"일"+ today.getHours() + "시" + today.getMinutes() + "분";
 	
@@ -596,7 +596,7 @@ if(admin.round == 4 && admin.vpoint == 0 && admin.readynum == totalplayer && vot
 		playerid4 : admin.playerid4,
 		playerid5 : admin.playerid5,
 		playerid6 : admin.playerid6,
-        round : (admin.round *= 0) +5,
+        round : (admin.round *= 0) +6,
 		starttime : admin.starttime,
 		endtime : dater,
 		vpoint : admin.vpoint
@@ -674,7 +674,7 @@ console.log('끝')
 	   
 
 }
-if(admin.round == 5 && admin.vpoint == 0 && admin.readynum == totalplayer && vote.votenum == totalplayer){////투표종료후 결과
+if(admin.round == 6 && admin.vpoint == 0 && admin.readynum == totalplayer && vote.votenum == totalplayer){////투표종료후 결과
 	await today.setMinutes(today.getMinutes() + 50);
 	const dlck = "" + today.getDate() +"일"+ today.getHours() + "시" + today.getMinutes() + "분";
 	var rufrhk = ""

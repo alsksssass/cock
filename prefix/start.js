@@ -1,6 +1,6 @@
 const fs = require('node:fs');
 const { Client, GatewayIntentBits, Collection, MembershipScreeningFieldType, ClientUser, User, time, GuildChannel, GuildManager, MessageManager, GuildMemberManager, GuildBanManager, GuildBan, GuildStickerManager, PermissionsBitField, PermissionOverwriteManager, MessageFlagsBitField, GuildMemberRoleManager, GuildMember } = require('discord.js');
-const { record, playcode, owner, character1, character2, character3, character4, character5, character6, botplay, botstan  } = require('../config.json');
+const { record, playcode, owner, character1, character2, character3, character4, character5, character6, botplay, botstan, totalplayer  } = require('../config.json');
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.GuildMessageReactions, GatewayIntentBits.GuildVoiceStates, GatewayIntentBits.DirectMessages, GatewayIntentBits.MessageContent, GatewayIntentBits.Guilds, GatewayIntentBits.GuildMembers, GatewayIntentBits.GuildBans] });
 const wait = require('node:timers/promises').setTimeout;///딜레이 구문
 const today = new Date();
