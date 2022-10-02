@@ -96,7 +96,7 @@ module.exports = {
             {
                console.log(arguments)
                console.log(clue.dclueid02)
-               await channel.send('> 020 - 윤새롬의 통장')
+               await channel.send('> 020 - 윤새롬의 통장, 통장에 돈이 많이 부족하다.')
                const ms1 = await channel.send('https://i.imgur.com/q3pdrOF.png')
                await ms1.react('❤️');
                await channel5.send("조사횟수"+(admin.vpoint-1)+"개 남음")
@@ -138,7 +138,8 @@ module.exports = {
             {
               console.log(arguments)
               console.log(clue.dclueid03)
-              await channel.send('> 030 - 윤새롬의 흰 봉투')
+              await channel.send('> 030 - 윤새롬의 흰 봉투 메모도 같이 들어있다.')
+              await channel.send('```호랑아. 앞으로도 우리 가끔씩 합방도 하고, 다시 컨덴츠 회의도 하자.\n이번에 내가 돈 열심히 모아서 우리 같이 쓸 수 있는 타로 매장도 구해놨어.\n이제 싸우지말자 내가 좀 더 잘 맞춰갈게.```')
               const ms1 = await channel.send('https://i.imgur.com/PXxl62g.jpg')
               await ms1.react('❤️');
                await channel5.send("조사횟수"+(admin.vpoint-1)+"개 남음")
@@ -179,7 +180,7 @@ module.exports = {
             {
                console.log(arguments)
                console.log(clue.dclueid04)
-               await channel.send('> 040 - 윤새롬의 계약서')
+               await channel.send('> 040 - 윤새롬의 오프라인 타로매장 계약서')
               const ms1 = await channel.send('https://i.imgur.com/qb2nxAP.jpg')
               await ms1.react('❤️');
                await channel5.send("조사횟수"+(admin.vpoint-1)+"개 남음")
@@ -220,7 +221,8 @@ module.exports = {
             {
                console.log(arguments)
                console.log(clue.dclueid05)
-               await channel.send('> 050 - 새롬의 골든버튼')
+               await channel.send('> 050 - 새롬의 골든버튼에 피가묻어있다.')
+               
               const ms1 = await channel.send('https://i.imgur.com/xCTSxHc.png')
               await ms1.react('❤️');
                await channel5.send("조사횟수"+(admin.vpoint-1)+"개 남음")
@@ -261,7 +263,6 @@ module.exports = {
                console.log(arguments)
                console.log(clue.dclueid06)
                await channel.send('> 060 - 윤새롬의 편지')
-               await channel.send('정성에게 쓴 편지. \n자신의 생일인 것 아는데 챙겨주는 것도 아는데 너무 못해줘서 미안하다는 편지. \n그리고 앞으로 상황이 변할것이니 조금만 참아달라는 내용의 편지다.')
                const ms1 = await channel.send('```정성오빠에게 \n오빠 내가 자주 데이트도 못하고, 나 바쁘다고 오빠 연락도 잘 못 받아서 미안해.\n나는 지금 자리를 잡아 두지 못 하면 앞으로 더 힘들어질 것 같아서 좀 겁이나나봐. \n그래서 대부분의 시간을 내일에만 할애를 했던 것 같아. \n앞으로는 그러지 않을께 \n자주 같이 하려고 노력할테니까 나 조금만 믿어줘!```')
                await ms1.react('❤️');
                await channel5.send("조사횟수"+(admin.vpoint-1)+"개 남음")

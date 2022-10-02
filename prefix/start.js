@@ -19,7 +19,7 @@ module.exports = {
       ///const arguments = args.shift(1)
       ////console.log(arguments)
       try {
-        console.log("넘어옴1")
+        
       ////저장정보 불러오는 부분
       var database = owner
       var uid = message.author.id
@@ -38,7 +38,7 @@ module.exports = {
 
         if(user.class === character1 && admin.readynum < totalplayer && admin.class1 == '미지정' && totalplayer == 5)
         {
-          console.log("넘어옴1")
+          console.log("넘어옴1--1")
           database = {
             readynum : admin.readynum += 1,
                 class1 : user.class,
@@ -65,7 +65,7 @@ module.exports = {
                 vpoint : admin.vpoint
              }
             fs.writeFileSync(dfilePath, JSON.stringify(database));
-         
+            console.log("넘어옴1-1")
          
         }
         else if(user.class === character2 && admin.readynum < totalplayer && admin.class2 == '미지정' && totalplayer == 5)

@@ -228,10 +228,10 @@ database = {
 		vpoint : admin.vpoint
 	 }
 	 fs.writeFileSync(dfilePath, JSON.stringify(database));
-
+	 {
 	 numtitle = {
-		title1 : numtitle.title1,
-		playnum : numtitle.playnum +1
+		title1 : pnum.title1,
+		playnum : pnum.playnum +1
 		
 		 }
 		 fs.writeFileSync(ffilePath, JSON.stringify(numtitle));
@@ -292,8 +292,8 @@ database = {
 	 fs.writeFileSync(dfilePath, JSON.stringify(database));
 	 console.log(admin.readynum+"성공")
 	 numtitle = {
-		title1 : numtitle.title1,
-		playnum : numtitle.playnum +1
+		title1 : pnum.title1,
+		playnum : pnum.playnum +1
 		
 		 }
 		 fs.writeFileSync(ffilePath, JSON.stringify(numtitle));
@@ -327,7 +327,7 @@ database = {
 
 }
 
-})
+}})
 
 client.on('messageCreate', async (message) => { 
 if(message.author.bot) return;
@@ -360,12 +360,13 @@ if(!client.commands.has(command)) return
 try{
 if(admin.round == 2 && admin.vpoint == 0 && admin.readynum == totalplayer){/////1차조사종료
 	await today.setMinutes(today.getMinutes() + 15);
-	const dlck = "" + today.getDate() +"일"+ today.getHours() + "시" + today.getMinutes() + "분";
+	await today.setHours(today.getHours() + 9);
+	const dlck = "" + today.getHours() + "시" + today.getMinutes() + "분";
 	
 
 	const channel5 = client.channels.cache.get(note1);//추리노트
 	await channel5.send('1차 조사가 모두 끝났습니다. 토론시간을 가지신후 2차조사를 시작하시려면 ```!2차조사```라고 쳐주세요.')
-	await channel5.send(dlck+"후에 2차조사를 시작 하세요")
+	await channel5.send(dlck+"후에 2차조사를 시작 하세요. 조사가 끝나면 ``!확인``을 쳐주세요")
 	database = {
 		readynum : admin.readynum,
 		class1 : admin.class1,
@@ -395,7 +396,8 @@ if(admin.round == 2 && admin.vpoint == 0 && admin.readynum == totalplayer){/////
 }
 if(admin.round == 4 && admin.vpoint == 0 && admin.readynum == totalplayer){////2차조사종료
 	await today.setMinutes(today.getMinutes() + 15);
-	const dlck = "" + today.getDate() +"일"+ today.getHours() + "시" + today.getMinutes() + "분";
+	await today.setHours(today.getHours() + 9);
+	const dlck = "" + today.getHours() + "시" + today.getMinutes() + "분";
 	
 
 	const channel5 = client.channels.cache.get(note1);//추리노트
@@ -455,7 +457,8 @@ if(admin.round == 4 && admin.vpoint == 0 && admin.readynum == totalplayer){////2
 	fs.writeFileSync(vfilePath, JSON.stringify(voting));
 }
 if(admin.round == 5 && admin.vpoint == 0 && admin.readynum == totalplayer && vote.votenum == totalplayer && totalplayer == 5){////5인 투표종료
-	await today.setMinutes(today.getMinutes() + 50);
+	await today.setMinutes(today.getMinutes() + 15);
+	await today.setHours(today.getHours() + 9);
 	const dlck = "" + today.getDate() +"일"+ today.getHours() + "시" + today.getMinutes() + "분";
 
 	const channel1 = client.channels.cache.get(chclue1);//윤새롬
@@ -564,7 +567,8 @@ console.log('끝')
 
 }
 if(admin.round == 5 && admin.vpoint == 0 && admin.readynum == totalplayer && vote.votenum == totalplayer && totalplayer == 6){////6인 투표종료
-	await today.setMinutes(today.getMinutes() + 50);
+	await today.setMinutes(today.getMinutes() + 15);
+	await today.setHours(today.getHours() + 9);
 	const dlck = "" + today.getDate() +"일"+ today.getHours() + "시" + today.getMinutes() + "분";
 	
 	const channel1 = client.channels.cache.get(chclue1);//윤새롬
@@ -675,7 +679,7 @@ console.log('끝')
 
 }
 if(admin.round == 6 && admin.vpoint == 0 && admin.readynum == totalplayer && vote.votenum == totalplayer){////투표종료후 결과
-	await today.setMinutes(today.getMinutes() + 50);
+
 	const dlck = "" + today.getDate() +"일"+ today.getHours() + "시" + today.getMinutes() + "분";
 	var rufrhk = ""
     if(vote.vote1 >= 3)rufrhk = "검거 성공"
@@ -779,10 +783,11 @@ client.on('interactionCreate', async interaction => {
 //////////////////////////////////초기입장 멘트/
 ///////////////
 
+
 client.on('guildMemberAdd', async member => {
-await wait(1000);
-member.guild.channels.cache.find(i => i.name === '롤지받기').send(`안녕하세요 롤 선택순서입니다.\n캐릭터롤\n${character1}\n${character2}\n${character3}\n${character4}\n${character5}\n${character6}\n이 있습니다.\n\n명령어는 ``!롤 역할``입니다.`)
-})
+	await wait(1000);
+	member.guild.channels.cache.find(i => i.name === '롤지받기').send(`안녕하세요 롤 선택순서입니다.\n캐릭터롤\n한호랑\n유수호\n오정성\n곽편집\n이 있습니다.\n\n명령어는 ``!롤 역할``입니다.`)
+	})
 
 
 //Welcome & goodbye messages end\\

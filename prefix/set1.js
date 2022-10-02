@@ -304,6 +304,7 @@ await editms.edit({ content: "준비중입니다. 1/10" })
     await channel4.send('-----------------------------')
     await editms.edit({ content: "준비 완료 되었습니다." })
     await channel22.send("``!단서 000`` 을 치셔서 연습을 해 보세요 횟수는 차감되지 않습니다. 아주 중요한 단서이니 꼭 쳐보시고 시작하세요!\n 명령어는 탐정님만 사용이 가능합니다. \n의견을 조율받으셔서 명령어를 써 주세요. \n1차 단서 조사갯수는 20+1개입니다.")
+    await channel22.send('조사가 끝나면 ``!확인``을 쳐주세요')
     cluedata = {
 
         dclueid01 : clueid01,
