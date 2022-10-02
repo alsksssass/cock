@@ -476,7 +476,7 @@ if(admin.round == 4 && admin.vpoint == 0 && admin.readynum == totalplayer){////2
 if(admin.round == 5 && admin.vpoint == 0 && admin.readynum == totalplayer && vote.votenum == totalplayer && totalplayer == 5){////5인 투표종료
 	await today.setMinutes(today.getMinutes() + 15);
 	await today.setHours(today.getHours() + 9);
-	const dlck = "" + today.getDate() +"일"+ today.getHours() + "시" + today.getMinutes() + "분";
+	const dlck = "" + today.getHours() + "시" + today.getMinutes() + "분";
 	var cd1 = admin.playerid1
 	var cd2 = admin.playerid2
 	var cd3 = admin.playerid3
