@@ -666,7 +666,7 @@ module.exports = {
             {
                console.log(arguments)
                console.log(clue.dclueid17)
-               await channel1.send('> 170 - 한호랑의  SD카드,내용이 없다.')
+               await channel1.send('> 170 - 한호랑의  SD카드 : 내용이 없다.')
                const ms1 = await channel1.send('https://i.imgur.com/8y15FaL.png')
                await ms1.react('❤️');
                await channel5.send("조사횟수"+(admin.vpoint-1)+"개 남음")
@@ -706,7 +706,7 @@ module.exports = {
             {
                console.log(arguments)
                console.log(clue.dclueid18)
-               await channel1.send('> 180 - 한호랑의  캐리어가방 비어있다.')
+               await channel1.send('> 180 - 한호랑의  캐리어가방 : 비어있다.')
                const ms1 = await channel1.send('https://i.imgur.com/h6iYEey.png')
                await ms1.react('❤️');
                await channel5.send("조사횟수"+(admin.vpoint-1)+"개 남음")
