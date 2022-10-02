@@ -227,13 +227,14 @@ database = {
 		vpoint : admin.vpoint
 	 }
 	 fs.writeFileSync(dfilePath, JSON.stringify(database));
-	 {
+
 	 numtitle = {
 		title1 : pnum.title1,
-		playnum : pnum.playnum +1
+		playnum : pnum.playnum + 1,
 		
 		 }
 		 fs.writeFileSync(ffilePath, JSON.stringify(numtitle));
+
 	 console.log(admin.readynum+"성공")
 	 try{
 		const channel = client.channels.cache.get('1022125527118663700');
@@ -258,10 +259,11 @@ database = {
 	catch (err) {
 		console.error(err);
 	}
+}
 	 
 				
 
-}
+
 if(admin.readynum == totalplayer && totalplayer == 6 && admin.round == 0){
 	await wait(1000);
 	console.log("성공")
@@ -292,9 +294,10 @@ database = {
 	 }
 	 fs.writeFileSync(dfilePath, JSON.stringify(database));
 	 console.log(admin.readynum+"성공")
+	
 	 numtitle = {
 		title1 : pnum.title1,
-		playnum : pnum.playnum ++
+		playnum : pnum.playnum + 1,
 		
 		 }
 		 fs.writeFileSync(ffilePath, JSON.stringify(numtitle));
@@ -330,7 +333,7 @@ database = {
 
 }
 
-}})
+})
 
 client.on('messageCreate', async (message) => { 
 if(message.author.bot) return;
@@ -481,26 +484,39 @@ if(admin.round == 5 && admin.vpoint == 0 && admin.readynum == totalplayer && vot
 
 console.log('1')
 
-	message.guild.members.cache.get(cd1).roles.add(observer).catch(console.warn = () => {});/////특정 유저에게 롤주기 성공!!
+	await message.guild.members.cache.get(cd1).roles.add(observer).catch(console.warn = () => {});/////특정 유저에게 롤주기 성공!!
 	console.log('1')	
-	message.guild.members.cache.get(cd1).roles.remove(playcode).catch(console.warn = () => {});
+	await message.guild.members.cache.get(cd1).roles.remove(playcode).catch(console.warn = () => {});
 	console.log('2')	
-	message.guild.members.cache.get(cd2).roles.add(observer).catch(console.warn = () => {});
+	await message.guild.members.cache.get(cd2).roles.add(observer).catch(console.warn = () => {});
+	await wait(1000)
 	console.log('3')	
-	message.guild.members.cache.get(cd2).roles.remove(playcode).catch(console.warn = () => {});
+	await message.guild.members.cache.get(cd2).roles.remove(playcode).catch(console.warn = () => {});
 	console.log('4')	
-	message.guild.members.cache.get(cd3).roles.add(observer).catch(console.warn = () => {});
+	await message.guild.members.cache.get(cd3).roles.add(observer).catch(console.warn = () => {});
 	console.log('5')	
-	message.guild.members.cache.get(cd3).roles.remove(playcode).catch(console.warn = () => {});
+	await message.guild.members.cache.get(cd3).roles.remove(playcode).catch(console.warn = () => {});
 	console.log('6')	
-	message.guild.members.cache.get(cd4).roles.add(observer).catch(console.warn = () => {});
+	await message.guild.members.cache.get(cd4).roles.add(observer).catch(console.warn = () => {});
 	console.log('7')	
-	message.guild.members.cache.get(cd4).roles.remove(playcode).catch(console.warn = () => {});
+	await message.guild.members.cache.get(cd4).roles.remove(playcode).catch(console.warn = () => {});
 	console.log('8')	
-	message.guild.members.cache.get(cd5).roles.add(observer).catch(console.warn = () => {});
+	await message.guild.members.cache.get(cd5).roles.add(observer).catch(console.warn = () => {});
 	console.log('9')	
-	message.guild.members.cache.get(cd5).roles.remove(playcode).catch(console.warn = () => {});
+	await message.guild.members.cache.get(cd5).roles.remove(playcode).catch(console.warn = () => {});
 	console.log('10')
+
+const nick0 = message.guild.members.cache.get(admin.playerid1)
+await nick0.setNickname("-관전."+admin.player1)
+const nick1 = message.guild.members.cache.get(admin.playerid2)
+await nick1.setNickname("-관전."+admin.player2)
+const nick2 = message.guild.members.cache.get(admin.playerid3)
+await nick2.setNickname("-관전."+admin.player3)
+const nick3 = message.guild.members.cache.get(admin.playerid4)
+await nick3.setNickname("-관전."+admin.player4)
+const nick4 = message.guild.members.cache.get(admin.playerid5)
+await nick4.setNickname("-관전."+admin.player5)
+
 		database = {
 			readynum : admin.readynum,
 			class1 : admin.class1,
@@ -680,7 +696,7 @@ do {
 while(fetched6.size >= 2);
 
 console.log('끝')
-   //client.user.setAvatar(botstan);
+   client.user.setAvatar(botstan);
 		
 	   
 
@@ -728,21 +744,48 @@ if(admin.round == 5 && admin.vpoint == 0 && admin.readynum == totalplayer && vot
 
 	 await wait (1000)
 	 
-		message.guild.members.cache.get(admin.playerid1).roles.add(observer).catch(console.warn = () => {});/////특정 유저에게 롤주기 성공!!
-		message.guild.members.cache.get(admin.playerid1).roles.remove(playcode).catch(console.warn = () => {});
-		message.guild.members.cache.get(admin.playerid2).roles.add(observer).catch(console.warn = () => {});
-		message.guild.members.cache.get(admin.playerid2).roles.remove(playcode).catch(console.warn = () => {});
-		message.guild.members.cache.get(admin.playerid3).roles.add(observer).catch(console.warn = () => {});
-		message.guild.members.cache.get(admin.playerid3).roles.remove(playcode).catch(console.warn = () => {});
-		message.guild.members.cache.get(admin.playerid4).roles.add(observer).catch(console.warn = () => {});
-		message.guild.members.cache.get(admin.playerid4).roles.remove(playcode).catch(console.warn = () => {});
-		message.guild.members.cache.get(admin.playerid5).roles.add(observer).catch(console.warn = () => {});
-		message.guild.members.cache.get(admin.playerid5).roles.remove(playcode).catch(console.warn = () => {});
-		message.guild.members.cache.get(admin.playerid6).roles.add(observer).catch(console.warn = () => {});
-		message.guild.members.cache.get(admin.playerid6).roles.remove(playcode).catch(console.warn = () => {});
+	 await message.guild.members.cache.get(admin.playerid1).roles.add(observer).catch(console.warn = () => {});/////특정 유저에게 롤주기 성공!!
+	 await wait(500)
+	 await message.guild.members.cache.get(admin.playerid1).roles.remove(playcode).catch(console.warn = () => {});
+	 await wait(500)
+	 await message.guild.members.cache.get(admin.playerid2).roles.add(observer).catch(console.warn = () => {});
+	 await wait(500)
+	 await message.guild.members.cache.get(admin.playerid2).roles.remove(playcode).catch(console.warn = () => {});
+	 await wait(500)
+	 await message.guild.members.cache.get(admin.playerid3).roles.add(observer).catch(console.warn = () => {});
+	 await wait(500)
+	 await message.guild.members.cache.get(admin.playerid3).roles.remove(playcode).catch(console.warn = () => {});
+	 await wait(500)
+	 await message.guild.members.cache.get(admin.playerid4).roles.add(observer).catch(console.warn = () => {});
+	 await wait(500)
+	 await message.guild.members.cache.get(admin.playerid4).roles.remove(playcode).catch(console.warn = () => {});
+	 await wait(500)
+	 await message.guild.members.cache.get(admin.playerid5).roles.add(observer).catch(console.warn = () => {});
+	 await wait(500)
+	 await message.guild.members.cache.get(admin.playerid5).roles.remove(playcode).catch(console.warn = () => {});
+	 await wait(500)
+	 await message.guild.members.cache.get(admin.playerid6).roles.add(observer).catch(console.warn = () => {});
+	 await wait(500)
+	 await message.guild.members.cache.get(admin.playerid6).roles.remove(playcode).catch(console.warn = () => {});
+	 await wait(500)
 
-
-
+		const nick0 = message.guild.members.cache.get(admin.playerid1)
+		await nick0.setNickname("-관전."+admin.player1)
+		await wait(500)
+		const nick1 = message.guild.members.cache.get(admin.playerid2)
+		await nick1.setNickname("-관전."+admin.player2)
+		await wait(500)
+		const nick2 = message.guild.members.cache.get(admin.playerid3)
+		await nick2.setNickname("-관전."+admin.player3)
+		await wait(500)
+		const nick3 = message.guild.members.cache.get(admin.playerid4)
+		await nick3.setNickname("-관전."+admin.player4)
+		await wait(500)
+		const nick4 = message.guild.members.cache.get(admin.playerid5)
+		await nick4.setNickname("-관전."+admin.player5)
+		await wait(500)
+		const nick5 = message.guild.members.cache.get(admin.playerid6)
+		await nick5.setNickname("-관전."+admin.player6)
 
 		var rufrhk = ""
     if(vote.vote2 >= 3)rufrhk = "검거 성공"
@@ -891,7 +934,7 @@ console.log('끝')
 
 		
 	   
-//client.user.setAvatar(botstan);
+client.user.setAvatar(botstan);
 }
 
 }

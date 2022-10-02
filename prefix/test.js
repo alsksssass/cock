@@ -16,13 +16,8 @@ const dater ="" + today.getFullYear()+"년" + today.getMonth()+"월" + today.get
 module.exports = {
   name: "확인",
   async execute(message, args, client ) {
-    const channel5 = client.channels.cache.get(chclue5);//곽편집
-    await wait(1000)
-    fetched5 = await channel5.messages.fetch({limit: 99}).catch(console.warn = () => {});
-    await channel5.bulkDelete(fetched5).catch(console.warn = () => {});
-    console.log('5')
-    while(fetched5.size >= 2);
-console.log('끝')
+console.log('확인')
+
   }}
 // var voting = '00'
 // var numtitle = '33'
