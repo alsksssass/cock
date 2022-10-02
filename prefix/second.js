@@ -64,7 +64,7 @@ if(admin.round == 3 && admin.vpoint == 0 && message.author.id == admin.playerid1
         round : (admin.round *= 0) +4,
 		starttime : admin.starttime,
 		endtime : admin.endtime,
-		vpoint : (admin.vpoint *= 0) +23
+		vpoint : (admin.vpoint *= 0) +21
 	 }
   
   fs.writeFileSync(dfilePath, JSON.stringify(database));

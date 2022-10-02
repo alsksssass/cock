@@ -364,6 +364,17 @@ const pnum = JSON.parse(fs.readFileSync(ffilePath, "utf-8"));
 if(!client.commands.has(command)) return
 
 try{
+
+	if(admin.vpoint == 0 && admin.round == 2){
+		const channel5 = client.channels.cache.get(note1);//추리노트
+		await channel5.send('단서를 다 사용했습니다.')
+		await channel5.send('``!확인``을 사용해 주세요')
+	}
+	if(admin.vpoint == 0 && admin.round == 4){
+		const channel5 = client.channels.cache.get(note1);//추리노트
+		await channel5.send('단서를 다 사용했습니다.')
+		await channel5.send('``!확인``을 사용해 주세요')
+	}
 if(admin.round == 2 && admin.vpoint == 0 && admin.readynum == totalplayer){/////1차조사종료
 	await today.setMinutes(today.getMinutes() + 15);
 	await today.setHours(today.getHours() + 8);
