@@ -105,8 +105,8 @@ if(admin.readynum == 1){
 if(message.author.bot) return;
 const channel = client.channels.cache.get('1022125527118663700');
 await channel.send("15초안에 모두 준비를 마쳐주세요")
-if (totalplayer == 5) await channel.send({ content: ">>> "+admin.class1+"역"+"\n"+admin.player1+"님"+"\n"+"\n"+admin.class2+"역"+"\n"+admin.player2+"님"+"\n"+"\n"+admin.class3+"역"+"\n"+admin.player3+"님"+"\n"+"\n"+admin.class4+"역"+"\n"+admin.player4+"님"+"\n"+"\n"+admin.class5+"역"+"\n"+admin.player5+"님"+"\n"+"\n"})
-if (totalplayer == 6) await channel.send({ content: ">>> "+admin.class1+"역"+"\n"+admin.player1+"님"+"\n"+"\n"+admin.class2+"역"+"\n"+admin.player2+"님"+"\n"+"\n"+admin.class3+"역"+"\n"+admin.player3+"님"+"\n"+"\n"+admin.class4+"역"+"\n"+admin.player4+"님"+"\n"+"\n"+admin.class5+"역"+"\n"+admin.player5+"님"+"\n"+"\n"+admin.class6+"역"+"\n"+admin.player6+"님"+"\n"+"\n"})
+if (totalplayer == 5 && admin.readynum == 5 ) await channel.send({ content: ">>> "+admin.class1+"역"+"\n"+admin.player1+"님"+"\n"+"\n"+admin.class2+"역"+"\n"+admin.player2+"님"+"\n"+"\n"+admin.class3+"역"+"\n"+admin.player3+"님"+"\n"+"\n"+admin.class4+"역"+"\n"+admin.player4+"님"+"\n"+"\n"+admin.class5+"역"+"\n"+admin.player5+"님"+"\n"+"\n"})
+if (totalplayer == 6 && admin.readynum == 6 ) await channel.send({ content: ">>> "+admin.class1+"역"+"\n"+admin.player1+"님"+"\n"+"\n"+admin.class2+"역"+"\n"+admin.player2+"님"+"\n"+"\n"+admin.class3+"역"+"\n"+admin.player3+"님"+"\n"+"\n"+admin.class4+"역"+"\n"+admin.player4+"님"+"\n"+"\n"+admin.class5+"역"+"\n"+admin.player5+"님"+"\n"+"\n"+admin.class6+"역"+"\n"+admin.player6+"님"+"\n"+"\n"})
 await wait(1000);
 await channel.send("14초안에 모두 준비를 마쳐주세요")
 await wait(1000);
@@ -167,7 +167,7 @@ if(admin.readynum == 2){
 	
 
 	if(admin.readynum != totalplayer && message.channel.id == stanby && totalplayer == 5) {
-	  console.log("오너파일 덮어쓰기")
+	  console.log("오너파일 취소 덮어쓰기")
 		database = {
 			readynum : 0,
 			class1 : "미지정",
@@ -195,7 +195,8 @@ if(admin.readynum == 2){
 		   
 		 }
 	 fs.writeFileSync(dfilePath, JSON.stringify(database));
-	await message.channel.send("실패!!! 다시 시도해 주세요")
+	 const channel = client.channels.cache.get('1022125527118663700');
+	await channel.send("실패!!! 다시 시도해 주세요")
 	}
 
 
