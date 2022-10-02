@@ -366,7 +366,7 @@ if(!client.commands.has(command)) return
 try{
 if(admin.round == 2 && admin.vpoint == 0 && admin.readynum == totalplayer){/////1차조사종료
 	await today.setMinutes(today.getMinutes() + 15);
-	await today.setHours(today.getHours() + 21);
+	await today.setHours(today.getHours() + 8);
 	const dlck = "" + today.getHours() + "시" + today.getMinutes() + "분";
 	
 
@@ -402,7 +402,7 @@ if(admin.round == 2 && admin.vpoint == 0 && admin.readynum == totalplayer){/////
 }
 if(admin.round == 4 && admin.vpoint == 0 && admin.readynum == totalplayer){////2차조사종료
 	await today.setMinutes(today.getMinutes() + 15);
-	await today.setHours(today.getHours() + 21);
+	await today.setHours(today.getHours() + 8);
 	const dlck = "" + today.getHours() + "시" + today.getMinutes() + "분";
 	
 
@@ -464,7 +464,7 @@ if(admin.round == 4 && admin.vpoint == 0 && admin.readynum == totalplayer){////2
 }
 if(admin.round == 5 && admin.vpoint == 0 && admin.readynum == totalplayer && vote.votenum == totalplayer && totalplayer == 5){////5인 투표종료
 	await today.setMinutes(today.getMinutes() + 15);
-	await today.setHours(today.getHours() + 9);
+	await today.setHours(today.getHours() + 8);
 	const dlck = "" + today.getDate() +"일"+ today.getHours() + "시" + today.getMinutes() + "분";
 	var cd1 = admin.playerid1
 	var cd2 = admin.playerid2

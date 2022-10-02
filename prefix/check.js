@@ -221,7 +221,7 @@ module.exports = {
             {
                console.log(arguments)
                console.log(clue.dclueid05)
-               await channel.send('> 050 - 새롬의 골든버튼에 피가묻어있다.')
+               await channel.send('> 050 - 새롬의 골든버튼에 피가묻은 흔적이있다.')
                
               const ms1 = await channel.send('https://i.imgur.com/xCTSxHc.png')
               await ms1.react('❤️');
