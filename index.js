@@ -474,7 +474,7 @@ if(admin.round == 4 && admin.vpoint == 0 && admin.readynum == totalplayer){////2
 	fs.writeFileSync(vfilePath, JSON.stringify(voting));
 }
 if(admin.round == 5 && admin.vpoint == 0 && admin.readynum == totalplayer && vote.votenum == totalplayer && totalplayer == 5){////5인 투표종료
-	await today.setMinutes(today.getMinutes() + 15);
+	
 	await today.setHours(today.getHours() + 9);
 	const dlck = "" + today.getHours() + "시" + today.getMinutes() + "분";
 	var cd1 = admin.playerid1
@@ -550,7 +550,7 @@ await nick4.setNickname("-관전."+admin.player5)
 			playerid6 : admin.playerid6,
 			round : (admin.round *= 0) +6,
 			starttime : admin.starttime,
-			endtime : dater,
+			endtime : dlck,
 			vpoint : admin.vpoint
 		 }
 		 fs.writeFileSync(dfilePath, JSON.stringify(database));
@@ -713,7 +713,7 @@ console.log('끝')
 
 }
 if(admin.round == 5 && admin.vpoint == 0 && admin.readynum == totalplayer && vote.votenum == totalplayer && totalplayer == 6){////6인 투표종료
-	await today.setMinutes(today.getMinutes() + 15);
+	
 	await today.setHours(today.getHours() + 9);
 	const dlck = "" + today.getDate() +"일"+ today.getHours() + "시" + today.getMinutes() + "분";
 	
@@ -748,7 +748,7 @@ if(admin.round == 5 && admin.vpoint == 0 && admin.readynum == totalplayer && vot
 		playerid6 : admin.playerid6,
         round : (admin.round *= 0) +6,
 		starttime : admin.starttime,
-		endtime : dater,
+		endtime : dlck,
 		vpoint : admin.vpoint
 	 }
 	 fs.writeFileSync(dfilePath, JSON.stringify(database));
