@@ -36,8 +36,10 @@ module.exports = {
 //   console.log(user.name+"실패시")
 // }
 
-        if(user.class === character1 && admin.readynum < totalplayer && admin.class1 == '미지정' && totalplayer == 5)
+        if(user.class == character1 && admin.readynum < totalplayer && admin.class1 == '미지정' && totalplayer == 5)
         {
+          if (admin.class1 != "미지정")
+          {await message.channel.send('이미 선택된 롤입니다.'); return;}
           console.log("넘어옴1--1")
           database = {
             readynum : admin.readynum += 1,
@@ -68,8 +70,10 @@ module.exports = {
             console.log("넘어옴1-1")
          
         }
-        else if(user.class === character2 && admin.readynum < totalplayer && admin.class2 == '미지정' && totalplayer == 5)
+        else if(user.class == character2 && admin.readynum < totalplayer && admin.class2 == '미지정' && totalplayer == 5)
         {
+          if (admin.class2 != "미지정")
+          {await message.channel.send('이미 선택된 롤입니다.'); return;}
           console.log("넘어옴2")
           database = {
             readynum : admin.readynum += 1,
@@ -101,8 +105,10 @@ module.exports = {
          
         }
 
-        else if(user.class === character3 && admin.readynum < totalplayer && admin.class3 == '미지정' && totalplayer == 5)
+        else if(user.class == character3 && admin.readynum < totalplayer && admin.class3 == '미지정' && totalplayer == 5)
         {
+          if (admin.class3 != "미지정")
+          {await message.channel.send('이미 선택된 롤입니다.'); return;}
           console.log("넘어옴3")
           database = {
             readynum : admin.readynum += 1,
@@ -134,8 +140,10 @@ module.exports = {
          
         }
 
-        else if(user.class === character4 && admin.readynum < totalplayer && admin.class4 == '미지정' && totalplayer == 5)
+        else if(user.class == character4 && admin.readynum < totalplayer && admin.class4 == '미지정' && totalplayer == 5)
         {
+          if (admin.class4 != "미지정")
+          {await message.channel.send('이미 선택된 롤입니다.'); return;}
           console.log("넘어옴4")
           database = {
             readynum : admin.readynum += 1,
@@ -167,8 +175,11 @@ module.exports = {
          
         }
 
-        else if(user.class === character5 && admin.readynum < totalplayer && admin.class5 == '미지정' && totalplayer == 5)
+        else if(user.class == character5 && admin.readynum < totalplayer && admin.class5 == '미지정' && totalplayer == 5)
         {
+          
+          if (admin.class5 != "미지정")
+          {await message.channel.send('이미 선택된 롤입니다.'); return;}
           console.log("넘어옴5")
           database = {
             readynum : admin.readynum += 1,
@@ -196,10 +207,13 @@ module.exports = {
                 vpoint : admin.vpoint
              }
             fs.writeFileSync(dfilePath, JSON.stringify(database));
+            
          }
 
-         if(user.class === character1 && admin.readynum < totalplayer && admin.class1 == '미지정' && totalplayer == 6)
+         if(user.class == character1 && admin.readynum < totalplayer && admin.class1 == '미지정' && totalplayer == 6)
         {
+          if (admin.class1 != "미지정")
+          {await message.channel.send('이미 선택된 롤입니다.'); return;}
           console.log("넘어옴1")
           database = {
             readynum : admin.readynum += 1,
@@ -227,11 +241,15 @@ module.exports = {
                 vpoint : admin.vpoint
              }
             fs.writeFileSync(dfilePath, JSON.stringify(database));
+            
+
          
          
         }
-        else if(user.class === character2 && admin.readynum < totalplayer && admin.class2 == '미지정' && totalplayer == 6)
+        else if(user.class == character2 && admin.readynum < totalplayer && admin.class2 == '미지정' && totalplayer == 6)
         {
+          if (admin.class2 != "미지정")
+          {await message.channel.send('이미 선택된 롤입니다.'); return;}
           console.log("넘어옴2")
           database = {
             readynum : admin.readynum += 1,
@@ -259,12 +277,17 @@ module.exports = {
                 vpoint : admin.vpoint
              }
             fs.writeFileSync(dfilePath, JSON.stringify(database));
+            
+            if (admin.class2 != "미지정")
+            {await message.channel.send('이미 선택된 롤입니다.')}
          
          
         }
 
-        else if(user.class === character3 && admin.readynum < totalplayer && admin.class3 == '미지정' && totalplayer == 6)
+        else if(user.class == character3 && admin.readynum < totalplayer && admin.class3 == '미지정' && totalplayer == 6)
         {
+          if (admin.class3 != "미지정")
+          {await message.channel.send('이미 선택된 롤입니다.'); return;}
           console.log("넘어옴3")
           database = {
             readynum : admin.readynum += 1,
@@ -292,12 +315,15 @@ module.exports = {
                 vpoint : admin.vpoint
              }
             fs.writeFileSync(dfilePath, JSON.stringify(database));
+            
          
          
         }
 
-        else if(user.class === character4 && admin.readynum < totalplayer && admin.class4 == '미지정' && totalplayer == 6)
+        else if(user.class == character4 && admin.readynum < totalplayer && admin.class4 == '미지정' && totalplayer == 6)
         {
+          if (admin.class4 != "미지정")
+          {await message.channel.send('이미 선택된 롤입니다.'); return;}
           console.log("넘어옴4")
           database = {
             readynum : admin.readynum += 1,
@@ -325,12 +351,16 @@ module.exports = {
                 vpoint : admin.vpoint
              }
             fs.writeFileSync(dfilePath, JSON.stringify(database));
+            
          
          
         }
 
-        else if(user.class === character5 && admin.readynum < totalplayer && admin.class5 == '미지정' && totalplayer == 6)
+        else if(user.class == character5 && admin.readynum < totalplayer && admin.class5 == '미지정' && totalplayer == 6)
         {
+
+          if (admin.class5 != "미지정")
+          {await message.channel.send('이미 선택된 롤입니다.'); return;}
           console.log("넘어옴5")
           database = {
             readynum : admin.readynum += 1,
@@ -358,9 +388,12 @@ module.exports = {
                 vpoint : admin.vpoint
              }
             fs.writeFileSync(dfilePath, JSON.stringify(database));
+
          }
-         else if(user.class === character6 && admin.readynum < totalplayer && admin.class6 == '미지정' && totalplayer == 6)
+         else if(user.class == character6 && admin.readynum < totalplayer && admin.class6 == '미지정' && totalplayer == 6)
         {
+          if (admin.class6 != "미지정")
+          {await message.channel.send('이미 선택된 롤입니다.'); return;}
           console.log("넘어옴6")
           database = {
             readynum : admin.readynum += 1,
@@ -389,7 +422,7 @@ module.exports = {
              }
             fs.writeFileSync(dfilePath, JSON.stringify(database));
          }
-else{await message.channel.send('이미 선택된 롤입니다.');}
+
        /// message.member.roles.add('1022144442175590410')/////.removeRole(options)
        /// message.member.roles.remove('1022087211266617344')
       } catch (err) {
