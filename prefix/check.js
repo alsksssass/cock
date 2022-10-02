@@ -1068,7 +1068,7 @@ module.exports = {
             {
                console.log(arguments)
                console.log(clue.dclueid28)
-               await channel2.send('> 280 - 유수호의 집앞')
+               await channel2.send('> 280 - 유수호의 단서, 피해자 집앞.')
                const ms1 = await channel2.send('https://i.imgur.com/iSnKvty.jpg')
                await ms1.react('❤️');
                await channel5.send("조사횟수"+(admin.vpoint-1)+"개 남음")
