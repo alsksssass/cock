@@ -46,8 +46,10 @@ let fetched4;
 let fetched5;
 let fetched6;
 console.log('0')
-
-
+if(message.author.id != message.guild.ownerId) {
+  message.channel.send('권한 없음')///관리자롤  
+  return}
+  else
 do {
   await wait(1000)
   fetched1 = await channel1.messages.fetch({limit: 99}).catch(console.warn = () => {});

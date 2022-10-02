@@ -928,7 +928,7 @@ client.on('guildMemberAdd', async member => {
 	await wait(1000);
 	member.guild.channels.cache.find(i => i.name === '롤지받기')
 	const channel44 = client.channels.cache.get('1022085158960115795');//관전방
-	channel44.send('안녕하세요 롤 선택순서입니다.\n캐릭터롤\n한호랑\n유수호\n오정성\n곽편집\n이 있습니다.\n\n명령어는 ``!롤 역할``입니다.')
+	channel44.send('안녕하세요 롤 선택순서입니다.\n캐릭터롤\n탐정\n한호랑\n유수호\n오정성\n곽편집\n이 있습니다.\n\n명령어는 ``!롤 역할``입니다.')
 	})
 
 
