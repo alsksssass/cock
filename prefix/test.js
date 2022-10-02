@@ -1,7 +1,7 @@
 const { createAudioResource, createAudioPlayer, joinVoiceChannel, NoSubscriberBehavior, AudioPlayerStatus, generateDependencyReport, getVoiceConnection, VoiceConnectionStatus, StreamType } = require('@discordjs/voice');
 const fs = require('node:fs');
 const { Client, GatewayIntentBits, Collection, MembershipScreeningFieldType, ClientUser, User, time, GuildChannel, GuildManager, MessageManager, GuildMemberManager, GuildBanManager, GuildBan, GuildStickerManager, PermissionsBitField, PermissionOverwriteManager, MessageFlagsBitField, GuildMemberRoleManager, GuildMember, MessageReaction, EmbedBuilder } = require('discord.js');
-const { record, playcode, owner, character1, character2, character3, character4, character5, character6, botplay, botstan, guildId, chclue1, chclue2, chclue3, chclue4, chclue5, note1 } = require('../config.json');
+const { record, playcode, owner, character1, character2, character3, character4, character5, character6, botplay, botstan, guildId, chclue1, chclue2, chclue3, chclue4, chclue5, note1, observer } = require('../config.json');
 const { createReadStream } = require('node:fs');
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.GuildMessageReactions, GatewayIntentBits.GuildVoiceStates, GatewayIntentBits.DirectMessages, GatewayIntentBits.MessageContent, GatewayIntentBits.Guilds, GatewayIntentBits.GuildMembers, GatewayIntentBits.GuildBans, GatewayIntentBits.GuildVoiceStates] });
 const wait = require('node:timers/promises').setTimeout;///딜레이 구문
@@ -16,37 +16,52 @@ const dater ="" + today.getFullYear()+"년" + today.getMonth()+"월" + today.get
 module.exports = {
   name: "확인",
   async execute(message, args, client ) {
-      ////저장정보 불러오는 부분
-      var cluedata = '0011005500'
-      var voting = '00'
-      var database = message.guild.ownerId
-      var uid = message.author.id
-      const cfilePath = `./data/${uid}.json`;
-      const dfilePath = `./data/${database}.json`;
-      const efilePath = `./data/${cluedata}.json`;
-      const vfilePath = `./data/${voting}.json`;
-      !fs.existsSync(cfilePath) ? fs.writeFileSync(cfilePath, JSON.stringify({})) : null;
-      !fs.existsSync(dfilePath) ? fs.writeFileSync(dfilePath, JSON.stringify({})) : null;
-      !fs.existsSync(efilePath) ? fs.writeFileSync(efilePath, JSON.stringify({})) : null;
-      !fs.existsSync(vfilePath) ? fs.writeFileSync(vfilePath, JSON.stringify({})) : null;
-    const user = JSON.parse(fs.readFileSync(cfilePath, "utf-8"));
-      const admin = JSON.parse(fs.readFileSync(dfilePath, "utf-8"));
-      const clue = JSON.parse(fs.readFileSync(efilePath, "utf-8"));
-      const vote = JSON.parse(fs.readFileSync(vfilePath, "utf-8"));
- ///////////
-
-  arguments = args.shift(1)
-  
-
-  try {
-
-  } catch (error) {
-    console.error(error);
-    
-  }
-  
-
+    const channel5 = client.channels.cache.get(chclue5);//곽편집
+    await wait(1000)
+    fetched5 = await channel5.messages.fetch({limit: 99}).catch(console.warn = () => {});
+    await channel5.bulkDelete(fetched5).catch(console.warn = () => {});
+    console.log('5')
+    while(fetched5.size >= 2);
+console.log('끝')
   }}
+// var voting = '00'
+// var numtitle = '33'
+// var database = message.guild.ownerId
+// var uid = message.author.id
+// const cfilePath = `./data/${uid}.json`;
+// const dfilePath = `./data/${database}.json`;
+// const efilePath = `./data/${cluedata}.json`;
+// const vfilePath = `./data/${voting}.json`;
+// const ffilePath = `./data/${numtitle}.json`;
+// !fs.existsSync(cfilePath) ? fs.writeFileSync(cfilePath, JSON.stringify({})) : null;
+// !fs.existsSync(dfilePath) ? fs.writeFileSync(dfilePath, JSON.stringify({})) : null;
+// !fs.existsSync(efilePath) ? fs.writeFileSync(efilePath, JSON.stringify({})) : null;
+// !fs.existsSync(vfilePath) ? fs.writeFileSync(vfilePath, JSON.stringify({})) : null;
+// !fs.existsSync(ffilePath) ? fs.writeFileSync(ffilePath, JSON.stringify({})) : null;
+// const user = JSON.parse(fs.readFileSync(cfilePath, "utf-8"));
+// const admin = JSON.parse(fs.readFileSync(dfilePath, "utf-8"));
+// const clue = JSON.parse(fs.readFileSync(efilePath, "utf-8"));
+// const vote = JSON.parse(fs.readFileSync(vfilePath, "utf-8"));
+// const pnum = JSON.parse(fs.readFileSync(ffilePath, "utf-8"));
+
+//   try {
+//     message.guild.members.cache.get(admin.playerid1).roles.add(observer).catch(console.warn = () => {});/////특정 유저에게 롤주기 성공!!
+// 		message.guild.members.cache.get(admin.playerid1).roles.remove(playcode).catch(console.warn = () => {});
+// 		message.guild.members.cache.get(admin.playerid2).roles.add(observer).catch(console.warn = () => {});
+// 		message.guild.members.cache.get(admin.playerid2).roles.remove(playcode).catch(console.warn = () => {});
+// 		message.guild.members.cache.get(admin.playerid3).roles.add(observer).catch(console.warn = () => {});
+// 		message.guild.members.cache.get(admin.playerid3).roles.remove(playcode).catch(console.warn = () => {});
+// 		message.guild.members.cache.get(admin.playerid4).roles.add(observer).catch(console.warn = () => {});
+// 		message.guild.members.cache.get(admin.playerid4).roles.remove(playcode).catch(console.warn = () => {});
+// 		message.guild.members.cache.get(admin.playerid5).roles.add(observer).catch(console.warn = () => {});
+// 		message.guild.members.cache.get(admin.playerid5).roles.remove(playcode).catch(console.warn = () => {});
+//   } catch (error) {
+//     console.error(error);
+    
+//   }
+  
+
+//   }}
 //     const arguments = args.shift(1)
 //     console.log(arguments)
    

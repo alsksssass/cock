@@ -46,7 +46,7 @@ module.exports = {
     ///////////
     ///////////console.log('1')
 if (arguments != character1 && arguments != character2 && arguments != character3 && arguments != character4 && arguments != character5) {message.channel.send('이름을 다시 확인해주세요'); return; }
-if(admin.round == 4 && vote.vchance1 ==1 && message.author.id == admin.playerid1) {
+if(admin.round == 5 && vote.vchance1 ==1 && message.author.id == admin.playerid1) {
     let vo1 = 0
     let vo2 = 0
     let vo3 = 0

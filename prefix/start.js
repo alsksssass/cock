@@ -40,6 +40,7 @@ module.exports = {
         {
           if (admin.class1 != "미지정")
           {await message.channel.send('이미 선택된 롤입니다.'); return;}
+          else {
           console.log("넘어옴1--1")
           database = {
             readynum : admin.readynum += 1,
@@ -68,12 +69,13 @@ module.exports = {
              }
             fs.writeFileSync(dfilePath, JSON.stringify(database));
             console.log("넘어옴1-1")
-         
+            }
         }
         else if(user.class == character2 && admin.readynum < totalplayer && admin.class2 == '미지정' && totalplayer == 5)
         {
           if (admin.class2 != "미지정")
           {await message.channel.send('이미 선택된 롤입니다.'); return;}
+          else{
           console.log("넘어옴2")
           database = {
             readynum : admin.readynum += 1,
@@ -102,13 +104,14 @@ module.exports = {
              }
             fs.writeFileSync(dfilePath, JSON.stringify(database));
          
-         
+            }
         }
 
         else if(user.class == character3 && admin.readynum < totalplayer && admin.class3 == '미지정' && totalplayer == 5)
         {
           if (admin.class3 != "미지정")
           {await message.channel.send('이미 선택된 롤입니다.'); return;}
+          else{
           console.log("넘어옴3")
           database = {
             readynum : admin.readynum += 1,
@@ -137,13 +140,14 @@ module.exports = {
              }
             fs.writeFileSync(dfilePath, JSON.stringify(database));
          
-         
+            }
         }
 
         else if(user.class == character4 && admin.readynum < totalplayer && admin.class4 == '미지정' && totalplayer == 5)
         {
           if (admin.class4 != "미지정")
           {await message.channel.send('이미 선택된 롤입니다.'); return;}
+          else{
           console.log("넘어옴4")
           database = {
             readynum : admin.readynum += 1,
@@ -171,7 +175,7 @@ module.exports = {
                 vpoint : admin.vpoint
              }
             fs.writeFileSync(dfilePath, JSON.stringify(database));
-         
+            }
          
         }
 
@@ -180,6 +184,7 @@ module.exports = {
           
           if (admin.class5 != "미지정")
           {await message.channel.send('이미 선택된 롤입니다.'); return;}
+          else{
           console.log("넘어옴5")
           database = {
             readynum : admin.readynum += 1,
@@ -207,13 +212,14 @@ module.exports = {
                 vpoint : admin.vpoint
              }
             fs.writeFileSync(dfilePath, JSON.stringify(database));
-            
+          }
          }
 
          if(user.class == character1 && admin.readynum < totalplayer && admin.class1 == '미지정' && totalplayer == 6)
         {
           if (admin.class1 != "미지정")
           {await message.channel.send('이미 선택된 롤입니다.'); return;}
+          else{
           console.log("넘어옴1")
           database = {
             readynum : admin.readynum += 1,
@@ -242,7 +248,7 @@ module.exports = {
              }
             fs.writeFileSync(dfilePath, JSON.stringify(database));
             
-
+            }
          
          
         }
@@ -250,6 +256,7 @@ module.exports = {
         {
           if (admin.class2 != "미지정")
           {await message.channel.send('이미 선택된 롤입니다.'); return;}
+          else{
           console.log("넘어옴2")
           database = {
             readynum : admin.readynum += 1,
@@ -280,7 +287,7 @@ module.exports = {
             
             if (admin.class2 != "미지정")
             {await message.channel.send('이미 선택된 롤입니다.')}
-         
+            }
          
         }
 
@@ -288,6 +295,7 @@ module.exports = {
         {
           if (admin.class3 != "미지정")
           {await message.channel.send('이미 선택된 롤입니다.'); return;}
+          else {
           console.log("넘어옴3")
           database = {
             readynum : admin.readynum += 1,
@@ -316,7 +324,7 @@ module.exports = {
              }
             fs.writeFileSync(dfilePath, JSON.stringify(database));
             
-         
+            }
          
         }
 
@@ -324,6 +332,7 @@ module.exports = {
         {
           if (admin.class4 != "미지정")
           {await message.channel.send('이미 선택된 롤입니다.'); return;}
+          else{
           console.log("넘어옴4")
           database = {
             readynum : admin.readynum += 1,
@@ -352,7 +361,7 @@ module.exports = {
              }
             fs.writeFileSync(dfilePath, JSON.stringify(database));
             
-         
+            }
          
         }
 
@@ -361,6 +370,7 @@ module.exports = {
 
           if (admin.class5 != "미지정")
           {await message.channel.send('이미 선택된 롤입니다.'); return;}
+          else {
           console.log("넘어옴5")
           database = {
             readynum : admin.readynum += 1,
@@ -388,12 +398,13 @@ module.exports = {
                 vpoint : admin.vpoint
              }
             fs.writeFileSync(dfilePath, JSON.stringify(database));
-
+            }
          }
          else if(user.class == character6 && admin.readynum < totalplayer && admin.class6 == '미지정' && totalplayer == 6)
         {
           if (admin.class6 != "미지정")
           {await message.channel.send('이미 선택된 롤입니다.'); return;}
+          else {
           console.log("넘어옴6")
           database = {
             readynum : admin.readynum += 1,
@@ -405,10 +416,10 @@ module.exports = {
                 player3 : admin.player3,
                 class4 : admin.class4,
                 player4 : admin.player4,
-                class5 : user.class,
-                player5 : user.name,
-                class6 : admin.class6,
-                player6 : admin.player6,
+                class5 : admin.class5,
+                player5 : admin.player6,
+                class6 : user.class,
+                player6 : user.name,
                 playerid1 : admin.playerid1,
                 playerid2 : admin.playerid2,
                 playerid3 : admin.playerid3,
@@ -421,6 +432,7 @@ module.exports = {
                 vpoint : admin.vpoint
              }
             fs.writeFileSync(dfilePath, JSON.stringify(database));
+          }
          }
 
        /// message.member.roles.add('1022144442175590410')/////.removeRole(options)
