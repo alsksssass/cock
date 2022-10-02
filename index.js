@@ -566,7 +566,7 @@ await nick4.setNickname("-관전."+admin.player5)
 		 .setDescription('타로마스터 살인사건')
 		 .setThumbnail('https://emoji-uc.akamaized.net/orig/36/42dfd89cc30f82fc76ebe7fd1ef1fb.png')
 		 .addFields(
-		   { name: `${admin.starttime}시작`, value: `${admin.endtime}끝` },
+		   { name: `${admin.starttime}시작`, value: `${dlck}끝` },
 		   { name: '\u200B', value: '\u200B' },
 		   { name: '검거결과', value: rufrhk },
 		   { name: '\u200B', value: '\u200B' },
@@ -809,7 +809,7 @@ if(admin.round == 5 && admin.vpoint == 0 && admin.readynum == totalplayer && vot
     .setDescription('타로마스터 살인사건')
     .setThumbnail('https://emoji-uc.akamaized.net/orig/36/42dfd89cc30f82fc76ebe7fd1ef1fb.png')
     .addFields(
-      { name: `${admin.starttime}시작`, value: `${admin.endtime}끝` },
+      { name: `${admin.starttime}시작`, value: `${dlck}끝` },
       { name: '\u200B', value: '\u200B' },
       { name: '검거결과', value: rufrhk },
       { name: '\u200B', value: '\u200B' },
