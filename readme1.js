@@ -90,14 +90,15 @@ connection.destroy();
 ///////////////////////////////////
 
 /////채널내 모든메시지 삭제
-// async () => {
-//   let fetched;
-//   do {
-//     fetched = await channel.fetchMessages({limit: 100});
-//     message.channel.bulkDelete(fetched);
+// do {
+ 
+//     const target = message.channel.id
+//     const channel77 = client.channels.cache.get(target)
+
+//     fetched = await channel77.messages.fetch({limit: 99}).catch(console.warn = () => {});
+//     await channel77.bulkDelete(fetched).catch(console.warn = () => {});
 //   }
 //   while(fetched.size >= 2);
-// }
 
 ////스위치
 switch(arguments)

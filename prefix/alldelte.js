@@ -35,55 +35,26 @@ module.exports = {
          const admin = JSON.parse(fs.readFileSync(dfilePath, "utf-8"));
          const clue = JSON.parse(fs.readFileSync(efilePath, "utf-8"));
     ///////////
-
+    let fetched
 
 
 ///채널내 모든메시지 삭제
-let fetched;
-let fetched2;
-let fetched3;
-let fetched4;
-let fetched5;
-let fetched6;
-console.log('0')
+
+
+console.log(message.channel.id)
 if(message.author.id != message.guild.ownerId) {
   message.channel.send('권한 없음')///관리자롤  
   return}
   else
-do {
-  await wait(1000)
-  fetched1 = await channel1.messages.fetch({limit: 99}).catch(console.warn = () => {});
-  await channel1.bulkDelete(fetched1).catch(console.warn = () => {});
-  console.log('1')
   
-  await wait(1000)
-  fetched2 = await channel2.messages.fetch({limit: 99}).catch(console.warn = () => {});
-  await channel2.bulkDelete(fetched2).catch(console.warn = () => {});
-  console.log('2')
-  
-  await wait(1000)
-  fetched3 = await channel3.messages.fetch({limit: 99}).catch(console.warn = () => {});
-  await channel3.bulkDelete(fetched3).catch(console.warn = () => {});
-  console.log('3')
-  
-  await wait(1000)
-  fetched4 = await channel4.messages.fetch({limit: 99}).catch(console.warn = () => {});
-  await channel4.bulkDelete(fetched4).catch(console.warn = () => {});
-  console.log('4')
-  
-  await wait(1000)
-  fetched5 = await channel5.messages.fetch({limit: 99}).catch(console.warn = () => {});
-  await channel5.bulkDelete(fetched5).catch(console.warn = () => {});
-  console.log('5')
-  
-  await wait(1000)
-  fetched6 = await channel6.messages.fetch({limit: 99}).catch(console.warn = () => {});
-  await channel6.bulkDelete(fetched6).catch(console.warn = () => {});
-  console.log('6')
-  
-  await wait(1000)
-}
-while((fetched1.size+fetched2.size+fetched3.size+fetched4.size+fetched5.size+fetched6.size) >= 2);
-console.log('끝')
+  do {
+ 
+    const target = message.channel.id
+    const channel77 = client.channels.cache.get(target)
+
+    fetched = await channel77.messages.fetch({limit: 99}).catch(console.warn = () => {});
+    await channel77.bulkDelete(fetched).catch(console.warn = () => {});
+  }
+  while(fetched.size >= 2);
 }
 }
