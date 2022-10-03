@@ -80,6 +80,7 @@ module.exports = {
     const clue = JSON.parse(fs.readFileSync(efilePath, "utf-8"));
  
  if(admin.round == 1 && message.author.id == admin.playerid1){
+
     try {
     let cluedata = {};
     
@@ -304,10 +305,10 @@ await editms.edit({ content: "준비중입니다. ■□□□□□□□□□
     })
     await channel4.send('-----------------------------')
     await editms.edit({ content: "준비 완료 되었습니다." })
-    await channel22.send("명령어는 탐정님만 사용이 가능합니다. \n의견을 조율받으셔서 명령어를 써 주세요. \n1차 단서 조사갯수는 20+1개입니다.")
-    await channel22.send('조사가 끝나면 ``!확인``을 쳐주세요')
+    await channel22.send("명령어는 탐정님만 사용이 가능합니다. \n의견을 조율받으셔서 명령어를 써 주세요. \n1차 단서 조사갯수는 20개입니다.")
     await channel22.send('단서가 다 나오고 나서 다음 단서를 쳐주세요! 안그럼 오류가 생길 수 있습니다!!')
     await channel22.send('단서 갯수가 남는다면 ``!단서 010`` 으로 아무단서나 열람해서 갯수를 0으로 만들어주세요!')
+    await channel22.send('조사가 끝나면 ``!확인``을 쳐주세요')
     cluedata = {
 
         dclueid01 : clueid01,
