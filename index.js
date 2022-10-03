@@ -418,8 +418,9 @@ if(admin.round == 4 && admin.vpoint == 0 && admin.readynum == totalplayer){////2
 	
 
 	const channel5 = client.channels.cache.get(note1);//추리노트
-	await channel5.send('2차 조사가 모두 끝났습니다. 토론시간을 가지신후 투표해 주세요 투표는 ```!투표 캐릭터이름```이라고 쳐주세요. 각자 치시면 됩니다.')
-	await channel5.send(dlck+"까지 토론 하시면 됩니다. 투표 동점이라면 범인승리 입니다. 재투표는 없습니다.")
+	await channel5.send('2차 조사가 모두 끝났습니다. \n토론시간을 가지신후 투표해 주세요 투표는 투표소채널에서 ```!투표 캐릭터이름```이라고 쳐주세요. \n각자 치시면 됩니다.(비밀투표)')
+	await channel5.send(dlck+"까지 토론 하시면 됩니다. \n투표 동점이라면 범인승리 입니다. \n재투표는 없습니다.")
+	await channel5.send('플레이 시작부터 투표종료시까지 플레이 시간이 기록되며 **영구히** 남습니다. \n일부러 늘린 오랜토론 시간은 검거하여도 **영광치못한 기록**으로 남게될것입니다.')
 	database = {
 		readynum : admin.readynum,
 		class1 : admin.class1,
