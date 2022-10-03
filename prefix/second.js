@@ -41,6 +41,11 @@ if(admin.round == 3 && admin.vpoint == 0 && message.author.id == admin.playerid1
 	const channel6 = client.channels.cache.get(note1);//추리노트
 	await channel6.send('2차 조사가 시작되었습니다. ```!단서 ???``` 명령어로 남은 단서를 모두 열람 할 수 있습니다!')
   await channel6.send('단서 열람횟수 23개 추가 됨.')
+  await channel6.send('탐정님! 오늘 방송된 유튜브 라이브 방송영상을 입수했습니다!')
+	await channel6.send('> 000 - 윤새롬의 유튜브 라이브화면')
+	await channel6.send({ files: ['./roll/Preview.mp4'] })
+	const ms1 = await channel6.send('```\n생방송 라이브영상은 8시에 시작되어서 8시 15분 종료되었다.```')
+	await ms1.react('❤️');
 	database = {
     readynum : admin.readynum,
 		class1 : admin.class1,
@@ -64,7 +69,7 @@ if(admin.round == 3 && admin.vpoint == 0 && message.author.id == admin.playerid1
         round : (admin.round *= 0) +4,
 		starttime : admin.starttime,
 		endtime : admin.endtime,
-		vpoint : (admin.vpoint *= 0) +21
+		vpoint : (admin.vpoint *= 0) +23
 	 }
   
   fs.writeFileSync(dfilePath, JSON.stringify(database));

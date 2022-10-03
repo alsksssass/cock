@@ -376,7 +376,8 @@ try{
 		await channel5.send('``!확인``을 사용해 주세요')
 	}
 if(admin.round == 2 && admin.vpoint == 0 && admin.readynum == totalplayer){/////1차조사종료
-	await today.setMinutes(today.getMinutes() + 15);
+    
+    await today.setMinutes(today.getMinutes() + 15);
 
 	const dlck = "" + today.getHours() + "시" + today.getMinutes() + "분";
 	
@@ -384,11 +385,7 @@ if(admin.round == 2 && admin.vpoint == 0 && admin.readynum == totalplayer){/////
 	const channel5 = client.channels.cache.get(note1);//추리노트
 	await channel5.send('1차 조사가 모두 끝났습니다. 토론시간을 가지신후 2차조사를 시작하시려면 ```!2차조사```라고 쳐주세요.')
 	await channel5.send(dlck+"후에 2차조사를 시작 하세요. 조사가 끝나면 ``!확인``을 쳐주세요")
-	await channel5.send('탐정님! 오늘 방송된 유튜브 라이브 방송영상을 입수했습니다!')
-	await channel5.send('> 000 - 윤새롬의 유튜브 라이브화면')
-	await channel5.send({ files: ['./roll/Preview.mp4'] })
-	const ms1 = await channel.send('```\n생방송 라이브영상은 8시에 시작되어서 8시 15분 종료되었다.```')
-	await ms1.react('❤️');
+
 	database = {
 		readynum : admin.readynum,
 		class1 : admin.class1,
@@ -417,9 +414,10 @@ if(admin.round == 2 && admin.vpoint == 0 && admin.readynum == totalplayer){/////
 	 fs.writeFileSync(dfilePath, JSON.stringify(database));
 }
 if(admin.round == 4 && admin.vpoint == 0 && admin.readynum == totalplayer){////2차조사종료
-	await today.setMinutes(today.getMinutes() + 15);
+    
+ 
 
-	const dlck = "" + today.getHours() + "시" + today.getMinutes() + "분";
+	const dlckk = "" + today.getHours() + "시" + today.getMinutes() + "분";
 	
 
 	const channel5 = client.channels.cache.get(note1);//추리노트
@@ -483,7 +481,7 @@ if(admin.round == 4 && admin.vpoint == 0 && admin.readynum == totalplayer){////2
 }
 if(admin.round == 5 && admin.vpoint == 0 && admin.readynum == totalplayer && vote.votenum == totalplayer && totalplayer == 5){////5인 투표종료
 	
-
+	await today.setMinutes(today.getMinutes() - 15);
 	const dlck = "" + today.getFullYear()+"년" + today.getMonth()+"월" + today.getDate()+"일" + today.getHours()+"시" + today.getMinutes()+"분";
 	var cd1 = admin.playerid1
 	var cd2 = admin.playerid2
@@ -722,7 +720,7 @@ console.log('끝')
 }
 if(admin.round == 5 && admin.vpoint == 0 && admin.readynum == totalplayer && vote.votenum == totalplayer && totalplayer == 6){////6인 투표종료
 	
-
+	await today.setMinutes(today.getMinutes() - 15);
 	const dlck = "" + today.getFullYear()+"년" + today.getMonth()+"월" + today.getDate()+"일" + today.getHours()+"시" + today.getMinutes()+"분";
 	
 	const channel1 = client.channels.cache.get(chclue1);//윤새롬
