@@ -141,7 +141,7 @@ module.exports = {
             {
               console.log(arguments)
               console.log(clue.dclueid03)
-              await channel.send('> 030 - 윤새롬의 흰 봉투 메모도 같이 들어있다.')
+              await channel.send('> 030 - 윤새롬의 흰 봉투 : 상당한 금액과 메모도 같이 들어있다.')
               await channel.send('```호랑아. 앞으로도 우리 가끔씩 합방도 하고, 다시 컨덴츠 회의도 하자.\n이번에 내가 돈 열심히 모아서 우리 같이 쓸 수 있는 타로 매장도 구해놨어.\n이제 싸우지말자 내가 좀 더 잘 맞춰갈게.```')
               const ms1 = await channel.send('https://i.imgur.com/PXxl62g.jpg')
               await ms1.react('❤️');
@@ -226,7 +226,7 @@ module.exports = {
             {
                console.log(arguments)
                console.log(clue.dclueid05)
-               await channel.send('> 050 - 새롬의 골든버튼에 피가묻은 흔적이있다.')
+               await channel.send('> 050 - 새롬의 골든버튼 : 약간 물기가 있다..')
                
               const ms1 = await channel.send('https://i.imgur.com/xCTSxHc.png')
               await ms1.react('❤️');
@@ -642,7 +642,7 @@ module.exports = {
                console.log(arguments)
                console.log(clue.dclueid16)
                await channel1.send('> 160 - 한호랑의 스타벅스 CCTV')
-               const ms1 = await channel1.send('```6시 50분~ 8시 20분까지 매장을 이용한 것이 찍혀있다.```')
+               const ms1 = await channel1.send('```6시 50분~ 8시 20분까지 매장을 이용한 것이 찍혀있다.\n이용시간동안 몇 번 잠깐 자리를 뜬 것 외에는 긴 시간 자리를 비운적이 없다.\n8시 15분에는 깜짝 놀란것처럼 벌떡 일어나더니 서둘러서 자리를 정리해서 밖으로 나갔다.```')
                await ms1.react('❤️');
                
                client.channels.cache
@@ -1094,7 +1094,7 @@ module.exports = {
             {
                console.log(arguments)
                console.log(clue.dclueid28)
-               await channel2.send('> 280 - 유수호의 단서, 피해자 집앞.')
+               await channel2.send('> 280 - 유수호의 단서 : 피해자 집앞 CCTV에 찍힌 영상중 일부')
                const ms1 = await channel2.send('https://i.imgur.com/iSnKvty.jpg')
                await ms1.react('❤️');
                
@@ -1547,7 +1547,7 @@ module.exports = {
             {
                console.log(arguments)
                console.log(clue.dclueid41)
-               await channel4.send('> 430 - 곽편집의 노트북. 영상편집용이다.')
+               await channel4.send('> 430 - 곽편집의 노트북. 영상편집용이다. 타로영상과 야동이 많다')
                const ms1 = await channel4.send('https://i.imgur.com/NGBoSjI.png')
                await ms1.react('❤️');
                
@@ -1831,9 +1831,191 @@ module.exports = {
                await channel5.send("조사횟수"+(admin.vpoint-1)+"개 남음")
                break;
             }
-         
-         
-         
+            case '999' : 
+            {
+               console.log(arguments)
+               console.log(clue.dclueid47)
+               await channel5.send('> 999 =별별정보통')
+               const ms1 = await channel5.send('```6시 15분. 곽편집이 맛집에 줄서고 있는 모습이 찍혀있다.```')
+               await ms1.react('❤️');
+               
+               database = {
+                  readynum : admin.readynum,
+                class1 : admin.class1,
+                player1 : admin.player1,
+                class2 : admin.class2,
+                player2 : admin.player2,
+                class3 : admin.class3,
+                player3 : admin.player3,
+                class4 : admin.class4,
+                player4 : admin.player4,
+                class5 : admin.class5,
+                player5 : admin.player5,
+                class6 : admin.class6,
+                player6 : admin.player6,
+                playerid1 : admin.playerid1,
+                playerid2 : admin.playerid2,
+                playerid3 : admin.playerid3,
+                playerid4 : admin.playerid4,
+                playerid5 : admin.playerid5,
+                playerid6 : admin.playerid6,
+                    round : admin.round,
+                starttime : admin.starttime,
+                endtime : admin.endtime,
+                vpoint : (admin.vpoint *= 0)
+               }
+               fs.writeFileSync(dfilePath, JSON.stringify(database));
+               await channel5.send("랜덤증거 사용완료")
+               break;
+            }
+            case '888' : 
+            {
+               console.log(arguments)
+               console.log(clue.dclueid47)
+               await channel5.send('> 888 =주차장 CCTV')
+               const ms1 = await channel5.send('```곽편집이 6시에 주차하고 7시10분 차로 돌아옴. 8시 17분이 문이 벌컥열리며 나왔다.```')
+               await ms1.react('❤️');
+               
+               database = {
+                  readynum : admin.readynum,
+                class1 : admin.class1,
+                player1 : admin.player1,
+                class2 : admin.class2,
+                player2 : admin.player2,
+                class3 : admin.class3,
+                player3 : admin.player3,
+                class4 : admin.class4,
+                player4 : admin.player4,
+                class5 : admin.class5,
+                player5 : admin.player5,
+                class6 : admin.class6,
+                player6 : admin.player6,
+                playerid1 : admin.playerid1,
+                playerid2 : admin.playerid2,
+                playerid3 : admin.playerid3,
+                playerid4 : admin.playerid4,
+                playerid5 : admin.playerid5,
+                playerid6 : admin.playerid6,
+                    round : admin.round,
+                starttime : admin.starttime,
+                endtime : admin.endtime,
+                vpoint : (admin.vpoint *= 0)
+               }
+               fs.writeFileSync(dfilePath, JSON.stringify(database));
+               await channel5.send("랜덤증거 사용완료")
+               break;
+            }
+            case '777' : 
+            {
+               console.log(arguments)
+               console.log(clue.dclueid47)
+               await channel5.send('> 777 =새롬집 근처 블랙박스')
+               const ms1 = await channel5.send('```유수호의 오토바이를 찍고 있다. 7시 30분에 와서 8시 15분에 벌떡 일어나 어디론가 달려갔다```')
+               await ms1.react('❤️');
+               
+               database = {
+                  readynum : admin.readynum,
+                class1 : admin.class1,
+                player1 : admin.player1,
+                class2 : admin.class2,
+                player2 : admin.player2,
+                class3 : admin.class3,
+                player3 : admin.player3,
+                class4 : admin.class4,
+                player4 : admin.player4,
+                class5 : admin.class5,
+                player5 : admin.player5,
+                class6 : admin.class6,
+                player6 : admin.player6,
+                playerid1 : admin.playerid1,
+                playerid2 : admin.playerid2,
+                playerid3 : admin.playerid3,
+                playerid4 : admin.playerid4,
+                playerid5 : admin.playerid5,
+                playerid6 : admin.playerid6,
+                    round : admin.round,
+                starttime : admin.starttime,
+                endtime : admin.endtime,
+                vpoint : (admin.vpoint *= 0)
+               }
+               fs.writeFileSync(dfilePath, JSON.stringify(database));
+               await channel5.send("랜덤증거 사용완료")
+               break;
+            }
+            case '666' : 
+            {
+               console.log(arguments)
+               console.log(clue.dclueid47)
+               await channel5.send('> 666 =지역신문 : 미스테리 팡팡) ')
+               const ms1 = await channel5.send('```이번 시간에는 지난 10년간 연쇄적으로 일어났던 여성 실종사건을 다루겠습니다.\n2010년부터 10년 사이 20대~ 30대 초반의 여성들을 대상으로 몇개월 주기로 여성들의실종사건이 있었습니다.\n실종된 여성들은 공통점이 없는 것으로 확인이 되었습니다만 최근 2018년 한 겨울 인근 산에서 발견된 시체들이 비슷한 곳에 묻혀 있다는 점. \n그리고 왼손 약지가 잘려있다는 점을 들어서 연쇄 살인으로 판면되었습니다.\n과연 어떤 사람이 이런 무자비한 짓을 한 것일까요?```')
+               await ms1.react('❤️');
+               
+               database = {
+                  readynum : admin.readynum,
+                class1 : admin.class1,
+                player1 : admin.player1,
+                class2 : admin.class2,
+                player2 : admin.player2,
+                class3 : admin.class3,
+                player3 : admin.player3,
+                class4 : admin.class4,
+                player4 : admin.player4,
+                class5 : admin.class5,
+                player5 : admin.player5,
+                class6 : admin.class6,
+                player6 : admin.player6,
+                playerid1 : admin.playerid1,
+                playerid2 : admin.playerid2,
+                playerid3 : admin.playerid3,
+                playerid4 : admin.playerid4,
+                playerid5 : admin.playerid5,
+                playerid6 : admin.playerid6,
+                    round : admin.round,
+                starttime : admin.starttime,
+                endtime : admin.endtime,
+                vpoint : (admin.vpoint *= 0)
+               }
+               fs.writeFileSync(dfilePath, JSON.stringify(database));
+               await channel5.send("랜덤증거 사용완료")
+               break;
+            }
+            case '555' : 
+            {
+               console.log(arguments)
+               console.log(clue.dclueid47)
+               await channel5.send('> 555 =새롬이 집 주변) ')
+               const ms1 = await channel5.send('```헌옷수거함에서 피묻은 츄리링이 한벌 나왔다.```')
+               await ms1.react('❤️');
+               
+               database = {
+                  readynum : admin.readynum,
+                class1 : admin.class1,
+                player1 : admin.player1,
+                class2 : admin.class2,
+                player2 : admin.player2,
+                class3 : admin.class3,
+                player3 : admin.player3,
+                class4 : admin.class4,
+                player4 : admin.player4,
+                class5 : admin.class5,
+                player5 : admin.player5,
+                class6 : admin.class6,
+                player6 : admin.player6,
+                playerid1 : admin.playerid1,
+                playerid2 : admin.playerid2,
+                playerid3 : admin.playerid3,
+                playerid4 : admin.playerid4,
+                playerid5 : admin.playerid5,
+                playerid6 : admin.playerid6,
+                    round : admin.round,
+                starttime : admin.starttime,
+                endtime : admin.endtime,
+                vpoint : (admin.vpoint *= 0)
+               }
+               fs.writeFileSync(dfilePath, JSON.stringify(database));
+               await channel5.send("랜덤증거 사용완료")
+               break;
+            }
          
          
          

@@ -5,9 +5,6 @@ const { record, playcode, owner, character1, character2, character3, character4,
 const { createReadStream } = require('node:fs');
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.GuildMessageReactions, GatewayIntentBits.GuildVoiceStates, GatewayIntentBits.DirectMessages, GatewayIntentBits.MessageContent, GatewayIntentBits.Guilds, GatewayIntentBits.GuildMembers, GatewayIntentBits.GuildBans, GatewayIntentBits.GuildVoiceStates] });
 const wait = require('node:timers/promises').setTimeout;///딜레이 구문
-const today = new Date();
-const date = "" + today.getFullYear() +"년" + today.getMonth() + "월" + today.getDate() + "일" + today.getHours() + "시" + today.getMinutes() + "분";
-const dater ="" + today.getFullYear()+"년" + today.getMonth()+"월" + today.getDate()+"일" + today.getHours()+"시" + today.getMinutes()+"분";
 
 
 
@@ -16,9 +13,12 @@ const dater ="" + today.getFullYear()+"년" + today.getMonth()+"월" + today.get
 module.exports = {
   name: "체크시간",
   async execute(message, args, client ) {
-
+    const today = new Date();
+    const date = "" + today.getFullYear() +"년" + today.getMonth() + "월" + today.getDate() + "일" + today.getHours() + "시" + today.getMinutes() + "분";
+    const dater ="" + today.getFullYear()+"년" + today.getMonth()+"월" + today.getDate()+"일" + today.getHours()+"시" + today.getMinutes()+"분";
+    
     await today.setMinutes(today.getMinutes() + 15);
-	await today.setHours(today.getHours() + 21);
+
 	const dlck = "" + today.getHours() + "시" + today.getMinutes() + "분";
 console.log('시간')
 message.channel.send(dlck)
