@@ -42,7 +42,9 @@ module.exports = {
      } 
      else if(admin.vpoint > 0 && message.author.id == admin.playerid1)  {
         console.log('2')
-        
+        if(admin.vpoint <= 1){
+         await channel5.send("단서를 다 확인 했다면 ``!확인``을쳐주세요")
+        }
       switch(arguments)
          {
             case '000' : 
