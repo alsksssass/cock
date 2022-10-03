@@ -93,9 +93,9 @@ const channel4 = client.channels.cache.get(chclue5);
 const channel22 = client.channels.cache.get('1024599576541397033');
 
 const editms = await channel22.send("준비중입니다. Loding....")////특정채널 메시지
-await editms.edit({ content: "준비중입니다. 1/10" })
+await editms.edit({ content: "준비중입니다. ■□□□□□□□□□" })
 
-    await channel.send('시체 : 정수리에 깊게 패인 흔적이 있다. 다량의 피가 옷과 바닥에 흘렀다.\n바닥에는 쏟아진 물건들로 엉망이다.\n생방송 라이브영상은 8시에 시작되어서 8시 15분 종료되었다.')
+    
     await channel.send('> **윤새롬**')
     await channel.send('**010> 다이어리**')
     .then(sent => { // 'sent' is that message you just sent
@@ -117,7 +117,7 @@ await editms.edit({ content: "준비중입니다. 1/10" })
     .then(sent => { // 'sent' is that message you just sent
         clueid05 = sent.id;
     })
-    await editms.edit({ content: "준비중입니다. 1/10" })
+    await editms.edit({ content: "준비중입니다. ■■□□□□□□□□" })
     await channel.send('**060> 편지**')
     .then(sent => { // 'sent' is that message you just sent
         clueid06 = sent.id;
@@ -136,7 +136,7 @@ await editms.edit({ content: "준비중입니다. 1/10" })
     })
     await channel.send('-----------------------------')
   
-    await editms.edit({ content: "준비중입니다. 2/10" })
+    await editms.edit({ content: "준비중입니다. ■■■□□□□□□□" })
     await channel1.send('> **1. 한호랑**')
     .then(sent => { // 'sent' is that message you just sent
         clueid10 = sent.id;
@@ -161,7 +161,7 @@ await editms.edit({ content: "준비중입니다. 1/10" })
     .then(sent => { // 'sent' is that message you just sent
         clueid15 = sent.id;
     })
-    await editms.edit({ content: "준비중입니다. 3/10" })
+    await editms.edit({ content: "준비중입니다. ■■■■□□□□□□" })
     await channel1.send('**160> CCTV**')
     .then(sent => { // 'sent' is that message you just sent
         clueid16 = sent.id;
@@ -179,7 +179,7 @@ await editms.edit({ content: "준비중입니다. 1/10" })
         clueid19 = sent.id;
     })
     await channel1.send('-----------------------------')
-    await editms.edit({ content: "준비중입니다. 4/10" })
+    await editms.edit({ content: "준비중입니다. ■■■■■□□□□□" })
 
     await channel2.send('> **2. 유수호**')
     .then(sent => { // 'sent' is that message you just sent
@@ -201,7 +201,7 @@ await editms.edit({ content: "준비중입니다. 1/10" })
     .then(sent => { // 'sent' is that message you just sent
         clueid24 = sent.id;
     })
-    await editms.edit({ content: "준비중입니다. 5/10" })
+    await editms.edit({ content: "준비중입니다. ■■■■■■□□□□" })
     await channel2.send('**250> 신체검사**')
     .then(sent => { // 'sent' is that message you just sent
         clueid25 = sent.id;
@@ -219,7 +219,7 @@ await editms.edit({ content: "준비중입니다. 1/10" })
         clueid28 = sent.id;
     })
     await channel2.send('-----------------------------')
-    await editms.edit({ content: "준비중입니다. 6/10" })
+    await editms.edit({ content: "준비중입니다. ■■■■■■■□□□" })
 
     await channel3.send('> **3. 오정성**')
     .then(sent => { // 'sent' is that message you just sent
@@ -245,7 +245,7 @@ await editms.edit({ content: "준비중입니다. 1/10" })
     .then(sent => { // 'sent' is that message you just sent
         clueid34 = sent.id;
     })
-    await editms.edit({ content: "준비중입니다. 7/10" })
+    await editms.edit({ content: "준비중입니다. ■■■■■■■■□□" })
     await channel3.send('**360> 증언**')
     .then(sent => { // 'sent' is that message you just sent
         clueid35 = sent.id;
@@ -259,7 +259,7 @@ await editms.edit({ content: "준비중입니다. 1/10" })
         clueid37 = sent.id;
     })
     await channel3.send('-----------------------------')
-    await editms.edit({ content: "준비중입니다. 8/10" })
+    await editms.edit({ content: "준비중입니다. ■■■■■■■■■□" })
     await channel4.send('> **4. 곽편집**')
     .then(sent => { // 'sent' is that message you just sent
         clueid38 = sent.id;
@@ -284,7 +284,7 @@ await editms.edit({ content: "준비중입니다. 1/10" })
     .then(sent => { // 'sent' is that message you just sent
         clueid43 = sent.id;
     })
-    await editms.edit({ content: "준비중입니다. 9/10" })
+    await editms.edit({ content: "준비중입니다. ■■■■■■■■■■" })
     await channel4.send('**460> SD카드**')
     .then(sent => { // 'sent' is that message you just sent
         clueid44 = sent.id;

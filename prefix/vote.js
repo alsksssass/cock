@@ -9,6 +9,7 @@ const wait = require('node:timers/promises').setTimeout;///딜레이 구문
 const today = new Date();
 const date = "" + today.getFullYear() +"년" + today.getMonth() + "월" + today.getDate() + "일" + today.getHours() + "시" + today.getMinutes() + "분";
 
+const dlck = "" + today.getFullYear() +"년" + today.getMonth() + "월" + today.getDate() +"일"+ today.getHours() + "시" + today.getMinutes() + "분";
 
 
 
@@ -157,7 +158,7 @@ saveUser = {
   player5 : admin.player5,
   player6 : admin.player6,
   sdate : admin.starttime,
-      edate : admin.endtime,
+      edate : dlck,
     ptitle : pnum.title1,
     pnum : pnum.playnum
 }
@@ -278,7 +279,7 @@ saveUser = {
   player5 : admin.player5,
   player6 : admin.player6,
   sdate : admin.starttime,
-      edate : admin.endtime,
+      edate : dlck,
     ptitle : pnum.title1,
     pnum : pnum.playnum
 }
@@ -398,7 +399,7 @@ voting = {
     player5 : admin.player5,
     player6 : admin.player6,
     sdate : admin.starttime,
-        edate : admin.endtime,
+        edate : dlck,
     ptitle : pnum.title1,
     pnum : pnum.playnum
   }
@@ -518,7 +519,7 @@ voting = {
     player5 : admin.player5,
     player6 : admin.player6,
     sdate : admin.starttime,
-        edate : admin.endtime,
+        edate : dlck,
     ptitle : pnum.title1,
     pnum : pnum.playnum
   }
@@ -637,7 +638,7 @@ voting = {
     player5 : admin.player5,
     player6 : admin.player6,
     sdate : admin.starttime,
-    edate : admin.endtime,
+    edate : dlck,
     ptitle : pnum.title1,
     pnum : pnum.playnum
   
@@ -757,7 +758,7 @@ voting = {
     player5 : admin.player5,
     player6 : admin.player6,
     sdate : admin.starttime,
-        edate : admin.endtime,
+        edate : dlck,
     ptitle : pnum.title1,
     pnum : pnum.playnum
   }
