@@ -66,10 +66,10 @@ module.exports = {
                const ms1 = await channel.send('방송일정과 스케쥴이 빡빡하다.')
                await ms1.react('❤️');
                
-               // client.channels.cache
-               // .get(chclue1)
-               // .messages.fetch(clue.dclueid01)
-               // .then((msg) => msg.edit('~~**010> 다이어리**~~'));
+               client.channels.cache
+               .get(chclue1)
+               .messages.fetch(clue.dclueid01)
+               .then((msg) => msg.edit('~~**010> 다이어리**~~'));
                database = {
                   readynum : admin.readynum,
                 class1 : admin.class1,
