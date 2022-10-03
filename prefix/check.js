@@ -1871,6 +1871,7 @@ module.exports = {
                }
                fs.writeFileSync(dfilePath, JSON.stringify(database));
                await channel5.send("랜덤증거 사용완료")
+               await channel5.send("토론후 투표해주세요 투표는 투표소에.... 아니라면 공개투표가 되어버립니다")
                break;
             }
             case '888' : 
@@ -1908,6 +1909,7 @@ module.exports = {
                }
                fs.writeFileSync(dfilePath, JSON.stringify(database));
                await channel5.send("랜덤증거 사용완료")
+               await channel5.send("토론후 투표해주세요 투표는 투표소에.... 아니라면 공개투표가 되어버립니다")
                break;
             }
             case '777' : 
@@ -1945,6 +1947,7 @@ module.exports = {
                }
                fs.writeFileSync(dfilePath, JSON.stringify(database));
                await channel5.send("랜덤증거 사용완료")
+               await channel5.send("토론후 투표해주세요 투표는 투표소에.... 아니라면 공개투표가 되어버립니다")
                break;
             }
             case '666' : 
@@ -1982,6 +1985,7 @@ module.exports = {
                }
                fs.writeFileSync(dfilePath, JSON.stringify(database));
                await channel5.send("랜덤증거 사용완료")
+               await channel5.send("토론후 투표해주세요 투표는 투표소에.... 아니라면 공개투표가 되어버립니다")
                break;
             }
             case '555' : 
@@ -2019,6 +2023,7 @@ module.exports = {
                }
                fs.writeFileSync(dfilePath, JSON.stringify(database));
                await channel5.send("랜덤증거 사용완료")
+               await channel5.send("토론후 투표해주세요 투표는 투표소에.... 아니라면 공개투표가 되어버립니다")
                break;
             }
          
