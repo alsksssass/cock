@@ -255,6 +255,8 @@ database = {
 		message.guild.members.cache.get(admin.playerid5).roles.remove(stanby).catch(console.warn = () => {});
 		await wait(2000)
 		await channel13.send('탐정님이``!세팅``명령어를 치시면 세팅이 준비가 되고 시작됩니다.')
+		await channel13.send('플레이어들은 대기자 음성채널에서 이제 음성채팅이 불가능합니다.')
+		await channel13.send('**추리방**으로 음성채널을 옮겨주세요!')
 	}
 	catch (err) {
 		console.error(err);
