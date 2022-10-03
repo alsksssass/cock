@@ -42,7 +42,10 @@ module.exports = {
      } 
      else if(admin.vpoint > 0 && message.author.id == admin.playerid1)  {
         console.log('2')
-        if(admin.vpoint <= 1){
+        if(admin.vpoint <= 1 && admin.round == 2){
+         await channel5.send("단서를 다 확인 했다면 ``!확인``을쳐주세요")
+        }
+        if(admin.vpoint <= 1 && admin.round == 4){
          await channel5.send("단서를 다 확인 했다면 ``!확인``을쳐주세요")
         }
       switch(arguments)
@@ -63,10 +66,10 @@ module.exports = {
                const ms1 = await channel.send('방송일정과 스케쥴이 빡빡하다.')
                await ms1.react('❤️');
                
-               client.channels.cache
-               .get(chclue1)
-               .messages.fetch(clue.dclueid01)
-               .then((msg) => msg.edit('~~**010> 다이어리**~~'));
+               // client.channels.cache
+               // .get(chclue1)
+               // .messages.fetch(clue.dclueid01)
+               // .then((msg) => msg.edit('~~**010> 다이어리**~~'));
                database = {
                   readynum : admin.readynum,
                 class1 : admin.class1,

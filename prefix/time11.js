@@ -23,7 +23,7 @@ module.exports = {
 console.log('시간')
 message.channel.send(dlck)
 message.channel.send(date)
-
+await today.setMinutes(today.getMinutes() - 15);
 
   }}
 // var voting = '00'
