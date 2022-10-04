@@ -404,10 +404,10 @@ try{
 
 
 if(admin.round == 2 && admin.vpoint == 0 && admin.readynum == totalplayer){/////1차조사종료
-    
+    const today1 = new Date();
 
-	await today.setMinutes(today.getMinutes() + 15);
-	const dlck = "" + today.getHours() + "시" + today.getMinutes() + "분";
+	await today1.setMinutes(today1.getMinutes() + 15);
+	const dlck = "" + today1.getHours() + "시" + today1.getMinutes() + "분";
 	
 
 	const channel5 = client.channels.cache.get(note1);//추리노트
@@ -440,21 +440,30 @@ if(admin.round == 2 && admin.vpoint == 0 && admin.readynum == totalplayer){/////
 		vpoint : admin.vpoint *= 0
 	 }
 	 fs.writeFileSync(dfilePath, JSON.stringify(database));
-	 await today.setMinutes(today.getMinutes() - 15);
+	 await today1.setMinutes(today1.getMinutes() - 15);
 }
 if(admin.round == 4 && admin.vpoint == 0 && admin.readynum == totalplayer){////2차조사종료
-    
-	await today.setMinutes(today.getMinutes() + 15);
+    const today1 = new Date();
+	await today1.setMinutes(today1.getMinutes() + 15);
 
-	const dlckk = "" + today.getHours() + "시" + today.getMinutes() + "분";
+	const dlckk = "" + today1.getHours() + "시" + today1.getMinutes() + "분";
 	
 
 	const channel5 = client.channels.cache.get(note1);//추리노트
+	const channel6 = client.channels.cache.get('1026345168376438844');//추리노트
+	const channel7 = client.channels.cache.get('1026345195048026143');//추리노트
+	const channel8 = client.channels.cache.get('1026345227159601162');//추리노트
+	const channel9 = client.channels.cache.get('1026345260915367977');//추리노트
+	const channel99 = client.channels.cache.get('1026345366481809448');//추리노트
 	await channel5.send('2차 조사가 모두 끝났습니다. \n토론시간을 가지신후 투표해 주세요 투표는 투표소채널에서 ```!투표 캐릭터이름```이라고 쳐주세요. \n각자 치시면 됩니다.(비밀투표)')
 	await channel5.send(dlckk+"까지 토론 하시면 됩니다. \n투표 동점이라면 범인승리 입니다. \n재투표는 없습니다.")
 	await channel5.send('플레이 시작부터 투표종료시까지 플레이 시간이 기록되며 **영구히** 남습니다. \n일부러 늘린 오랜토론 시간은 검거하여도 **영광치못한 기록**으로 남게될것입니다.')
 	await channel5.send('마지막으로 한가지 랜덤 단서를 획득할수 있습니다.\n=별별정보통(``!단서 999``)\n=새롬집 근처 블랙박스(``!단서 888``)\n=지역신문(``!단서 777``)\n=새롬이의 집주변(``!단서 666``)')
-	
+	channel6.send('>>> 투표 방법입니다. 이곳에입력 하시면 됩니다.\n한호랑                     유수호\n오정성                     곽편집\n\n명령어는 **!투표 (역할명)**입니다.\n명령어를 입력할 땐 괄호는 생략하고 입력해주세요.')
+	channel7.send('>>> 투표 방법입니다. 이곳에입력 하시면 됩니다.\n한호랑                     유수호\n오정성                     곽편집\n\n명령어는 **!투표 (역할명)**입니다.\n명령어를 입력할 땐 괄호는 생략하고 입력해주세요.')
+	channel8.send('>>> 투표 방법입니다. 이곳에입력 하시면 됩니다.\n한호랑                     유수호\n오정성                     곽편집\n\n명령어는 **!투표 (역할명)**입니다.\n명령어를 입력할 땐 괄호는 생략하고 입력해주세요.')
+	channel9.send('>>> 투표 방법입니다. 이곳에입력 하시면 됩니다.\n한호랑                     유수호\n오정성                     곽편집\n\n명령어는 **!투표 (역할명)**입니다.\n명령어를 입력할 땐 괄호는 생략하고 입력해주세요.')
+	channel99.send('>>> 투표 방법입니다. 이곳에입력 하시면 됩니다.\n한호랑                     유수호\n오정성                     곽편집\n\n명령어는 **!투표 (역할명)**입니다.\n명령어를 입력할 땐 괄호는 생략하고 입력해주세요.')
 	database = {
 		readynum : admin.readynum,
 		class1 : admin.class1,
@@ -507,7 +516,7 @@ if(admin.round == 4 && admin.vpoint == 0 && admin.readynum == totalplayer){////2
 	   
 	 }
 	fs.writeFileSync(vfilePath, JSON.stringify(voting));
-	await today.setMinutes(today.getMinutes() - 15);
+	await today1.setMinutes(today1.getMinutes() - 15);
 }
 if(admin.round == 5 && admin.vpoint == 0 && admin.readynum == totalplayer && vote.votenum == totalplayer && totalplayer == 5){////5인 투표종료
 	
@@ -528,7 +537,7 @@ if(admin.round == 5 && admin.vpoint == 0 && admin.readynum == totalplayer && vot
 	
 	await channel6.send('투표가 모두 끝났습니다.')
 	await channel6.send('결과 발표와 동시 모든 플레이어는 관전자로 바뀝니다. 결과는 기록채널에서 확인 가능하며 사건의 전말 채널이 열립니다.')
-	if(vote.vote2 >= 3){
+	if(vote.vote2 > 2){
 		const connection = joinVoiceChannel({
 		channelId: '812915041194999833',
 		guildId: message.guildId,
@@ -549,7 +558,7 @@ if(admin.round == 5 && admin.vpoint == 0 && admin.readynum == totalplayer && vot
 	
 	});
 	}
-	if(vote.vote3 >= 3){
+	if(vote.vote3 > 2){
 		const connection = joinVoiceChannel({
 		channelId: '812915041194999833',
 		guildId: message.guildId,
@@ -570,7 +579,7 @@ if(admin.round == 5 && admin.vpoint == 0 && admin.readynum == totalplayer && vot
 	
 	});
 	}
-	if(vote.vote4 >= 3){
+	if(vote.vote4 > 2){
 		const connection = joinVoiceChannel({
 		channelId: '812915041194999833',
 		guildId: message.guildId,
@@ -591,7 +600,7 @@ if(admin.round == 5 && admin.vpoint == 0 && admin.readynum == totalplayer && vot
 	
 	});
 	}
-	if(vote.vote5 >= 3){
+	if(vote.vote5 > 2){
 		const connection = joinVoiceChannel({
 		channelId: '812915041194999833',
 		guildId: message.guildId,
@@ -867,7 +876,7 @@ if(admin.round == 5 && admin.vpoint == 0 && admin.readynum == totalplayer && vot
 	
 	await channel6.send('투표가 모두 끝났습니다.')
 	await channel6.send('결과 발표와 동시 모든 플레이어는 관전자로 바뀝니다. 결과는 기록채널에서 확인 가능하며 사건의 전말 채널이 열립니다.')
-	if(vote.vote2 >= 3){
+	if(vote.vote2 > 2){
 		const connection = joinVoiceChannel({
 		channelId: '812915041194999833',
 		guildId: message.guildId,
@@ -888,7 +897,7 @@ if(admin.round == 5 && admin.vpoint == 0 && admin.readynum == totalplayer && vot
 	
 	});
 	}
-	if(vote.vote3 >= 3){
+	if(vote.vote3 > 2){
 		const connection = joinVoiceChannel({
 		channelId: '812915041194999833',
 		guildId: message.guildId,
@@ -909,7 +918,7 @@ if(admin.round == 5 && admin.vpoint == 0 && admin.readynum == totalplayer && vot
 	
 	});
 	}
-	if(vote.vote4 >= 3){
+	if(vote.vote4 > 2){
 		const connection = joinVoiceChannel({
 		channelId: '812915041194999833',
 		guildId: message.guildId,
@@ -930,7 +939,7 @@ if(admin.round == 5 && admin.vpoint == 0 && admin.readynum == totalplayer && vot
 	
 	});
 	}
-	if(vote.vote5 >= 3){
+	if(vote.vote5 > 2){
 		const connection = joinVoiceChannel({
 		channelId: '812915041194999833',
 		guildId: message.guildId,
