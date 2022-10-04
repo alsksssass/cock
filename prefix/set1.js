@@ -96,7 +96,7 @@ const channel22 = client.channels.cache.get('1024599576541397033');
 const editms = await channel22.send("준비중입니다. Loding....")////특정채널 메시지
 await editms.edit({ content: "준비중입니다. ■□□□□□□□□□" })
 const connection = joinVoiceChannel({
-    channelId: message.member.voice.channelId,
+    channelId: '812915041194999833',
     guildId: message.guildId,
     adapterCreator: message.guild.voiceAdapterCreator
     
@@ -104,7 +104,7 @@ const connection = joinVoiceChannel({
 
 
 const player = createAudioPlayer()
-const resource = createAudioResource('./music/1234.mp3') ////확인명령어 멘트
+const resource = createAudioResource('./music/1start.mp3') ////확인명령어 멘트
 
 
 player.play(resource, {seek: 0, volume: 1.0})

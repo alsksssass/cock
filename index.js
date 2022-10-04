@@ -241,7 +241,7 @@ database = {
 				await channel.send('시작!')
 				const channel13 = client.channels.cache.get(note1);
 				const connection = joinVoiceChannel({
-    channelId: message.member.voice.channelId,
+    channelId: '1023559232798343199',
     guildId: message.guildId,
     adapterCreator: message.guild.voiceAdapterCreator
     
@@ -249,7 +249,7 @@ database = {
 
 
 const player = createAudioPlayer()
-const resource = createAudioResource('./music/1234.mp3')/////추리방으로 옮겨주세요
+const resource = createAudioResource('./music/cubamg.mp3')/////추리방으로 옮겨주세요
 
 
 player.play(resource, {seek: 0, volume: 1.0})
@@ -327,7 +327,7 @@ database = {
 				
 				const channel13 = client.channels.cache.get(note1);
 			const connection = joinVoiceChannel({
-    channelId: message.member.voice.channelId,
+    channelId: '1023559232798343199',
     guildId: message.guildId,
     adapterCreator: message.guild.voiceAdapterCreator
     
@@ -335,7 +335,7 @@ database = {
 
 
 const player = createAudioPlayer()
-const resource = createAudioResource('./music/1234.mp3')///추리방으로 옮겨주세요
+const resource = createAudioResource('./music/cubamg.mp3')///추리방으로 옮겨주세요
 
 
 player.play(resource, {seek: 0, volume: 1.0})
@@ -530,7 +530,7 @@ if(admin.round == 5 && admin.vpoint == 0 && admin.readynum == totalplayer && vot
 	await channel6.send('결과 발표와 동시 모든 플레이어는 관전자로 바뀝니다. 결과는 기록채널에서 확인 가능하며 사건의 전말 채널이 열립니다.')
 	if(vote.vote2 >= 3){
 		const connection = joinVoiceChannel({
-		channelId: message.member.voice.channelId,
+		channelId: '812915041194999833',
 		guildId: message.guildId,
 		adapterCreator: message.guild.voiceAdapterCreator
 		
@@ -538,7 +538,7 @@ if(admin.round == 5 && admin.vpoint == 0 && admin.readynum == totalplayer && vot
 	
 	
 	const player = createAudioPlayer()
-	const resource = createAudioResource('./music/1234.mp3')///결과발표 멘트 한호랑 다득표
+	const resource = createAudioResource('./music/hanho.mp3')///결과발표 멘트 한호랑 다득표
 	
 	
 	player.play(resource, {seek: 0, volume: 1.0})
@@ -551,7 +551,7 @@ if(admin.round == 5 && admin.vpoint == 0 && admin.readynum == totalplayer && vot
 	}
 	if(vote.vote3 >= 3){
 		const connection = joinVoiceChannel({
-		channelId: message.member.voice.channelId,
+		channelId: '812915041194999833',
 		guildId: message.guildId,
 		adapterCreator: message.guild.voiceAdapterCreator
 		
@@ -559,7 +559,7 @@ if(admin.round == 5 && admin.vpoint == 0 && admin.readynum == totalplayer && vot
 	
 	
 	const player = createAudioPlayer()
-	const resource = createAudioResource('./music/calling.mp3')///결과발표 멘트 유수호 다득표
+	const resource = createAudioResource('./music/suho.mp3')///결과발표 멘트 유수호 다득표
 	
 	
 	player.play(resource, {seek: 0, volume: 1.0})
@@ -570,6 +570,70 @@ if(admin.round == 5 && admin.vpoint == 0 && admin.readynum == totalplayer && vot
 	
 	});
 	}
+	if(vote.vote4 >= 3){
+		const connection = joinVoiceChannel({
+		channelId: '812915041194999833',
+		guildId: message.guildId,
+		adapterCreator: message.guild.voiceAdapterCreator
+		
+	})
+	
+	
+	const player = createAudioPlayer()
+	const resource = createAudioResource('./music/ojung.mp3')///결과발표 멘트 오정성 다득표
+	
+	
+	player.play(resource, {seek: 0, volume: 1.0})
+	connection.subscribe(player);
+	
+	player.on(AudioPlayerStatus.Idle, () => {
+	  connection.destroy();
+	
+	});
+	}
+	if(vote.vote5 >= 3){
+		const connection = joinVoiceChannel({
+		channelId: '812915041194999833',
+		guildId: message.guildId,
+		adapterCreator: message.guild.voiceAdapterCreator
+		
+	})
+	
+	
+	const player = createAudioPlayer()
+	const resource = createAudioResource('./music/gack.mp3')///결과발표 멘트 곽편집 다득표
+	
+	
+	player.play(resource, {seek: 0, volume: 1.0})
+	connection.subscribe(player);
+	
+	player.on(AudioPlayerStatus.Idle, () => {
+	  connection.destroy();
+	
+	});
+	}
+	else{
+		const connection = joinVoiceChannel({
+			channelId: '812915041194999833',
+			guildId: message.guildId,
+			adapterCreator: message.guild.voiceAdapterCreator
+			
+		})
+		
+		
+		const player = createAudioPlayer()
+		const resource = createAudioResource('./music/dong.mp3')///결과발표 멘트 이외
+		
+		
+		player.play(resource, {seek: 0, volume: 1.0})
+		connection.subscribe(player);
+		
+		player.on(AudioPlayerStatus.Idle, () => {
+		  connection.destroy();
+		
+		});
+	}
+	
 console.log('1')
 
 	await message.guild.members.cache.get(cd1).roles.add(observer).catch(console.warn = () => {});/////특정 유저에게 롤주기 성공!!
@@ -803,48 +867,111 @@ if(admin.round == 5 && admin.vpoint == 0 && admin.readynum == totalplayer && vot
 	
 	await channel6.send('투표가 모두 끝났습니다.')
 	await channel6.send('결과 발표와 동시 모든 플레이어는 관전자로 바뀝니다. 결과는 기록채널에서 확인 가능하며 사건의 전말 채널이 열립니다.')
-if(vote.vote2 >= 3){
-	const connection = joinVoiceChannel({
-    channelId: message.member.voice.channelId,
-    guildId: message.guildId,
-    adapterCreator: message.guild.voiceAdapterCreator
-    
-})
-
-
-const player = createAudioPlayer()
-const resource = createAudioResource('./music/1234.mp3')///결과발표 멘트 한호랑 다득표
-
-
-player.play(resource, {seek: 0, volume: 1.0})
-connection.subscribe(player);
-
-player.on(AudioPlayerStatus.Idle, () => {
-  connection.destroy();
-
-});
-}
-if(vote.vote3 >= 3){
-	const connection = joinVoiceChannel({
-    channelId: message.member.voice.channelId,
-    guildId: message.guildId,
-    adapterCreator: message.guild.voiceAdapterCreator
-    
-})
-
-
-const player = createAudioPlayer()
-const resource = createAudioResource('./music/calling.mp3')///결과발표 멘트 유수호 다득표
-
-
-player.play(resource, {seek: 0, volume: 1.0})
-connection.subscribe(player);
-
-player.on(AudioPlayerStatus.Idle, () => {
-  connection.destroy();
-
-});
-}
+	if(vote.vote2 >= 3){
+		const connection = joinVoiceChannel({
+		channelId: '812915041194999833',
+		guildId: message.guildId,
+		adapterCreator: message.guild.voiceAdapterCreator
+		
+	})
+	
+	
+	const player = createAudioPlayer()
+	const resource = createAudioResource('./music/hanho.mp3')///결과발표 멘트 한호랑 다득표
+	
+	
+	player.play(resource, {seek: 0, volume: 1.0})
+	connection.subscribe(player);
+	
+	player.on(AudioPlayerStatus.Idle, () => {
+	  connection.destroy();
+	
+	});
+	}
+	if(vote.vote3 >= 3){
+		const connection = joinVoiceChannel({
+		channelId: '812915041194999833',
+		guildId: message.guildId,
+		adapterCreator: message.guild.voiceAdapterCreator
+		
+	})
+	
+	
+	const player = createAudioPlayer()
+	const resource = createAudioResource('./music/suho.mp3')///결과발표 멘트 유수호 다득표
+	
+	
+	player.play(resource, {seek: 0, volume: 1.0})
+	connection.subscribe(player);
+	
+	player.on(AudioPlayerStatus.Idle, () => {
+	  connection.destroy();
+	
+	});
+	}
+	if(vote.vote4 >= 3){
+		const connection = joinVoiceChannel({
+		channelId: '812915041194999833',
+		guildId: message.guildId,
+		adapterCreator: message.guild.voiceAdapterCreator
+		
+	})
+	
+	
+	const player = createAudioPlayer()
+	const resource = createAudioResource('./music/ojung.mp3')///결과발표 멘트 오정성 다득표
+	
+	
+	player.play(resource, {seek: 0, volume: 1.0})
+	connection.subscribe(player);
+	
+	player.on(AudioPlayerStatus.Idle, () => {
+	  connection.destroy();
+	
+	});
+	}
+	if(vote.vote5 >= 3){
+		const connection = joinVoiceChannel({
+		channelId: '812915041194999833',
+		guildId: message.guildId,
+		adapterCreator: message.guild.voiceAdapterCreator
+		
+	})
+	
+	
+	const player = createAudioPlayer()
+	const resource = createAudioResource('./music/gack.mp3')///결과발표 멘트 곽편집 다득표
+	
+	
+	player.play(resource, {seek: 0, volume: 1.0})
+	connection.subscribe(player);
+	
+	player.on(AudioPlayerStatus.Idle, () => {
+	  connection.destroy();
+	
+	});
+	}
+	else{
+		const connection = joinVoiceChannel({
+			channelId: '812915041194999833',
+			guildId: message.guildId,
+			adapterCreator: message.guild.voiceAdapterCreator
+			
+		})
+		
+		
+		const player = createAudioPlayer()
+		const resource = createAudioResource('./music/dong.mp3')///결과발표 멘트 이외
+		
+		
+		player.play(resource, {seek: 0, volume: 1.0})
+		connection.subscribe(player);
+		
+		player.on(AudioPlayerStatus.Idle, () => {
+		  connection.destroy();
+		
+		});
+	}
 	database = {
 		readynum : admin.readynum,
 		class1 : admin.class1,
@@ -1101,7 +1228,8 @@ client.on('guildMemberAdd', async member => {
 	await wait(1000);
 	member.guild.channels.cache.find(i => i.name === '롤지받기')
 	const channel44 = client.channels.cache.get('1022085158960115795');//관전방
-	channel44.send('안녕하세요 롤 선택순서입니다.\n캐릭터롤\n탐정\n한호랑\n유수호\n오정성\n곽편집\n이 있습니다.\n\n명령어는 ``!롤 역할``입니다.')
+	channel44.send('**본크씬은 음성이 나오니 봇의 볼륨조절을 부탁드립니다.!!!!**')
+	channel44.send('>>> 안녕하세요, 이 곳은 롤지를 받는 곳입니다.\n한호랑                     유수호\n오정성                     곽편집\n탐정\n\n명령어는 **!롤 (역할명)**입니다.\n명령어를 입력할 땐 괄호는 생략하고 입력해주세요.')
 	})
 
 

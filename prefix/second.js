@@ -41,6 +41,24 @@ if(admin.round == 3 && admin.vpoint == 0 && message.author.id == admin.playerid1
 	const channel6 = client.channels.cache.get(note1);//추리노트
 	await channel6.send('2차 조사가 시작되었습니다. ```!단서 ???``` 명령어로 남은 단서를 모두 열람 할 수 있습니다!')
   await channel6.send('단서 열람횟수 23개 추가 됨.')
+  const connection = joinVoiceChannel({
+    channelId: '1023559232798343199',
+    guildId: message.guildId,
+    adapterCreator: message.guild.voiceAdapterCreator
+    
+})
+
+
+const player = createAudioPlayer()
+const resource = createAudioResource('./music/live.mp3')///탐정님! 멘트
+
+
+player.play(resource, {seek: 0, volume: 1.0})
+connection.subscribe(player);
+
+player.on(AudioPlayerStatus.Idle, () => {
+  connection.destroy();
+});
   await channel6.send('탐정님! 오늘 방송된 유튜브 라이브 방송영상을 입수했습니다!')
 	await channel6.send('> 000 - 윤새롬의 유튜브 라이브화면')
 	await channel6.send({ files: ['./roll/Preview.mp4'] })

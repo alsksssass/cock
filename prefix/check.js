@@ -1873,7 +1873,7 @@ module.exports = {
                await channel5.send("랜덤증거 사용완료")
                await channel5.send("토론후 투표해주세요 투표는 투표소에.... 아니라면 공개투표가 되어버립니다")
                const connection = joinVoiceChannel({
-                  channelId: message.member.voice.channelId,
+                  channelId: '812915041194999833',
                   guildId: message.guildId,
                   adapterCreator: message.guild.voiceAdapterCreator
                   
@@ -1881,7 +1881,7 @@ module.exports = {
                
                
                const player = createAudioPlayer()
-               const resource = createAudioResource('./music/1234.mp3')///결과발표 멘트 투표는 투표소에서
+               const resource = createAudioResource('./music/vote.mp3')///결과발표 멘트 투표는 투표소에서
                
                
                player.play(resource, {seek: 0, volume: 1.0})
@@ -1930,7 +1930,7 @@ module.exports = {
                await channel5.send("랜덤증거 사용완료")
                await channel5.send("토론후 투표해주세요 투표는 투표소에.... 아니라면 공개투표가 되어버립니다")
                const connection = joinVoiceChannel({
-                  channelId: message.member.voice.channelId,
+                  channelId: '812915041194999833',
                   guildId: message.guildId,
                   adapterCreator: message.guild.voiceAdapterCreator
                   
@@ -1938,7 +1938,7 @@ module.exports = {
                
                
                const player = createAudioPlayer()
-               const resource = createAudioResource('./music/1234.mp3')///결과발표 멘트 투표는 투표소에서
+               const resource = createAudioResource('./music/vote.mp3')///결과발표 멘트 투표는 투표소에서
                
                
                player.play(resource, {seek: 0, volume: 1.0})
@@ -1987,7 +1987,7 @@ module.exports = {
                await channel5.send("랜덤증거 사용완료")
                await channel5.send("토론후 투표해주세요 투표는 투표소에.... 아니라면 공개투표가 되어버립니다")
                const connection = joinVoiceChannel({
-                  channelId: message.member.voice.channelId,
+                  channelId: '812915041194999833',
                   guildId: message.guildId,
                   adapterCreator: message.guild.voiceAdapterCreator
                   
@@ -1995,7 +1995,7 @@ module.exports = {
                
                
                const player = createAudioPlayer()
-               const resource = createAudioResource('./music/1234.mp3')///결과발표 멘트 투표는 투표소에서
+               const resource = createAudioResource('./music/vote.mp3')///결과발표 멘트 투표는 투표소에서
                
                
                player.play(resource, {seek: 0, volume: 1.0})
@@ -2044,7 +2044,7 @@ module.exports = {
                await channel5.send("랜덤증거 사용완료")
                await channel5.send("토론후 투표해주세요 투표는 투표소에.... 아니라면 공개투표가 되어버립니다")
                const connection = joinVoiceChannel({
-                  channelId: message.member.voice.channelId,
+                  channelId: '812915041194999833',
                   guildId: message.guildId,
                   adapterCreator: message.guild.voiceAdapterCreator
                   
@@ -2052,7 +2052,7 @@ module.exports = {
                
                
                const player = createAudioPlayer()
-               const resource = createAudioResource('./music/1234.mp3')///결과발표 멘트 투표는 투표소에서
+               const resource = createAudioResource('./music/vote.mp3')///결과발표 멘트 투표는 투표소에서
                
                
                player.play(resource, {seek: 0, volume: 1.0})
@@ -2101,7 +2101,7 @@ module.exports = {
                await channel5.send("랜덤증거 사용완료")
                await channel5.send("토론후 투표해주세요 투표는 투표소에.... 아니라면 공개투표가 되어버립니다")
                const connection = joinVoiceChannel({
-                  channelId: message.member.voice.channelId,
+                  channelId: '812915041194999833',
                   guildId: message.guildId,
                   adapterCreator: message.guild.voiceAdapterCreator
                   
@@ -2109,7 +2109,7 @@ module.exports = {
                
                
                const player = createAudioPlayer()
-               const resource = createAudioResource('./music/1234.mp3')///결과발표 멘트 투표는 투표소에서
+               const resource = createAudioResource('./music/vote.mp3')///결과발표 멘트 투표는 투표소에서
                
                
                player.play(resource, {seek: 0, volume: 1.0})
