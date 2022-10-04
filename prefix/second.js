@@ -42,7 +42,7 @@ if(admin.round == 3 && admin.vpoint == 0 && message.author.id == admin.playerid1
 	await channel6.send('2차 조사가 시작되었습니다. ```!단서 ???``` 명령어로 남은 단서를 모두 열람 할 수 있습니다!')
   await channel6.send('단서 열람횟수 23개 추가 됨.')
   const connection = joinVoiceChannel({
-    channelId: '1023559232798343199',
+    channelId: '812915041194999833',
     guildId: message.guildId,
     adapterCreator: message.guild.voiceAdapterCreator
     
