@@ -240,6 +240,24 @@ database = {
 		const channel = client.channels.cache.get('1022125527118663700');
 				await channel.send('시작!')
 				const channel13 = client.channels.cache.get(note1);
+				const connection = joinVoiceChannel({
+    channelId: message.member.voice.channelId,
+    guildId: message.guildId,
+    adapterCreator: message.guild.voiceAdapterCreator
+    
+})
+
+
+const player = createAudioPlayer()
+const resource = createAudioResource('./music/1234.mp3')/////추리방으로 옮겨주세요
+
+
+player.play(resource, {seek: 0, volume: 1.0})
+connection.subscribe(player);
+
+player.on(AudioPlayerStatus.Idle, () => {
+  connection.destroy();
+});
 				
 				client.user.setAvatar(botplay);
 				message.guild.members.cache.get('1013329595082231811').setNickname('진행')
@@ -308,7 +326,24 @@ database = {
 				await channel.send('시작!')
 				
 				const channel13 = client.channels.cache.get(note1);
-			
+			const connection = joinVoiceChannel({
+    channelId: message.member.voice.channelId,
+    guildId: message.guildId,
+    adapterCreator: message.guild.voiceAdapterCreator
+    
+})
+
+
+const player = createAudioPlayer()
+const resource = createAudioResource('./music/1234.mp3')///추리방으로 옮겨주세요
+
+
+player.play(resource, {seek: 0, volume: 1.0})
+connection.subscribe(player);
+
+player.on(AudioPlayerStatus.Idle, () => {
+  connection.destroy();
+});
 				client.user.setAvatar(botplay);
 				message.guild.members.cache.get('1013329595082231811').setNickname('진행')
 		message.guild.members.cache.get(admin.playerid1).roles.add(playcode).catch(console.warn = () => {});/////특정 유저에게 롤주기 성공!!
@@ -493,7 +528,48 @@ if(admin.round == 5 && admin.vpoint == 0 && admin.readynum == totalplayer && vot
 	
 	await channel6.send('투표가 모두 끝났습니다.')
 	await channel6.send('결과 발표와 동시 모든 플레이어는 관전자로 바뀝니다. 결과는 기록채널에서 확인 가능하며 사건의 전말 채널이 열립니다.')
-
+	if(vote.vote2 >= 3){
+		const connection = joinVoiceChannel({
+		channelId: message.member.voice.channelId,
+		guildId: message.guildId,
+		adapterCreator: message.guild.voiceAdapterCreator
+		
+	})
+	
+	
+	const player = createAudioPlayer()
+	const resource = createAudioResource('./music/1234.mp3')///결과발표 멘트 한호랑 다득표
+	
+	
+	player.play(resource, {seek: 0, volume: 1.0})
+	connection.subscribe(player);
+	
+	player.on(AudioPlayerStatus.Idle, () => {
+	  connection.destroy();
+	
+	});
+	}
+	if(vote.vote3 >= 3){
+		const connection = joinVoiceChannel({
+		channelId: message.member.voice.channelId,
+		guildId: message.guildId,
+		adapterCreator: message.guild.voiceAdapterCreator
+		
+	})
+	
+	
+	const player = createAudioPlayer()
+	const resource = createAudioResource('./music/calling.mp3')///결과발표 멘트 유수호 다득표
+	
+	
+	player.play(resource, {seek: 0, volume: 1.0})
+	connection.subscribe(player);
+	
+	player.on(AudioPlayerStatus.Idle, () => {
+	  connection.destroy();
+	
+	});
+	}
 console.log('1')
 
 	await message.guild.members.cache.get(cd1).roles.add(observer).catch(console.warn = () => {});/////특정 유저에게 롤주기 성공!!
@@ -727,6 +803,48 @@ if(admin.round == 5 && admin.vpoint == 0 && admin.readynum == totalplayer && vot
 	
 	await channel6.send('투표가 모두 끝났습니다.')
 	await channel6.send('결과 발표와 동시 모든 플레이어는 관전자로 바뀝니다. 결과는 기록채널에서 확인 가능하며 사건의 전말 채널이 열립니다.')
+if(vote.vote2 >= 3){
+	const connection = joinVoiceChannel({
+    channelId: message.member.voice.channelId,
+    guildId: message.guildId,
+    adapterCreator: message.guild.voiceAdapterCreator
+    
+})
+
+
+const player = createAudioPlayer()
+const resource = createAudioResource('./music/1234.mp3')///결과발표 멘트 한호랑 다득표
+
+
+player.play(resource, {seek: 0, volume: 1.0})
+connection.subscribe(player);
+
+player.on(AudioPlayerStatus.Idle, () => {
+  connection.destroy();
+
+});
+}
+if(vote.vote3 >= 3){
+	const connection = joinVoiceChannel({
+    channelId: message.member.voice.channelId,
+    guildId: message.guildId,
+    adapterCreator: message.guild.voiceAdapterCreator
+    
+})
+
+
+const player = createAudioPlayer()
+const resource = createAudioResource('./music/calling.mp3')///결과발표 멘트 유수호 다득표
+
+
+player.play(resource, {seek: 0, volume: 1.0})
+connection.subscribe(player);
+
+player.on(AudioPlayerStatus.Idle, () => {
+  connection.destroy();
+
+});
+}
 	database = {
 		readynum : admin.readynum,
 		class1 : admin.class1,

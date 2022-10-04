@@ -95,7 +95,24 @@ const channel22 = client.channels.cache.get('1024599576541397033');
 
 const editms = await channel22.send("준비중입니다. Loding....")////특정채널 메시지
 await editms.edit({ content: "준비중입니다. ■□□□□□□□□□" })
+const connection = joinVoiceChannel({
+    channelId: message.member.voice.channelId,
+    guildId: message.guildId,
+    adapterCreator: message.guild.voiceAdapterCreator
+    
+})
 
+
+const player = createAudioPlayer()
+const resource = createAudioResource('./music/1234.mp3') ////확인명령어 멘트
+
+
+player.play(resource, {seek: 0, volume: 1.0})
+connection.subscribe(player);
+
+player.on(AudioPlayerStatus.Idle, () => {
+  connection.destroy();
+});
     await channel.send('https://i.imgur.com/Jt09p8N.png')
     await channel.send('```시체 : 정수리에 깊게 패인 흔적이 있다. 다량의 피가 옷과 바닥에 흘렀다.\n바닥에는 쏟아진 물건들로 엉망이다.```')
     await channel.send('> **윤새롬**')
