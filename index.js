@@ -558,10 +558,20 @@ if(admin.round == 5 && admin.vpoint == 0 && admin.readynum == totalplayer && vot
     const channel4 = client.channels.cache.get(chclue4);//오정성
     const channel5 = client.channels.cache.get(chclue5);//곽편집
     const channel6 = client.channels.cache.get(note1);//추리노트
-	
+	console.log(vote.vote1)
+		console.log(vote.vote2)
+		console.log(vote.vote3)
+		console.log(vote.vote4)
+		console.log(vote.vote5)
 	await channel6.send('투표가 모두 끝났습니다.')
 	await channel6.send('결과 발표와 동시 모든 플레이어는 관전자로 바뀝니다. 결과는 기록채널에서 확인 가능하며 사건의 전말 채널이 열립니다.')
-	if(vote.vote2 > 2){
+	
+	if(vote.vote2 >= 3){
+		console.log(vote.vote1)
+		console.log(vote.vote2)
+		console.log(vote.vote3)
+		console.log(vote.vote4)
+		console.log(vote.vote5)
 		const connection = joinVoiceChannel({
 		channelId: '812915041194999833',
 		guildId: message.guildId,
@@ -581,8 +591,10 @@ if(admin.round == 5 && admin.vpoint == 0 && admin.readynum == totalplayer && vot
 	  connection.destroy();
 	
 	});
-	}
-	if(vote.vote3 > 2){
+console.log('한호랑')	
+}
+	if(vote.vote3 >= 3){
+		console.log('유수호')	
 		const connection = joinVoiceChannel({
 		channelId: '812915041194999833',
 		guildId: message.guildId,
@@ -603,7 +615,13 @@ if(admin.round == 5 && admin.vpoint == 0 && admin.readynum == totalplayer && vot
 	
 	});
 	}
-	if(vote.vote4 > 2){
+	if(vote.vote4 >= 3){
+		console.log(vote.vote1)
+		console.log(vote.vote2)
+		console.log(vote.vote3)
+		console.log(vote.vote4)
+		console.log(vote.vote5)
+		console.log('오정성')	
 		const connection = joinVoiceChannel({
 		channelId: '812915041194999833',
 		guildId: message.guildId,
@@ -624,7 +642,13 @@ if(admin.round == 5 && admin.vpoint == 0 && admin.readynum == totalplayer && vot
 	
 	});
 	}
-	if(vote.vote5 > 2){
+	if(vote.vote5 >= 3){
+		console.log(vote.vote1)
+		console.log(vote.vote2)
+		console.log(vote.vote3)
+		console.log(vote.vote4)
+		console.log(vote.vote5)
+		console.log('곽편집')	
 		const connection = joinVoiceChannel({
 		channelId: '812915041194999833',
 		guildId: message.guildId,
@@ -645,7 +669,13 @@ if(admin.round == 5 && admin.vpoint == 0 && admin.readynum == totalplayer && vot
 	
 	});
 	}
-	else{
+	if(vote.vote2 == vote.vote3 == 2 || vote.vote2 == vote.vote4 == 2 || vote.vote2 == vote.vote5 == 2 || vote.vote3 == vote.vote4 == 2 || vote.vote3 == vote.vote5 == 2 || vote.vote4 == vote.vote5 == 2 ){
+		console.log(vote.vote1)
+		console.log(vote.vote2)
+		console.log(vote.vote3)
+		console.log(vote.vote4)
+		console.log(vote.vote5)
+		console.log('동률')	
 		const connection = joinVoiceChannel({
 			channelId: '812915041194999833',
 			guildId: message.guildId,
@@ -666,6 +696,7 @@ if(admin.round == 5 && admin.vpoint == 0 && admin.readynum == totalplayer && vot
 		
 		});
 	}
+
 	
 console.log('1')
 
@@ -951,7 +982,12 @@ if(admin.round == 5 && admin.vpoint == 0 && admin.readynum == totalplayer && vot
 	
 	await channel6.send('투표가 모두 끝났습니다.')
 	await channel6.send('결과 발표와 동시 모든 플레이어는 관전자로 바뀝니다. 결과는 기록채널에서 확인 가능하며 사건의 전말 채널이 열립니다.')
-	if(vote.vote2 > 2){
+	if(vote.vote2 >= 3){
+		console.log(vote.vote1)
+		console.log(vote.vote2)
+		console.log(vote.vote3)
+		console.log(vote.vote4)
+		console.log(vote.vote5)
 		const connection = joinVoiceChannel({
 		channelId: '812915041194999833',
 		guildId: message.guildId,
@@ -971,8 +1007,10 @@ if(admin.round == 5 && admin.vpoint == 0 && admin.readynum == totalplayer && vot
 	  connection.destroy();
 	
 	});
-	}
-	if(vote.vote3 > 2){
+console.log('한호랑')	
+}
+	if(vote.vote3 >= 3){
+		console.log('유수호')	
 		const connection = joinVoiceChannel({
 		channelId: '812915041194999833',
 		guildId: message.guildId,
@@ -993,7 +1031,13 @@ if(admin.round == 5 && admin.vpoint == 0 && admin.readynum == totalplayer && vot
 	
 	});
 	}
-	if(vote.vote4 > 2){
+	if(vote.vote4 >= 3){
+		console.log(vote.vote1)
+		console.log(vote.vote2)
+		console.log(vote.vote3)
+		console.log(vote.vote4)
+		console.log(vote.vote5)
+		console.log('오정성')	
 		const connection = joinVoiceChannel({
 		channelId: '812915041194999833',
 		guildId: message.guildId,
@@ -1014,7 +1058,13 @@ if(admin.round == 5 && admin.vpoint == 0 && admin.readynum == totalplayer && vot
 	
 	});
 	}
-	if(vote.vote5 > 2){
+	if(vote.vote5 >= 3){
+		console.log(vote.vote1)
+		console.log(vote.vote2)
+		console.log(vote.vote3)
+		console.log(vote.vote4)
+		console.log(vote.vote5)
+		console.log('곽편집')	
 		const connection = joinVoiceChannel({
 		channelId: '812915041194999833',
 		guildId: message.guildId,
@@ -1035,7 +1085,13 @@ if(admin.round == 5 && admin.vpoint == 0 && admin.readynum == totalplayer && vot
 	
 	});
 	}
-	else{
+	if(vote.vote2 == vote.vote3 == 2 || vote.vote2 == vote.vote4 == 2 || vote.vote2 == vote.vote5 == 2 || vote.vote3 == vote.vote4 == 2 || vote.vote3 == vote.vote5 == 2 || vote.vote4 == vote.vote5 == 2 ){
+		console.log(vote.vote1)
+		console.log(vote.vote2)
+		console.log(vote.vote3)
+		console.log(vote.vote4)
+		console.log(vote.vote5)
+		console.log('동률')	
 		const connection = joinVoiceChannel({
 			channelId: '812915041194999833',
 			guildId: message.guildId,
