@@ -450,11 +450,12 @@ if(admin.round == 4 && admin.vpoint == 0 && admin.readynum == totalplayer){////2
 	
 
 	const channel5 = client.channels.cache.get(note1);//추리노트
-	const channel6 = client.channels.cache.get('1026345168376438844');//추리노트
-	const channel7 = client.channels.cache.get('1026345195048026143');//추리노트
-	const channel8 = client.channels.cache.get('1026345227159601162');//추리노트
-	const channel9 = client.channels.cache.get('1026345260915367977');//추리노트
-	const channel99 = client.channels.cache.get('1026345366481809448');//추리노트
+	const channel6 = client.channels.cache.get('1026345168376438844');//투표1
+	const channel7 = client.channels.cache.get('1026345195048026143');//투표2
+	const channel8 = client.channels.cache.get('1026345227159601162');//투표3
+	const channel9 = client.channels.cache.get('1026345260915367977');//투표4
+	const channel99 = client.channels.cache.get('1026345366481809448');//투표5
+	const channel88 = client.channels.cache.get('1027030645534380072');//수다
 	await channel5.send('2차 조사가 모두 끝났습니다. \n토론시간을 가지신후 투표해 주세요 투표는 투표소채널에서 ```!투표 캐릭터이름```이라고 쳐주세요. \n각자 치시면 됩니다.(비밀투표)')
 	await channel5.send(dlckk+"까지 토론 하시면 됩니다. \n투표 동점이라면 범인승리 입니다. \n재투표는 없습니다.")
 	await channel5.send('플레이 시작부터 투표종료시까지 플레이 시간이 기록되며 **영구히** 남습니다. \n일부러 늘린 오랜토론 시간은 검거하여도 **영광치못한 기록**으로 남게될것입니다.')
@@ -801,7 +802,12 @@ await nick4.setNickname("-관전."+admin.player5)
 	   
 	 }
 	fs.writeFileSync(vfilePath, JSON.stringify(voting));
-
+	const channel10 = client.channels.cache.get('1026345168376438844');//투표1
+	const channel7 = client.channels.cache.get('1026345195048026143');//투표2
+	const channel8 = client.channels.cache.get('1026345227159601162');//투표3
+	const channel9 = client.channels.cache.get('1026345260915367977');//투표4
+	const channel99 = client.channels.cache.get('1026345366481809448');//투표5
+	const channel88 = client.channels.cache.get('1027030645534380072');//수다
 ///채널내 모든메시지 삭제
 let fetched1;
 let fetched2;
@@ -809,9 +815,55 @@ let fetched3;
 let fetched4;
 let fetched5;
 let fetched6;
+let fetched7;
+let fetched8;
+let fetched9;
+let fetched10;
+let fetched99;
+let fetched88;
 console.log('0')
+do {
 
+	fetched88 = await channel88.messages.fetch({limit: 99}).catch(console.warn = () => {});
+	await channel88.bulkDelete(fetched88).catch(console.warn = () => {});
+	console.log('1')
+  }
+  while(fetched88.size >= 2);///투표3
+do {
 
+	fetched99 = await channel99.messages.fetch({limit: 99}).catch(console.warn = () => {});
+	await channel99.bulkDelete(fetched99).catch(console.warn = () => {});
+	console.log('1')
+  }
+  while(fetched99.size >= 2);///투표3
+do {
+
+	fetched9 = await channel9.messages.fetch({limit: 99}).catch(console.warn = () => {});
+	await channel9.bulkDelete(fetched9).catch(console.warn = () => {});
+	console.log('1')
+  }
+  while(fetched9.size >= 2);///투표3
+do {
+
+	fetched8 = await channel8.messages.fetch({limit: 99}).catch(console.warn = () => {});
+	await channel8.bulkDelete(fetched8).catch(console.warn = () => {});
+	console.log('1')
+  }
+  while(fetched8.size >= 2);///투표3
+do {
+
+	fetched7 = await channel7.messages.fetch({limit: 99}).catch(console.warn = () => {});
+	await channel7.bulkDelete(fetched7).catch(console.warn = () => {});
+	console.log('1')
+  }
+  while(fetched7.size >= 2);///투표2
+do {
+
+	fetched10 = await channel10.messages.fetch({limit: 99}).catch(console.warn = () => {});
+	await channel10.bulkDelete(fetched10).catch(console.warn = () => {});
+	console.log('1')
+  }
+  while(fetched10.size >= 2);///투표1
 do {
 
   fetched1 = await channel1.messages.fetch({limit: 99}).catch(console.warn = () => {});
@@ -1150,6 +1202,12 @@ voting = {
  }
 fs.writeFileSync(vfilePath, JSON.stringify(voting));
 
+const channel10 = client.channels.cache.get('1026345168376438844');//투표1
+	const channel7 = client.channels.cache.get('1026345195048026143');//투표2
+	const channel8 = client.channels.cache.get('1026345227159601162');//투표3
+	const channel9 = client.channels.cache.get('1026345260915367977');//투표4
+	const channel99 = client.channels.cache.get('1026345366481809448');//투표5
+	const channel88 = client.channels.cache.get('1027030645534380072');//수다
 ///채널내 모든메시지 삭제
 let fetched1;
 let fetched2;
@@ -1157,43 +1215,99 @@ let fetched3;
 let fetched4;
 let fetched5;
 let fetched6;
+let fetched7;
+let fetched8;
+let fetched9;
+let fetched10;
+let fetched99;
+let fetched88;
 console.log('0')
-
-
 do {
-  await wait(1000)
+
+	fetched88 = await channel88.messages.fetch({limit: 99}).catch(console.warn = () => {});
+	await channel88.bulkDelete(fetched88).catch(console.warn = () => {});
+	console.log('1')
+  }
+  while(fetched88.size >= 2);///투표3
+do {
+
+	fetched99 = await channel99.messages.fetch({limit: 99}).catch(console.warn = () => {});
+	await channel99.bulkDelete(fetched99).catch(console.warn = () => {});
+	console.log('1')
+  }
+  while(fetched99.size >= 2);///투표3
+do {
+
+	fetched9 = await channel9.messages.fetch({limit: 99}).catch(console.warn = () => {});
+	await channel9.bulkDelete(fetched9).catch(console.warn = () => {});
+	console.log('1')
+  }
+  while(fetched9.size >= 2);///투표3
+do {
+
+	fetched8 = await channel8.messages.fetch({limit: 99}).catch(console.warn = () => {});
+	await channel8.bulkDelete(fetched8).catch(console.warn = () => {});
+	console.log('1')
+  }
+  while(fetched8.size >= 2);///투표3
+do {
+
+	fetched7 = await channel7.messages.fetch({limit: 99}).catch(console.warn = () => {});
+	await channel7.bulkDelete(fetched7).catch(console.warn = () => {});
+	console.log('1')
+  }
+  while(fetched7.size >= 2);///투표2
+do {
+
+	fetched10 = await channel10.messages.fetch({limit: 99}).catch(console.warn = () => {});
+	await channel10.bulkDelete(fetched10).catch(console.warn = () => {});
+	console.log('1')
+  }
+  while(fetched10.size >= 2);///투표1
+do {
+
   fetched1 = await channel1.messages.fetch({limit: 99}).catch(console.warn = () => {});
   await channel1.bulkDelete(fetched1).catch(console.warn = () => {});
   console.log('1')
-  
+}
+while(fetched1.size >= 2);
+
+do {
   await wait(1000)
   fetched2 = await channel2.messages.fetch({limit: 99}).catch(console.warn = () => {});
   await channel2.bulkDelete(fetched2).catch(console.warn = () => {});
   console.log('2')
-  
+}
+while(fetched2.size >= 2);
+do {
   await wait(1000)
   fetched3 = await channel3.messages.fetch({limit: 99}).catch(console.warn = () => {});
   await channel3.bulkDelete(fetched3).catch(console.warn = () => {});
   console.log('3')
-  
+}
+while(fetched3.size >= 2);
+do {
   await wait(1000)
   fetched4 = await channel4.messages.fetch({limit: 99}).catch(console.warn = () => {});
   await channel4.bulkDelete(fetched4).catch(console.warn = () => {});
   console.log('4')
-  
+}
+while(fetched4.size >= 2);
+do {
   await wait(1000)
   fetched5 = await channel5.messages.fetch({limit: 99}).catch(console.warn = () => {});
   await channel5.bulkDelete(fetched5).catch(console.warn = () => {});
   console.log('5')
-  
+}
+while(fetched5.size >= 2);
+do {
   await wait(1000)
   fetched6 = await channel6.messages.fetch({limit: 99}).catch(console.warn = () => {});
   await channel6.bulkDelete(fetched6).catch(console.warn = () => {});
   console.log('6')
-  
-  await wait(1000)
 }
-while((fetched1.size+fetched2.size+fetched3.size+fetched4.size+fetched5.size+fetched6.size) >= 2);
+while(fetched6.size >= 2);
+
 console.log('끝')
 
 
