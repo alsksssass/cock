@@ -593,7 +593,7 @@ if(admin.round == 5 && admin.vpoint == 0 && admin.readynum == totalplayer && vot
 	});
 console.log('한호랑')	
 }
-	if(vote.vote3 >= 3){
+	else if(vote.vote3 >= 3){
 		console.log('유수호')	
 		const connection = joinVoiceChannel({
 		channelId: '812915041194999833',
@@ -615,7 +615,7 @@ console.log('한호랑')
 	
 	});
 	}
-	if(vote.vote4 >= 3){
+	else if(vote.vote4 >= 3){
 		console.log(vote.vote1)
 		console.log(vote.vote2)
 		console.log(vote.vote3)
@@ -642,7 +642,7 @@ console.log('한호랑')
 	
 	});
 	}
-	if(vote.vote5 >= 3){
+	else if(vote.vote5 >= 3){
 		console.log(vote.vote1)
 		console.log(vote.vote2)
 		console.log(vote.vote3)
@@ -669,7 +669,34 @@ console.log('한호랑')
 	
 	});
 	}
-	if(vote.vote2 == vote.vote3 == 2 || vote.vote2 == vote.vote4 == 2 || vote.vote2 == vote.vote5 == 2 || vote.vote3 == vote.vote4 == 2 || vote.vote3 == vote.vote5 == 2 || vote.vote4 == vote.vote5 == 2 ){
+	else if(vote.vote2 == vote.vote3 == 2 || vote.vote2 == vote.vote4 == 2 || vote.vote2 == vote.vote5 == 2 || vote.vote3 == vote.vote4 == 2 || vote.vote3 == vote.vote5 == 2 || vote.vote4 == vote.vote5 == 2 ){
+		console.log(vote.vote1)
+		console.log(vote.vote2)
+		console.log(vote.vote3)
+		console.log(vote.vote4)
+		console.log(vote.vote5)
+		console.log('동률')	
+		const connection = joinVoiceChannel({
+			channelId: '812915041194999833',
+			guildId: message.guildId,
+			adapterCreator: message.guild.voiceAdapterCreator
+			
+		})
+		
+		
+		const player = createAudioPlayer()
+		const resource = createAudioResource('./music/dong.mp3')///결과발표 멘트 이외
+		
+		
+		player.play(resource, {seek: 0, volume: 1.0})
+		connection.subscribe(player);
+		
+		player.on(AudioPlayerStatus.Idle, () => {
+		  connection.destroy();
+		
+		});
+	}
+	else {
 		console.log(vote.vote1)
 		console.log(vote.vote2)
 		console.log(vote.vote3)
@@ -1009,7 +1036,7 @@ if(admin.round == 5 && admin.vpoint == 0 && admin.readynum == totalplayer && vot
 	});
 console.log('한호랑')	
 }
-	if(vote.vote3 >= 3){
+	else if(vote.vote3 >= 3){
 		console.log('유수호')	
 		const connection = joinVoiceChannel({
 		channelId: '812915041194999833',
@@ -1031,7 +1058,7 @@ console.log('한호랑')
 	
 	});
 	}
-	if(vote.vote4 >= 3){
+	else if(vote.vote4 >= 3){
 		console.log(vote.vote1)
 		console.log(vote.vote2)
 		console.log(vote.vote3)
@@ -1058,7 +1085,7 @@ console.log('한호랑')
 	
 	});
 	}
-	if(vote.vote5 >= 3){
+	else if(vote.vote5 >= 3){
 		console.log(vote.vote1)
 		console.log(vote.vote2)
 		console.log(vote.vote3)
@@ -1085,7 +1112,34 @@ console.log('한호랑')
 	
 	});
 	}
-	if(vote.vote2 == vote.vote3 == 2 || vote.vote2 == vote.vote4 == 2 || vote.vote2 == vote.vote5 == 2 || vote.vote3 == vote.vote4 == 2 || vote.vote3 == vote.vote5 == 2 || vote.vote4 == vote.vote5 == 2 ){
+	else if(vote.vote2 == vote.vote3 == 2 || vote.vote2 == vote.vote4 == 2 || vote.vote2 == vote.vote5 == 2 || vote.vote3 == vote.vote4 == 2 || vote.vote3 == vote.vote5 == 2 || vote.vote4 == vote.vote5 == 2 ){
+		console.log(vote.vote1)
+		console.log(vote.vote2)
+		console.log(vote.vote3)
+		console.log(vote.vote4)
+		console.log(vote.vote5)
+		console.log('동률')	
+		const connection = joinVoiceChannel({
+			channelId: '812915041194999833',
+			guildId: message.guildId,
+			adapterCreator: message.guild.voiceAdapterCreator
+			
+		})
+		
+		
+		const player = createAudioPlayer()
+		const resource = createAudioResource('./music/dong.mp3')///결과발표 멘트 이외
+		
+		
+		player.play(resource, {seek: 0, volume: 1.0})
+		connection.subscribe(player);
+		
+		player.on(AudioPlayerStatus.Idle, () => {
+		  connection.destroy();
+		
+		});
+	}
+	else {
 		console.log(vote.vote1)
 		console.log(vote.vote2)
 		console.log(vote.vote3)
