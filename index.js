@@ -261,16 +261,27 @@ player.on(AudioPlayerStatus.Idle, () => {
 				
 				client.user.setAvatar(botplay);
 				message.guild.members.cache.get('1013329595082231811').setNickname('진행')
-		message.guild.members.cache.get(admin.playerid1).roles.add(playcode).catch(console.warn = () => {});/////특정 유저에게 롤주기 성공!!
-		message.guild.members.cache.get(admin.playerid1).roles.remove(stanby).catch(console.warn = () => {});
-		message.guild.members.cache.get(admin.playerid2).roles.add(playcode1).catch(console.warn = () => {});
-		message.guild.members.cache.get(admin.playerid2).roles.remove(stanby).catch(console.warn = () => {});
-		message.guild.members.cache.get(admin.playerid3).roles.add(playcode2).catch(console.warn = () => {});
-		message.guild.members.cache.get(admin.playerid3).roles.remove(stanby).catch(console.warn = () => {});
-		message.guild.members.cache.get(admin.playerid4).roles.add(playcode3).catch(console.warn = () => {});
-		message.guild.members.cache.get(admin.playerid4).roles.remove(stanby).catch(console.warn = () => {});
-		message.guild.members.cache.get(admin.playerid5).roles.add(playcode4).catch(console.warn = () => {});
-		message.guild.members.cache.get(admin.playerid5).roles.remove(stanby).catch(console.warn = () => {});
+				await wait(500)
+				message.guild.members.cache.get(admin.playerid1).roles.add(playcode).catch(console.warn = () => {});/////특정 유저에게 롤주기 성공!!
+				await wait(500)
+				message.guild.members.cache.get(admin.playerid1).roles.remove(stanby).catch(console.warn = () => {});
+		
+				await wait(500)
+				message.guild.members.cache.get(admin.playerid2).roles.add(playcode1).catch(console.warn = () => {});
+				await wait(500)
+				message.guild.members.cache.get(admin.playerid2).roles.remove(stanby).catch(console.warn = () => {});
+				await wait(500)
+				message.guild.members.cache.get(admin.playerid3).roles.add(playcode2).catch(console.warn = () => {});
+				await wait(500)
+				message.guild.members.cache.get(admin.playerid3).roles.remove(stanby).catch(console.warn = () => {});
+				await wait(500)
+				message.guild.members.cache.get(admin.playerid4).roles.add(playcode3).catch(console.warn = () => {});
+				await wait(500)
+				message.guild.members.cache.get(admin.playerid4).roles.remove(stanby).catch(console.warn = () => {});
+				await wait(500)
+				message.guild.members.cache.get(admin.playerid5).roles.add(playcode4).catch(console.warn = () => {});
+				await wait(500)
+				message.guild.members.cache.get(admin.playerid5).roles.remove(stanby).catch(console.warn = () => {});
 		await wait(2000)
 		await channel13.send('탐정님이``!세팅``명령어를 치시면 세팅이 준비가 되고 시작됩니다.')
 		await channel13.send('플레이어들은 대기자 음성채널에서 이제 음성채팅이 불가능합니다.')
@@ -346,17 +357,29 @@ player.on(AudioPlayerStatus.Idle, () => {
 });
 				client.user.setAvatar(botplay);
 				message.guild.members.cache.get('1013329595082231811').setNickname('진행')
-		message.guild.members.cache.get(admin.playerid1).roles.add(playcode).catch(console.warn = () => {});/////특정 유저에게 롤주기 성공!!
+				await wait(500)
+				message.guild.members.cache.get(admin.playerid1).roles.add(playcode).catch(console.warn = () => {});/////특정 유저에게 롤주기 성공!!
+		await wait(500)
 		message.guild.members.cache.get(admin.playerid1).roles.remove(stanby).catch(console.warn = () => {});
+		await wait(500)
 		message.guild.members.cache.get(admin.playerid2).roles.add(playcode1).catch(console.warn = () => {});
+		await wait(500)
 		message.guild.members.cache.get(admin.playerid2).roles.remove(stanby).catch(console.warn = () => {});
+		await wait(500)
 		message.guild.members.cache.get(admin.playerid3).roles.add(playcode2).catch(console.warn = () => {});
+		await wait(500)
 		message.guild.members.cache.get(admin.playerid3).roles.remove(stanby).catch(console.warn = () => {});
+		await wait(500)
 		message.guild.members.cache.get(admin.playerid4).roles.add(playcode3).catch(console.warn = () => {});
+		await wait(500)
 		message.guild.members.cache.get(admin.playerid4).roles.remove(stanby).catch(console.warn = () => {});
+		await wait(500)
 		message.guild.members.cache.get(admin.playerid5).roles.add(playcode4).catch(console.warn = () => {});
+		await wait(500)
 		message.guild.members.cache.get(admin.playerid5).roles.remove(stanby).catch(console.warn = () => {});
+		await wait(500)
 		message.guild.members.cache.get(admin.playerid6).roles.add(playcode).catch(console.warn = () => {});
+		await wait(500)
 		message.guild.members.cache.get(admin.playerid6).roles.remove(stanby).catch(console.warn = () => {});
 		await wait(2000)
 		await channel13.send('탐정님이``!세팅``명령어를 치시면 세팅이 준비가 되고 시작됩니다.')
