@@ -797,7 +797,7 @@ await nick4.setNickname("-관전."+admin.player5)
 			playerid6 : admin.playerid6,
 			round : (admin.round *= 0) +6,
 			starttime : admin.starttime,
-			endtime : dlck,
+			endtime : dater,
 			vpoint : admin.vpoint
 		 }
 		 fs.writeFileSync(dfilePath, JSON.stringify(database));
@@ -1203,7 +1203,7 @@ console.log('한호랑')
 		playerid6 : admin.playerid6,
         round : (admin.round *= 0) +6,
 		starttime : admin.starttime,
-		endtime : dlck,
+		endtime : dater,
 		vpoint : admin.vpoint
 	 }
 	 fs.writeFileSync(dfilePath, JSON.stringify(database));
