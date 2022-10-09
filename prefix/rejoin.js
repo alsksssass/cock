@@ -39,6 +39,7 @@ const pnum = JSON.parse(fs.readFileSync(ffilePath, "utf-8"));
 /////////////
 if(message.channel.id != chstan)
 {console.log('채널안맞음')
+message.channel.send('이곳에서 사용불가한 명령어 입니다.')
    return;}
 else if(admin.playerid1 == user.id)
 {
@@ -91,7 +92,7 @@ else if(admin.playerid1 == user.id)
 
     else 
     {
-message.channel.send('이곳에서 사용불가한 명령어 입니다.')
+message.channel.send('플레이 리스트에 없는 사용자 입니다.')
     }
   }}
 
