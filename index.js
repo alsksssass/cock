@@ -286,6 +286,10 @@ player.on(AudioPlayerStatus.Idle, () => {
 		await channel13.send('탐정님이``!세팅``명령어를 치시면 세팅이 준비가 되고 시작됩니다.')
 		await channel13.send('플레이어들은 대기자 음성채널에서 이제 음성채팅이 불가능합니다.')
 		await channel13.send('**추리방**으로 음성채널을 옮겨주세요!')
+		await channel13.send('모든 플레이어가 추리방에 모이면 입력해 주세요')
+		await wait(2000)
+		await channel.send('이 메시지를 본 준비를 마친 플레이어가 있다면 진입실패 오류이니 ``!재진입``명령어를 사용해주세요!')
+
 	}
 	catch (err) {
 		console.error(err);
@@ -383,6 +387,11 @@ player.on(AudioPlayerStatus.Idle, () => {
 		message.guild.members.cache.get(admin.playerid6).roles.remove(stanby).catch(console.warn = () => {});
 		await wait(2000)
 		await channel13.send('탐정님이``!세팅``명령어를 치시면 세팅이 준비가 되고 시작됩니다.')
+		await channel13.send('플레이어들은 대기자 음성채널에서 이제 음성채팅이 불가능합니다.')
+		await channel13.send('**추리방**으로 음성채널을 옮겨주세요!')
+		await channel13.send('모든 플레이어가 추리방에 모이면 입력해 주세요')
+		await wait(2000)
+		await channel.send('이 메시지를 본 준비를 마친 플레이어가 있다면 진입실패 오류이니 ``!재진입``명령어를 사용해주세요!')
 
 	}
 	catch (err) {
@@ -487,7 +496,13 @@ if(admin.round == 4 && admin.vpoint == 0 && admin.readynum == totalplayer){////2
 	channel7.send('>>> 투표 방법입니다. 이곳에입력 하시면 됩니다.\n한호랑                     유수호\n오정성                     곽편집\n\n명령어는 **!투표 (역할명)**입니다.\n명령어를 입력할 땐 괄호는 생략하고 입력해주세요.')
 	channel8.send('>>> 투표 방법입니다. 이곳에입력 하시면 됩니다.\n한호랑                     유수호\n오정성                     곽편집\n\n명령어는 **!투표 (역할명)**입니다.\n명령어를 입력할 땐 괄호는 생략하고 입력해주세요.')
 	channel9.send('>>> 투표 방법입니다. 이곳에입력 하시면 됩니다.\n한호랑                     유수호\n오정성                     곽편집\n\n명령어는 **!투표 (역할명)**입니다.\n명령어를 입력할 땐 괄호는 생략하고 입력해주세요.')
-	channel99.send('>>> 투표 방법입니다. 이곳에입력 하시면 됩니다.\n한호랑                     유수호\n오정성                     곽편집\n\n명령어는 **!투표 (역할명)**입니다.\n명령어를 입력할 땐 괄호는 생략하고 입력해주세요.')
+	channel99.send('투표는 한번만 가능합니다. 신중하게 투표해 주세요!')
+	channel6.send('투표는 한번만 가능합니다. 신중하게 투표해 주세요!')
+	channel7.send('투표는 한번만 가능합니다. 신중하게 투표해 주세요!')
+	channel8.send('투표는 한번만 가능합니다. 신중하게 투표해 주세요!')
+	channel9.send('투표는 한번만 가능합니다. 신중하게 투표해 주세요!')
+	channel99.send('투표는 한번만 가능합니다. 신중하게 투표해 주세요!')
+	
 	database = {
 		readynum : admin.readynum,
 		class1 : admin.class1,
