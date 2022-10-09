@@ -37,9 +37,12 @@ const clue = JSON.parse(fs.readFileSync(efilePath, "utf-8"));
 const vote = JSON.parse(fs.readFileSync(vfilePath, "utf-8"));
 const pnum = JSON.parse(fs.readFileSync(ffilePath, "utf-8"));
 /////////////
-if(message.channel.id != chstan) return;
+if(message.channel.id != chstan)
+{console.log('채널안맞음')
+   return;}
 else if(admin.playerid1 == user.id)
 {
+  console.log('유저1')
     message.guild.members.cache.get(admin.playerid1).roles.add(playcode).catch(console.warn = () => {});/////특정 유저에게 롤주기 성공!!
 		await wait(500)
 		message.guild.members.cache.get(admin.playerid1).roles.remove(stanby).catch(console.warn = () => {});
@@ -47,6 +50,7 @@ else if(admin.playerid1 == user.id)
     }
     else if (admin.playerid2 == user.id && message.channel.id == chstan)
     {
+      console.log('유저2')
         message.guild.members.cache.get(admin.playerid2).roles.add(playcode1).catch(console.warn = () => {});
 		await wait(500)
 		message.guild.members.cache.get(admin.playerid2).roles.remove(stanby).catch(console.warn = () => {});
@@ -54,6 +58,7 @@ else if(admin.playerid1 == user.id)
     }
     else if (admin.playerid3 == user.id && message.channel.id == chstan)
     {
+      console.log('유저3')
         message.guild.members.cache.get(admin.playerid3).roles.add(playcode2).catch(console.warn = () => {});
 		await wait(500)
 		message.guild.members.cache.get(admin.playerid3).roles.remove(stanby).catch(console.warn = () => {});
@@ -61,6 +66,7 @@ else if(admin.playerid1 == user.id)
     }
     else if (admin.playerid4 == user.id && message.channel.id == chstan)
     {
+      console.log('유저4')
         message.guild.members.cache.get(admin.playerid4).roles.add(playcode3).catch(console.warn = () => {});
 		await wait(500)
 		message.guild.members.cache.get(admin.playerid4).roles.remove(stanby).catch(console.warn = () => {});
@@ -68,6 +74,7 @@ else if(admin.playerid1 == user.id)
     }
     else if (admin.playerid5 == user.id && message.channel.id == chstan)
     {
+      console.log('유저5')
         message.guild.members.cache.get(admin.playerid5).roles.add(playcode4).catch(console.warn = () => {});
 		await wait(500)
 		message.guild.members.cache.get(admin.playerid5).roles.remove(stanby).catch(console.warn = () => {});
@@ -75,6 +82,7 @@ else if(admin.playerid1 == user.id)
     }
     else if (admin.playerid6 == user.id && message.channel.id == chstan)
     {
+      console.log('유저6')
         message.guild.members.cache.get(admin.playerid6).roles.add(playcode).catch(console.warn = () => {});
 		await wait(500)
 		message.guild.members.cache.get(admin.playerid6).roles.remove(stanby).catch(console.warn = () => {});
