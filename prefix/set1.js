@@ -78,13 +78,31 @@ module.exports = {
   const user = JSON.parse(fs.readFileSync(cfilePath, "utf-8"));
     const admin = JSON.parse(fs.readFileSync(dfilePath, "utf-8"));
     const clue = JSON.parse(fs.readFileSync(efilePath, "utf-8"));
- 
- if(admin.round == 1 && message.author.id == admin.playerid1){
+    if(message.member.voice.channelId != '812915041194999833'){
+        message.channel.send('음성채널 추리방으로 모든 플레이어 이동후 사용해 주세요')
+			const connection = joinVoiceChannel({
+    channelId: '1023559232798343199',
+    guildId: message.guildId,
+    adapterCreator: message.guild.voiceAdapterCreator
+    
+})
+
+
+const player = createAudioPlayer()
+const resource = createAudioResource('./music/cubamg.mp3')///추리방으로 옮겨주세요
+
+
+player.play(resource, {seek: 0, volume: 1.0})
+connection.subscribe(player);
+
+player.on(AudioPlayerStatus.Idle, () => {
+  connection.destroy();
+});
+    }
+ else if(admin.round == 1 && message.author.id == admin.playerid1 && message.member.voice.channelId == '812915041194999833'){
 
     try {
     let cluedata = {};
-    
-    await message.channel.bulkDelete(1)
     const channel = client.channels.cache.get(chclue1);
 const channel1 = client.channels.cache.get(chclue2);
 const channel2 = client.channels.cache.get(chclue3);
