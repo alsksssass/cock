@@ -4,7 +4,7 @@ const today = new Date();
 const date = "" + today.getFullYear() + today.getMonth() + today.getDate() + today.getHours() + today.getMinutes();
 const dater ="" + today.getFullYear()+"년" + today.getMonth()+"월" + today.getDate()+"일" + today.getHours()+"시" + today.getMinutes()+"분";
 
-const { Client, GatewayIntentBits, Collection, GuildMember, PermissionFlagsBits, Message, MessageMentions, EmbedBuilder, MessageFlags, RoleManager } = require('discord.js');
+const { Client, GatewayIntentBits, Collection, GuildMember, PermissionFlagsBits, Message, MessageMentions, EmbedBuilder, MessageFlags, RoleManager, ActivityType } = require('discord.js');
 const { token, prefix, totalplayer, stanby, record, playcode, playcode1, playcode2, playcode3, playcode4, owner, character1, character2, character3, character4, character5, character6, botplay, botstan, guildId, chclue1, chclue2, chclue3, chclue4, chclue5, note1, observer } = require('./config.json');
 const wait = require('node:timers/promises').setTimeout;///딜레이 구문
 const { RESTJSONErrorCodes } = require('discord.js');
