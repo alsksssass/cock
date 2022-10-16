@@ -43,12 +43,12 @@ const pnum = JSON.parse(fs.readFileSync(ffilePath, "utf-8"));
 //    return;}
 
 
-  console.log(message.author.id)
-  console.log(message.author.username)
-  console.log(message.author.id)
-  await message.member.setNickname(`-관전.${message.author.username}`)
-  await message.guild.members.cache.get(message.author.id).roles.add(observer).catch(console.warn = () => {});
-await message.channel.send('관전자로 변경됨.')
+  // console.log(message.author.id)
+  // console.log(message.author.username)
+  // console.log(message.author.id)
+  // await message.member.setNickname(`-관전.${message.author.username}`)
+  // await message.guild.members.cache.get(message.author.id).roles.add(observer).catch(console.warn = () => {});
+await message.channel.send('관전자변경 지원 종료됨')
 //     else 
 //     {
 // message.channel.send('플레이 리스트에 없는 사용자 입니다.')

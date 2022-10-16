@@ -7,9 +7,9 @@ const { title } = require('node:process');
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.GuildMessageReactions, GatewayIntentBits.GuildVoiceStates, GatewayIntentBits.DirectMessages, GatewayIntentBits.MessageContent, GatewayIntentBits.Guilds, GatewayIntentBits.GuildMembers, GatewayIntentBits.GuildBans, GatewayIntentBits.GuildVoiceStates] });
 const wait = require('node:timers/promises').setTimeout;///딜레이 구문
 const today = new Date();
-const date = "" + today.getFullYear() +"년" + today.getMonth() + "월" + today.getDate() + "일" + today.getHours() + "시" + today.getMinutes() + "분";
+var date = "" + today.getFullYear() +"년" + today.getMonth() + "월" + today.getDate() + "일" + today.getHours() + "시" + today.getMinutes() + "분";
 
-const dlck = "" + today.getFullYear() +"년" + today.getMonth() + "월" + today.getDate() +"일"+ today.getHours() + "시" + today.getMinutes() + "분";
+var dlck = "" + today.getFullYear() +"년" + today.getMonth() + "월" + today.getDate() +"일"+ today.getHours() + "시" + today.getMinutes() + "분";
 
 
 
@@ -145,8 +145,7 @@ voting = {
  }
 fs.writeFileSync(vfilePath, JSON.stringify(voting));
 const dday = new Date();
-const daiy ="" + dday.getFullYear()+"년" + dday.getMonth()+"월" + dday.getDate()+"일" + dday.getHours()+"시" + dday.getMinutes()+"분";
-
+var daiy = dday.getHours() + "시" + dday.getMinutes() + "분, " + dday.toDateString();
 saveUser = {
   id : user.id,
   name : user.name,
@@ -269,8 +268,7 @@ voting = {
 fs.writeFileSync(vfilePath, JSON.stringify(voting));
 
 const dday = new Date();
-const daiy ="" + dday.getFullYear()+"년" + dday.getMonth()+"월" + dday.getDate()+"일" + dday.getHours()+"시" + dday.getMinutes()+"분";
-
+var daiy = dday.getHours() + "시" + dday.getMinutes() + "분, " + dday.toDateString();
 console.log('4')
 saveUser = {
   id : user.id,
@@ -393,8 +391,7 @@ voting = {
   fs.writeFileSync(vfilePath, JSON.stringify(voting));
 
   const dday = new Date();
-const daiy ="" + dday.getFullYear()+"년" + dday.getMonth()+"월" + dday.getDate()+"일" + dday.getHours()+"시" + dday.getMinutes()+"분";
-
+var daiy = dday.getHours() + "시" + dday.getMinutes() + "분, " + dday.toDateString();
   console.log('4')
   saveUser = {
     id : user.id,
@@ -517,8 +514,7 @@ voting = {
   fs.writeFileSync(vfilePath, JSON.stringify(voting));
 
   const dday = new Date();
-const daiy ="" + dday.getFullYear()+"년" + dday.getMonth()+"월" + dday.getDate()+"일" + dday.getHours()+"시" + dday.getMinutes()+"분";
-
+var daiy = dday.getHours() + "시" + dday.getMinutes() + "분, " + dday.toDateString();
   console.log('4')
   saveUser = {
     id : user.id,
@@ -640,8 +636,7 @@ voting = {
   fs.writeFileSync(vfilePath, JSON.stringify(voting));
 
   const dday = new Date();
-const daiy ="" + dday.getFullYear()+"년" + dday.getMonth()+"월" + dday.getDate()+"일" + dday.getHours()+"시" + dday.getMinutes()+"분";
-
+var daiy = dday.getHours() + "시" + dday.getMinutes() + "분, " + dday.toDateString();
   console.log('4')
   saveUser = {
     id : user.id,
@@ -764,8 +759,7 @@ voting = {
   fs.writeFileSync(vfilePath, JSON.stringify(voting));
 
   const dday = new Date();
-const daiy ="" + dday.getFullYear()+"년" + dday.getMonth()+"월" + dday.getDate()+"일" + dday.getHours()+"시" + dday.getMinutes()+"분";
-
+var daiy = dday.getHours() + "시" + dday.getMinutes() + "분, " + dday.toDateString();
   console.log('4')
   saveUser = {
     id : user.id,

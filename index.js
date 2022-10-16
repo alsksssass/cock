@@ -1,8 +1,8 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const today = new Date();
-const date = "" + today.getFullYear() + today.getMonth() + today.getDate() + today.getHours() + today.getMinutes();
-const dater ="" + today.getFullYear()+"년" + today.getMonth()+"월" + today.getDate()+"일" + today.getHours()+"시" + today.getMinutes()+"분";
+var date = "" + today.getFullYear() + today.getMonth() + today.getDate() + today.getHours() + today.getMinutes();
+var dater ="" + today.getFullYear()+"년" + today.getMonth()+"월" + today.getDate()+"일" + today.getHours()+"시" + today.getMinutes()+"분";
 
 const { Client, GatewayIntentBits, Collection, GuildMember, PermissionFlagsBits, Message, MessageMentions, EmbedBuilder, MessageFlags, RoleManager, ActivityType } = require('discord.js');
 const { token, prefix, totalplayer, stanby, record, playcode, playcode1, playcode2, playcode3, playcode4, owner, character1, character2, character3, character4, character5, character6, botplay, botstan, guildId, chclue1, chclue2, chclue3, chclue4, chclue5, note1, observer } = require('./config.json');
@@ -446,7 +446,7 @@ if(admin.round == 2 && admin.vpoint == 0 && admin.readynum == totalplayer){/////
     const today1 = new Date();
 
 	await today1.setMinutes(today1.getMinutes() + 15);
-	const dlck = "" + today1.getHours() + "시" + today1.getMinutes() + "분";
+	var dlck = "" + today1.getHours() + "시" + today1.getMinutes() + "분";
 	
 
 	const channel5 = client.channels.cache.get(note1);//추리노트
@@ -485,7 +485,7 @@ if(admin.round == 4 && admin.vpoint == 0 && admin.readynum == totalplayer){////2
     const today1 = new Date();
 	await today1.setMinutes(today1.getMinutes() + 15);
 
-	const dlckk = "" + today1.getHours() + "시" + today1.getMinutes() + "분";
+	var dlckk = "" + today1.getHours() + "시" + today1.getMinutes() + "분";
 	
 
 	const channel5 = client.channels.cache.get(note1);//추리노트
@@ -567,7 +567,7 @@ if(admin.round == 4 && admin.vpoint == 0 && admin.readynum == totalplayer){////2
 if(admin.round == 5 && admin.vpoint == 0 && admin.readynum == totalplayer && vote.votenum == totalplayer && totalplayer == 5){////5인 투표종료
 	
 	await today.setMinutes(today.getMinutes() - 15);
-	const dlck = "" + today.getFullYear()+"년" + today.getMonth()+"월" + today.getDate()+"일" + today.getHours()+"시" + today.getMinutes()+"분";
+	var dlck = "" + today.getFullYear()+"년" + today.getMonth()+"월" + today.getDate()+"일" + today.getHours()+"시" + today.getMinutes()+"분";
 	var cd1 = admin.playerid1
 	var cd2 = admin.playerid2
 	var cd3 = admin.playerid3
@@ -812,7 +812,8 @@ await nick4.setNickname("-관전."+admin.player5)
 		 var rufrhk = ""
 		 if(vote.vote2 >= 3)rufrhk = "검거 성공"
 		 if(vote.vote2 <= 2)rufrhk = "검거 실패"
-		 
+		 const dday = new Date();
+var daiy = dday.getHours() + "시" + dday.getMinutes() + "분, " + dday.toDateString();
 		 const playrecord = new EmbedBuilder()
 		 .setColor(0x0099FF)
 		 .setTitle('타로마스터')
@@ -820,7 +821,7 @@ await nick4.setNickname("-관전."+admin.player5)
 		 .setDescription('타로마스터 살인사건')
 		 .setThumbnail('https://emoji-uc.akamaized.net/orig/36/42dfd89cc30f82fc76ebe7fd1ef1fb.png')
 		 .addFields(
-		   { name: `${admin.starttime}시작`, value: new Date().toISOString()+"끝" },
+		   { name: `${admin.starttime}시작`, value: daiy+"끝" },
 		   { name: '\u200B', value: '\u200B' },
 		   { name: '검거결과', value: rufrhk },
 		   { name: '\u200B', value: '\u200B' },
@@ -1023,7 +1024,7 @@ console.log('끝')
 if(admin.round == 5 && admin.vpoint == 0 && admin.readynum == totalplayer && vote.votenum == totalplayer && totalplayer == 6){////6인 투표종료
 	
 	await today.setMinutes(today.getMinutes() - 15);
-	const dlck = "" + today.getFullYear()+"년" + today.getMonth()+"월" + today.getDate()+"일" + today.getHours()+"시" + today.getMinutes()+"분";
+	var dlck = "" + today.getFullYear()+"년" + today.getMonth()+"월" + today.getDate()+"일" + today.getHours()+"시" + today.getMinutes()+"분";
 	
 	const channel1 = client.channels.cache.get(chclue1);//윤새롬
     const channel2 = client.channels.cache.get(chclue2);//한호랑
@@ -1266,6 +1267,8 @@ console.log('한호랑')
 		var rufrhk = ""
     if(vote.vote2 >= 3)rufrhk = "검거 성공"
     if(vote.vote2 <= 2)rufrhk = "검거 실패"
+	const dday = new Date();
+	var daiy = dday.getHours() + "시" + dday.getMinutes() + "분, " + dday.toDateString();
     
     const playrecord = new EmbedBuilder()
     .setColor(0x0099FF)
@@ -1274,7 +1277,7 @@ console.log('한호랑')
     .setDescription('타로마스터 살인사건')
     .setThumbnail('https://emoji-uc.akamaized.net/orig/36/42dfd89cc30f82fc76ebe7fd1ef1fb.png')
     .addFields(
-      { name: `${admin.starttime}시작`, value: new Date().toISOString()+"끝" },
+      { name: `${admin.starttime}시작`, value: new daiy+"끝" },
       { name: '\u200B', value: '\u200B' },
       { name: '검거결과', value: rufrhk },
       { name: '\u200B', value: '\u200B' },

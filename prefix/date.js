@@ -11,7 +11,7 @@ module.exports = {
         h = parseInt(content/60)
         m = content%60
 const d = new Date
-date = d.getHours() + ":" + d.getMinutes() + ", " + d.toDateString();
+date = d.getHours() + "시" + d.getMinutes() + "분, " + d.toDateString();
 date2 = (d.getHours()+h) + ":" + (d.getMinutes()
 +m) + ", " + d.toDateString();
 var hr = d.getHours()
