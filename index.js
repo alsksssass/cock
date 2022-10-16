@@ -201,6 +201,8 @@ if(admin.readynum == 1){
 if(admin.readynum == totalplayer && totalplayer == 5 && admin.round == 0){
 	await wait(1000);
 	console.log("성공")
+	const dday = new Date();
+	var daiy = dday.getHours() + "시" + dday.getMinutes() + "분, " + dday.toDateString();
 database = {
 	readynum : admin.readynum,
 		class1 : admin.class1,
@@ -222,7 +224,7 @@ database = {
 		playerid5 : admin.playerid5,
 		playerid6 : admin.playerid6,
         round : (admin.round *= 0) +1,
-		starttime : dater,
+		starttime : daiy,
 		endtime : admin.endtime,
 		vpoint : admin.vpoint
 	 }
@@ -305,6 +307,8 @@ player.on(AudioPlayerStatus.Idle, () => {
 if(admin.readynum == totalplayer && totalplayer == 6 && admin.round == 0){
 	await wait(1000);
 	console.log("성공")
+	const dday = new Date();
+	var daiy = dday.getHours() + "시" + dday.getMinutes() + "분, " + dday.toDateString();
 database = {
 	readynum : admin.readynum,
 		class1 : admin.class1,
@@ -326,7 +330,7 @@ database = {
 		playerid5 : admin.playerid5,
 		playerid6 : admin.playerid6,
         round : (admin.round *= 0) +1,
-		starttime : dater,
+		starttime : daiy,
 		endtime : admin.endtime,
 		vpoint : admin.vpoint
 	 }
