@@ -144,6 +144,8 @@ voting = {
    
  }
 fs.writeFileSync(vfilePath, JSON.stringify(voting));
+const dday = new Date();
+const daiy ="" + dday.getFullYear()+"년" + dday.getMonth()+"월" + dday.getDate()+"일" + dday.getHours()+"시" + dday.getMinutes()+"분";
 
 saveUser = {
   id : user.id,
@@ -158,7 +160,7 @@ saveUser = {
   player5 : admin.player5,
   player6 : admin.player6,
   sdate : admin.starttime,
-      edate : dlck,
+      edate : daiy,
     ptitle : pnum.title1,
     pnum : pnum.playnum
 }
@@ -265,6 +267,10 @@ voting = {
    
  }
 fs.writeFileSync(vfilePath, JSON.stringify(voting));
+
+const dday = new Date();
+const daiy ="" + dday.getFullYear()+"년" + dday.getMonth()+"월" + dday.getDate()+"일" + dday.getHours()+"시" + dday.getMinutes()+"분";
+
 console.log('4')
 saveUser = {
   id : user.id,
@@ -279,7 +285,7 @@ saveUser = {
   player5 : admin.player5,
   player6 : admin.player6,
   sdate : admin.starttime,
-      edate : dlck,
+      edate : daiy,
     ptitle : pnum.title1,
     pnum : pnum.playnum
 }
@@ -385,6 +391,10 @@ voting = {
    
   }
   fs.writeFileSync(vfilePath, JSON.stringify(voting));
+
+  const dday = new Date();
+const daiy ="" + dday.getFullYear()+"년" + dday.getMonth()+"월" + dday.getDate()+"일" + dday.getHours()+"시" + dday.getMinutes()+"분";
+
   console.log('4')
   saveUser = {
     id : user.id,
@@ -399,7 +409,7 @@ voting = {
     player5 : admin.player5,
     player6 : admin.player6,
     sdate : admin.starttime,
-        edate : dlck,
+        edate : daiy,
     ptitle : pnum.title1,
     pnum : pnum.playnum
   }
@@ -505,6 +515,10 @@ voting = {
    
   }
   fs.writeFileSync(vfilePath, JSON.stringify(voting));
+
+  const dday = new Date();
+const daiy ="" + dday.getFullYear()+"년" + dday.getMonth()+"월" + dday.getDate()+"일" + dday.getHours()+"시" + dday.getMinutes()+"분";
+
   console.log('4')
   saveUser = {
     id : user.id,
@@ -519,7 +533,7 @@ voting = {
     player5 : admin.player5,
     player6 : admin.player6,
     sdate : admin.starttime,
-        edate : dlck,
+        edate : daiy,
     ptitle : pnum.title1,
     pnum : pnum.playnum
   }
@@ -624,6 +638,10 @@ voting = {
    
   }
   fs.writeFileSync(vfilePath, JSON.stringify(voting));
+
+  const dday = new Date();
+const daiy ="" + dday.getFullYear()+"년" + dday.getMonth()+"월" + dday.getDate()+"일" + dday.getHours()+"시" + dday.getMinutes()+"분";
+
   console.log('4')
   saveUser = {
     id : user.id,
@@ -638,7 +656,7 @@ voting = {
     player5 : admin.player5,
     player6 : admin.player6,
     sdate : admin.starttime,
-    edate : dlck,
+    edate : daiy,
     ptitle : pnum.title1,
     pnum : pnum.playnum
   
@@ -744,6 +762,10 @@ voting = {
    
   }
   fs.writeFileSync(vfilePath, JSON.stringify(voting));
+
+  const dday = new Date();
+const daiy ="" + dday.getFullYear()+"년" + dday.getMonth()+"월" + dday.getDate()+"일" + dday.getHours()+"시" + dday.getMinutes()+"분";
+
   console.log('4')
   saveUser = {
     id : user.id,
@@ -758,7 +780,7 @@ voting = {
     player5 : admin.player5,
     player6 : admin.player6,
     sdate : admin.starttime,
-        edate : dlck,
+        edate : daiy,
     ptitle : pnum.title1,
     pnum : pnum.playnum
   }

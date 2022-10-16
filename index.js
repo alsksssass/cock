@@ -804,7 +804,7 @@ await nick4.setNickname("-관전."+admin.player5)
 			playerid6 : admin.playerid6,
 			round : (admin.round *= 0) +6,
 			starttime : admin.starttime,
-			endtime : dater,
+			endtime : new Date().toISOString(),
 			vpoint : admin.vpoint
 		 }
 		 fs.writeFileSync(dfilePath, JSON.stringify(database));
@@ -820,7 +820,7 @@ await nick4.setNickname("-관전."+admin.player5)
 		 .setDescription('타로마스터 살인사건')
 		 .setThumbnail('https://emoji-uc.akamaized.net/orig/36/42dfd89cc30f82fc76ebe7fd1ef1fb.png')
 		 .addFields(
-		   { name: `${admin.starttime}시작`, value: `${dater}끝` },
+		   { name: `${admin.starttime}시작`, value: new Date().toISOString()+"끝" },
 		   { name: '\u200B', value: '\u200B' },
 		   { name: '검거결과', value: rufrhk },
 		   { name: '\u200B', value: '\u200B' },
@@ -1160,7 +1160,7 @@ console.log('한호랑')
 		connection.subscribe(player);
 		
 		player.on(AudioPlayerStatus.Idle, () => {
-		  connection.destroy();
+		  connection.destroy().catch(console.warn = () => {});
 		
 		});
 	}
@@ -1213,7 +1213,7 @@ console.log('한호랑')
 		playerid6 : admin.playerid6,
         round : (admin.round *= 0) +6,
 		starttime : admin.starttime,
-		endtime : dater,
+		endtime : new Date().toISOString(),
 		vpoint : admin.vpoint
 	 }
 	 fs.writeFileSync(dfilePath, JSON.stringify(database));
@@ -1274,7 +1274,7 @@ console.log('한호랑')
     .setDescription('타로마스터 살인사건')
     .setThumbnail('https://emoji-uc.akamaized.net/orig/36/42dfd89cc30f82fc76ebe7fd1ef1fb.png')
     .addFields(
-      { name: `${admin.starttime}시작`, value: `${dater}끝` },
+      { name: `${admin.starttime}시작`, value: new Date().toISOString()+"끝" },
       { name: '\u200B', value: '\u200B' },
       { name: '검거결과', value: rufrhk },
       { name: '\u200B', value: '\u200B' },
