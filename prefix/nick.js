@@ -43,7 +43,7 @@ const date = "" + today.getFullYear() +"년" + today.getMonth() + "월" + today.
          const rolecg = message.guild.roles.cache.find(role => role.name === '대기자')///1022087211266617344
          message.member.roles.add('1022087211266617344')/////.removeRole(options)
          await wait(1000);
-         await message.member.setNickname(arguments)
+         
          user1 = await message.author.username
          await message.author.send(arguments+"역의 롤지입니다.")
       
