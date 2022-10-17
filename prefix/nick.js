@@ -61,6 +61,7 @@ const date = "" + today.getFullYear() +"년" + today.getMonth() + "월" + today.
             case character1 : 
             {
                console.log(arguments)
+               await message.member.setNickname("0."+arguments)
                await message.author.send('당신은 탐정입니다. 롤지가 없습니다.');
                await message.author.send({ content: "일정과 시간을 조율하신후 약속된 시간에\n``!준비``를\n모든 플레이어가 15초내에 치시면 됩니다.\n카운트는 명령어 사용후  15초입니다." })
                break;
@@ -68,6 +69,7 @@ const date = "" + today.getFullYear() +"년" + today.getMonth() + "월" + today.
             case character2 : 
             {
                console.log(arguments)
+               await message.member.setNickname("1."+arguments)
                await message.author.send({ files: ['./roll/1.한호랑.pdf'] });
                await message.author.send({ content: "일정과 시간을 조율하신후 약속된 시간에\n``!준비``를\n모든 플레이어가 15초내에 치시면 됩니다.\n카운트는 명령어 사용후  15초입니다." })
                break;
@@ -75,6 +77,7 @@ const date = "" + today.getFullYear() +"년" + today.getMonth() + "월" + today.
             case character3 : 
             {
                console.log(arguments)
+               await message.member.setNickname("2."+arguments)
                await message.author.send({ files: ['./roll/2.유수호.pdf'] });
                await message.author.send({ content: "일정과 시간을 조율하신후 약속된 시간에\n``!준비``를\n모든 플레이어가 15초내에 치시면 됩니다.\n카운트는 명령어 사용후  15초입니다." })
                break;
@@ -83,6 +86,7 @@ const date = "" + today.getFullYear() +"년" + today.getMonth() + "월" + today.
             {
 
                console.log(arguments)
+               await message.member.setNickname("3."+arguments)
                await message.author.send({ files: ['./roll/3.오정성.pdf'] });
                await message.author.send({ content: "일정과 시간을 조율하신후 약속된 시간에\n``!준비``를\n모든 플레이어가 15초내에 치시면 됩니다.\n카운트는 명령어 사용후  15초입니다." })
                break;
@@ -90,6 +94,7 @@ const date = "" + today.getFullYear() +"년" + today.getMonth() + "월" + today.
             case character5 : 
             {
                console.log(arguments)
+               await message.member.setNickname("4."+arguments)
                await message.author.send({ files: ['./roll/4.곽편집.pdf'] });
                await message.author.send({ content: "일정과 시간을 조율하신후 약속된 시간에\n``!준비``를\n모든 플레이어가 15초내에 치시면 됩니다.\n카운트는 명령어 사용후  15초입니다." })
                break;
