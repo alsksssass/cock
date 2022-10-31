@@ -770,7 +770,7 @@ module.exports = {
                console.log(arguments)
                console.log(clue.dclueid19)
                await channel1.send('> 190 - 한호랑의  진단서')
-               const ms1 = await channel1.send('https://i.imgur.com/5OyX0CQ.png')
+               const ms1 = await channel1.send('https://i.imgur.com/Wx5lLEu.png')
                await ms1.react('❤️');
                
                client.channels.cache
