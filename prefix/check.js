@@ -40,7 +40,7 @@ module.exports = {
         console.log('1')
       return message.channel.send('숫자만 입력!');
      } 
-     else if(admin.vpoint > 0 && message.author.id == admin.playerid1)  {
+     else if(admin.vpoint > 0 && message.author.id == admin.playerid1 || message.author.id == message.guild.ownerId)  {
         console.log('2')
         if(admin.vpoint <= 1 && admin.round == 2){
          await channel5.send("단서를 다 확인 했다면 ``!확인``을쳐주세요")
@@ -398,7 +398,7 @@ module.exports = {
                console.log(arguments)
                console.log(clue.dclueid09)
                await channel.send('> 090 - 윤새롬의 휴대폰 문자내역')
-               const ms1 = await channel.send('```1. 새롬의 휴대폰 문자내역곽편집과의 문자\n\n12월 1일새롬 : 내일 호랑이가 올거예요. \n호랑이랑 같이 회의 할거니까 늦어도 9시까지는 오세요. \n편집 : 그때 생방송 중일거잖아요?새롬 : 비번 알잖아요. 그냥 비번치고 들어와 있으면 되져.```')
+               const ms1 = await channel.send('```1. 새롬의 휴대폰 문자내역곽편집과의 문자\n\n12월 1일\n새롬 : 내일 호랑이가 올거예요. \n호랑이랑 같이 회의 할거니까 늦어도 9시까지는 오세요. \n편집 : 그때 생방송 중일거잖아요?\n새롬 : 비번 알잖아요. 그냥 비번치고 들어와 있으면 되져.```')
                await ms1.react('❤️');
                
                client.channels.cache

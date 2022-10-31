@@ -131,6 +131,11 @@ connection.subscribe(player);
 player.on(AudioPlayerStatus.Idle, () => {
   connection.destroy();
 });
+await message.guild.members.cache.get(admin.playerid2).send('당신에게만 전달되는 메시지.')
+await message.guild.members.cache.get(admin.playerid2).send('https://i.imgur.com/spQHuZx.png')
+await message.guild.members.cache.get(admin.playerid2).send('새롬이가 들고 있는 카드다. 다잉메시지를 남긴걸까?')
+await message.guild.members.cache.get(admin.playerid3).send('당신에게만 전달되는 메시지.')
+await message.guild.members.cache.get(admin.playerid3).send('지금보니 내가 잡았던 사람이 3번인것 같은데?')
     await channel.send('https://i.imgur.com/Jt09p8N.png')
     await channel.send('```시체 : 정수리에 깊게 패인 흔적이 있다. 다량의 피가 옷과 바닥에 흘렀다.\n바닥에는 쏟아진 물건들로 엉망이다.```')
     await channel.send('> **윤새롬**')
