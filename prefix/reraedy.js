@@ -1,6 +1,6 @@
 const fs = require('node:fs');
 const { Client, GatewayIntentBits, Collection, MembershipScreeningFieldType, ClientUser, User, time, GuildChannel, GuildManager, MessageManager, GuildMemberManager, GuildBanManager, GuildBan, GuildStickerManager, PermissionsBitField, PermissionOverwriteManager, MessageFlagsBitField, GuildMemberRoleManager, GuildMember } = require('discord.js');
-const { record, playcode } = require('../config.json');
+const { record, playcode, freeman } = require('../config.json');
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.GuildMessageReactions, GatewayIntentBits.GuildVoiceStates, GatewayIntentBits.DirectMessages, GatewayIntentBits.MessageContent, GatewayIntentBits.Guilds, GatewayIntentBits.GuildMembers, GatewayIntentBits.GuildBans] });
 const wait = require('node:timers/promises').setTimeout;///딜레이 구문
 const today = new Date();
@@ -47,7 +47,7 @@ module.exports = {
       const admin = fs.readFileSync(dfilePath, "utf-8");
 //////////////////
       try {
-        if(message.author.id === message.guild.ownerId) {
+        if(freeman == message.author.id) {
           console.log("오너파일 덮어쓰기")
             database = {
                 readynum : 0,

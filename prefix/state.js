@@ -45,14 +45,14 @@ module.exports = {
   try {
     if(arguments == '진행')
 {
-    client.user.setActivity("타로마스터 크라임씬 진행중", {
+    client.user.setActivity("삭월의 밤", {
         type: ActivityType.Playing,
           });
 }   
 
 else if(arguments == '대기')
 {
-    client.user.setActivity("타로마스터 크라임씬 대기중", {
+    client.user.setActivity("삭월을 기대", {
         type: ActivityType.Playing,
           });
 }   

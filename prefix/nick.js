@@ -5,7 +5,7 @@ const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBit
 const wait = require('node:timers/promises').setTimeout;///딜레이 구문
 
 module.exports = {
-    name: "롤",
+    name: "역할",
     async execute(message, args, client) {
       
       const arguments = args.shift(1)
@@ -30,22 +30,22 @@ const date = "" + today.getFullYear() +"년" + today.getMonth() + "월" + today.
             console.log(message.guild.id)
             console.log(guildId)
 
-            await message.channel.send('롤지는 한번만 받을 수 있습니다.')
+            await message.channel.send('역할지는 한번만 받을 수 있습니다.')
             return;
          }
-        if(message.guild.id === guildId && arguments != character1 && arguments != character2 && arguments != character3 && arguments != character4 && arguments != character5) 
+        else if(message.guild.id === guildId && arguments != character1 && arguments != character2 && arguments != character3 && arguments != character4 && arguments != character5) 
         {
-           await message.channel.send("롤 확인을 다시해 주세요")
+           await message.channel.send("이름 확인을 다시해 주세요")
            return;
         }
-        if(message.guild.id === guildId) {
+        else if(message.guild.id === guildId) {
          //let role = await message.guild.roles.cache.find(r => r.name == '대기자')
          const rolecg = message.guild.roles.cache.find(role => role.name === '대기자')///1022087211266617344
          message.member.roles.add('1022087211266617344')/////.removeRole(options)
          await wait(1000);
          
          user1 = await message.author.username
-         await message.author.send(arguments+"역의 롤지입니다.")
+         await message.author.send(arguments+"역의 역할지입니다.")
       
         await wait(1000)
          saveUser = {
@@ -58,45 +58,45 @@ const date = "" + today.getFullYear() +"년" + today.getMonth() + "월" + today.
          console.log('1')
          switch(arguments)
          {
-            case character1 : 
+            case '아랑' : 
             {
                console.log(arguments)
-               await message.member.setNickname("0."+arguments)
-               await message.author.send('당신은 탐정입니다. 롤지가 없습니다.');
-               await message.author.send({ content: "일정과 시간을 조율하신후 약속된 시간에\n``!준비``를\n모든 플레이어가 15초내에 치시면 됩니다.\n카운트는 명령어 사용후  15초입니다." })
+               await message.member.setNickname("1."+character1)
+               await message.author.send({ files: ['./roll/1.아랑.pdf'] });
+               await message.author.send({ content: "일정과 시간을 조율하신후 약속된 시간에\n``!준비``를\n모든 용의자가 15초내에 치시면 됩니다.\n시간은 명령어 사용후  15초입니다." })
                break;
             }
-            case character2 : 
+            case '윤정남' : 
             {
                console.log(arguments)
-               await message.member.setNickname("1."+arguments)
-               await message.author.send({ files: ['./roll/1.한호랑.pdf'] });
-               await message.author.send({ content: "일정과 시간을 조율하신후 약속된 시간에\n``!준비``를\n모든 플레이어가 15초내에 치시면 됩니다.\n카운트는 명령어 사용후  15초입니다." })
+               await message.member.setNickname("2."+character2)
+               await message.author.send({ files: ['./roll/2.윤정남.pdf'] });
+               await message.author.send({ content: "일정과 시간을 조율하신후 약속된 시간에\n``!준비``를\n모든 용의자가 15초내에 치시면 됩니다.\n시간은 명령어 사용후  15초입니다." })
                break;
             }
-            case character3 : 
+            case '덕수' : 
             {
                console.log(arguments)
-               await message.member.setNickname("2."+arguments)
-               await message.author.send({ files: ['./roll/2.유수호.pdf'] });
-               await message.author.send({ content: "일정과 시간을 조율하신후 약속된 시간에\n``!준비``를\n모든 플레이어가 15초내에 치시면 됩니다.\n카운트는 명령어 사용후  15초입니다." })
+               await message.member.setNickname("3."+character3)
+               await message.author.send({ files: ['./roll/3.덕수.pdf'] });
+               await message.author.send({ content: "일정과 시간을 조율하신후 약속된 시간에\n``!준비``를\n모든 용의자가 15초내에 치시면 됩니다.\n시간은 명령어 사용후  15초입니다." })
                break;
             }
-            case character4 : 
+            case '사카모토' : 
             {
 
                console.log(arguments)
-               await message.member.setNickname("3."+arguments)
-               await message.author.send({ files: ['./roll/3.오정성.pdf'] });
-               await message.author.send({ content: "일정과 시간을 조율하신후 약속된 시간에\n``!준비``를\n모든 플레이어가 15초내에 치시면 됩니다.\n카운트는 명령어 사용후  15초입니다." })
+               await message.member.setNickname("4."+character4)
+               await message.author.send({ files: ['./roll/4.사카모토.pdf'] });
+               await message.author.send({ content: "일정과 시간을 조율하신후 약속된 시간에\n``!준비``를\n모든 용의자가 15초내에 치시면 됩니다.\n시간은 명령어 사용후  15초입니다." })
                break;
             }
-            case character5 : 
+            case '유메' : 
             {
                console.log(arguments)
-               await message.member.setNickname("4."+arguments)
-               await message.author.send({ files: ['./roll/4.곽편집.pdf'] });
-               await message.author.send({ content: "일정과 시간을 조율하신후 약속된 시간에\n``!준비``를\n모든 플레이어가 15초내에 치시면 됩니다.\n카운트는 명령어 사용후  15초입니다." })
+               await message.member.setNickname("5."+character5)
+               await message.author.send({ files: ['./roll/5.유메.pdf'] });
+               await message.author.send({ content: "일정과 시간을 조율하신후 약속된 시간에\n``!준비``를\n모든 용의자가 15초내에 치시면 됩니다.\n시간은 명령어 사용후  15초입니다." })
                break;
             }
          }

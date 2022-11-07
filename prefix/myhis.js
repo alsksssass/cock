@@ -50,9 +50,9 @@ module.exports = {
       
     const playrecord = new EmbedBuilder()
     .setColor(0x0099FF)
-    .setTitle('타로마스터')
+    .setTitle('삭월의밤')
     .setAuthor({ name: user.ptitle+" "+user.pnum+" 차", iconURL: 'https://emoji-uc.akamaized.net/orig/36/42dfd89cc30f82fc76ebe7fd1ef1fb.png'})
-    .setDescription('타로마스터 살인사건')
+    .setDescription('삭월의밤, 붉은 그림자')
     .setThumbnail('https://emoji-uc.akamaized.net/orig/36/42dfd89cc30f82fc76ebe7fd1ef1fb.png')
     .addFields(
       { name: `시작: ${user.sdate}`, value: `종료: ${user.edate}` },
